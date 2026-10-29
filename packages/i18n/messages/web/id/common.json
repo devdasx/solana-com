@@ -156,12 +156,16 @@
     "header": {
       "eyebrow": "Data jaringan dua kali sehari",
       "title": "Data Solana",
-      "description": "Metrik jaringan, stablecoin, dan DeFi yang diperbarui dua kali sehari dari penyedia on-chain terkemuka."
+      "description": "Metrik jaringan, stablecoin, dan DeFi yang diperbarui dua kali sehari dari penyedia on-chain terkemuka.",
+      "disclaimer": "Penolakan: Data historis mencerminkan apa yang dilaporkan setiap penyedia pada tanggal tersebut. Memperbaiki masalah kualitas data memerlukan pengajuan permintaan backfill di <link>SDA</link>."
     },
     "controls": {
       "ariaLabel": "Kontrol",
       "tabsAriaLabel": "Bagian data",
       "rangeAriaLabel": "Rentang tanggal",
+      "customRange": "Kustom",
+      "customFrom": "Dari",
+      "customTo": "Hingga",
       "rpcMethodAriaLabel": "Metode RPC",
       "rpcMethodLabel": "Metode",
       "rpcInfraAriaLabel": "Infrastruktur RPC",
@@ -195,6 +199,10 @@
       "lending": {
         "label": "Peminjaman",
         "description": "Metrik deposit, pinjaman, dan utilisasi untuk protokol peminjaman Solana dari berbagai penyedia data."
+      },
+      "perps": {
+        "label": "Perps",
+        "description": "Volume perdagangan, open interest, dan metrik trader untuk venue perpetual futures Solana dari berbagai penyedia data."
       },
       "rpc": {
         "label": "RPC",
@@ -357,14 +365,20 @@
           "avg": "Rata-rata bulanan dari nilai harian",
           "last": "Nilai di akhir bulan"
         },
-        "cumulative": "Total berjalan selama {days} hari terakhir"
+        "cumulative": "Total berjalan selama {days} hari terakhir",
+        "cumulativeRange": "Total berjalan dari {from} hingga {to}"
       }
+    },
+    "chartLink": {
+      "copy": "Salin tautan ke bagan {metric}",
+      "copied": "Tautan tersalin"
     },
     "footer": {
       "allProviders": "Semua penyedia",
       "noProviders": "Tidak ada penyedia yang dipilih",
       "providerListSeparator": " / ",
       "lastDays": "{days, plural, one {# hari} other {# hari}} terakhir",
+      "dateRange": "{from} – {to}",
       "lastHours": "Dalam {hours, plural, other {# jam}} terakhir",
       "lastTimeframe": "Dalam {timeframe} terakhir",
       "refreshCadence": "Diperbarui dua kali sehari setelah pukul 10.00 dan 22.00 ET",
@@ -466,6 +480,7 @@
       "milliseconds": "ms",
       "percent": "Persen",
       "sol": "SOL",
+      "tps": "TPS",
       "usd": "USD"
     },
     "charts": {
@@ -503,7 +518,8 @@
         "title": "Jumlah Transaksi Non-Vote (Gagal)"
       },
       "vote-transactions": {
-        "title": "Jumlah Transaksi (Vote)"
+        "title": "Jumlah Transaksi (Vote)",
+        "note": "Transaksi vote tidak lagi dihitung sejak Alpenglow aktif. Bagan ini akan tetap statis hingga 1 Januari 2027, lalu dihapus."
       },
       "slots": {
         "title": "Slot"
@@ -522,6 +538,9 @@
       },
       "sol-price-network": {
         "title": "Harga SOL (Jaringan)"
+      },
+      "average-tps": {
+        "title": "Rata-rata TPS"
       },
       "dex-volume": {
         "title": "Volume DEX"
@@ -546,6 +565,21 @@
       },
       "lending-protocol-count": {
         "title": "Jumlah Protokol"
+      },
+      "perps-trading-volume": {
+        "title": "Volume Perdagangan"
+      },
+      "perps-open-interest": {
+        "title": "Total Open Interest"
+      },
+      "perps-transactions": {
+        "title": "Transaksi"
+      },
+      "perps-traders": {
+        "title": "Trader"
+      },
+      "perps-venue-count": {
+        "title": "Jumlah Venue"
       },
       "rpc-error-rate": {
         "title": "Tingkat Kesalahan",
@@ -9105,7 +9139,7 @@
       "title": "RPC Infrastructure",
       "description": "RPC requests are an application's gateway to the Solana cluster. The requests are serviced by aptly named RPC Nodes, which are typically dedicated to the task rather than participating in consensus."
     },
-    "content": "# Infrastruktur RPC\n\n**Ringkasan:** Permintaan RPC adalah gerbang aplikasi ke kluster Solana. Permintaan ini dilayani oleh Node RPC yang dinamai dengan tepat, yang biasanya didedikasikan untuk tugas tersebut daripada berpartisipasi dalam konsensus. Namun demikian, dari perspektif pengguna aplikasi, performa RPC yang buruk tidak berbeda dengan performa kluster yang buruk. Untuk memberikan pengalaman yang luar biasa kepada pengguna Anda dan menunjukkan kecepatan dan latensi rendah Solana, penting untuk memiliki infrastruktur RPC yang mampu melaksanakan tugas tersebut.\n\n**Pengembangan:** Developer didorong untuk menggunakan kluster lokal selama pengembangan, terutama di tahap awal dan untuk pengujian. Kluster lokal lebih fleksibel dibandingkan penawaran publik, memberikan kebebasan untuk menjalankan iterasi awal yang belum dioptimalkan. Cara termudah untuk menjalankan kluster lokal adalah dengan biner [solana-test-validator](https://docs.solana.com/developing/test-validator), yang disertakan dalam suite Solana CLI Tools. Setelah aplikasi mencapai kondisi stabil, deployment pada kluster publik menjadi lebih sesuai.\n\nSeperti semua tugas optimasi kode, dalam hal permintaan RPC, lebih sedikit lebih baik. Hindari melakukan pemanggilan yang sering dan berulang untuk data yang sama. Hindari membangun klien yang melakukan permintaan RPC secara langsung. \"dApp tanpa backend\" adalah mitos; Anda hanya membebani infrastruktur orang lain. Cache pemanggilan yang mahal (terutama getProgramAccount, getSignaturesForAddress2, dan getConfirmedBlock) dengan cara yang dioptimalkan untuk aplikasi dan layani pengguna Anda dari cache. Meluangkan waktu untuk mengoptimalkan kode Anda sebelum go-live dapat menghemat banyak masalah dari laporan pengalaman pengguna yang buruk, dan dapat secara signifikan mengurangi pengeluaran infrastruktur Anda.\n\n## Layanan Gratis\n\nBeberapa penyedia menawarkan akses RPC gratis ke kluster Solana publik. Layanan ini baik untuk pengujian di dunia nyata, demo awal, dan program beta pribadi berskala kecil. Perlu diingat bahwa Anda mendapatkan persis apa yang Anda bayar. Layanan gratis biasanya tidak melakukan autoscale, dibatasi rate-nya, tidak menawarkan SLA, dan tidak ragu untuk memblokir penyalahguna. Ketika aplikasi siap dibuka untuk publik, saatnya berinvestasi dalam akses RPC privat.\n\n**Beberapa penyedia RPC gratis:**\n\n**Testnet**\n\n- [https://api.testnet.solana.com](https://api.testnet.solana.com/)\n\n**Devnet**\n\n- [https://api.devnet.solana.com](https://api.devnet.solana.com/)\n- [https://rpc.ankr.com/solana_devnet](https://rpc.ankr.com/solana_devnet)\n- [Helius](https://www.helius.dev/solana-rpc-nodes)\n- [OrbitFlare](https://orbitflare.com/)\n- [Quicknode](https://www.quicknode.com/chains/sol) ([x402-enabled](https://www.quicknode.com/docs/build-with-ai/x402-payments))\n- [Chainstack](https://chainstack.com/build-better-with-solana/)\n\n**Mainnet-beta**\n\n- [https://api.mainnet-beta.solana.com](https://api.mainnet-beta.solana.com/)\n- [Syndica](https://syndica.io/)\n- [Blockdaemon](https://www.blockdaemon.com/protocols/solana)\n- [https://rpc.ankr.com/solana](https://rpc.ankr.com/solana)\n- [GetBlock](https://getblock.io/nodes/sol/)\n- [FluxRPC](https://fluxrpc.com/)\n- [Helius](https://www.helius.dev/solana-rpc-nodes)\n- [OrbitFlare](https://orbitflare.com/)\n- [Quicknode](https://www.quicknode.com/chains/sol) ([x402-enabled](https://www.quicknode.com/docs/build-with-ai/x402-payments))\n- [InstantNodes](https://instantnodes.io/)\n- [Chainstack](https://chainstack.com/build-better-with-solana/)\n\n## Layanan Privat\n\nKarena variabilitas dalam kebutuhan RPC antar aplikasi, infrastruktur RPC publik yang digeneralisasi jarang memenuhi kebutuhan. Untuk memastikan pengguna mendapatkan pengalaman yang baik, aplikasi yang menghadap publik perlu mengamankan akses RPC privat mereka sendiri. Ini akan memungkinkan Anda melakukan autoscale berdasarkan permintaan pengguna, melonggarkan batasan rate sesuai dengan aplikasi Anda, dan merasa tenang bahwa pengguna aplikasi lain tidak akan mendesak pengguna Anda. Beberapa organisasi menawarkan layanan RPC ketersediaan tinggi dan on-demand; lihat di bawah. Jika tidak ada penyedia yang cocok dan Anda siap untuk menjalankan layanan RPC Anda sendiri, silakan hubungi Solana Foundation untuk panduan.\n\n- [Quicknode](https://www.quicknode.com/chains/sol) (shared, [x402-enabled](https://www.quicknode.com/docs/build-with-ai/x402-payments))\n- [Triton/RPC Pool](https://triton.one/) (shared dan dedicated)\n- [Chainflow](https://chainflow.io/contact/) (dedicated)\n- [Chainstack](https://chainstack.com/build-better-with-solana/) (shared dan dedicated)\n- [GenesysGo](https://genesysgo.com/) (dedicated)\n- [Figment](https://datahub.figment.io/sign_up?service=solana) (shared)\n- [FluxRPC](https://fluxrpc.com/)\n- [Foundation Server Program](https://solana.org/delegation-program) - bare metal dengan diskon untuk run-your-own\n- [Syndica](https://syndica.io/)\n- [Alchemy](https://www.alchemy.com/solana) (shared)\n- [Blockdaemon](https://blockdaemon.com/marketplace/solana/)\n- [Ankr](https://www.ankr.com/)\n- [GetBlock](https://getblock.io/nodes/sol/)\n- [Helius](https://helius.dev/solana-rpc-nodes)\n- [OrbitFlare](https://orbitflare.com/) (shared dan dedicated)\n- [NOWNodes](https://nownodes.io/nodes/solana-sol) (shared dan dedicated)\n- [InstantNodes](https://instantnodes.io/) (hybrid)"
+    "content": "# Infrastruktur RPC\n\n**Ringkasan:** Permintaan RPC adalah gerbang aplikasi ke kluster Solana. Permintaan ini dilayani oleh Node RPC yang dinamai dengan tepat, yang biasanya didedikasikan untuk tugas tersebut daripada berpartisipasi dalam konsensus. Namun demikian, dari perspektif pengguna aplikasi, performa RPC yang buruk tidak berbeda dengan performa kluster yang buruk. Untuk memberikan pengalaman yang luar biasa kepada pengguna Anda dan menunjukkan kecepatan dan latensi rendah Solana, penting untuk memiliki infrastruktur RPC yang mampu melaksanakan tugas tersebut.\n\n**Pengembangan:** Developer didorong untuk menggunakan kluster lokal selama pengembangan, terutama di tahap awal dan untuk pengujian. Kluster lokal lebih fleksibel dibandingkan penawaran publik, memberikan kebebasan untuk menjalankan iterasi awal yang belum dioptimalkan. Cara termudah untuk menjalankan kluster lokal adalah dengan biner [solana-test-validator](https://docs.solana.com/developing/test-validator), yang disertakan dalam suite Solana CLI Tools. Setelah aplikasi mencapai kondisi stabil, deployment pada kluster publik menjadi lebih sesuai.\n\nSeperti semua tugas optimasi kode, dalam hal permintaan RPC, lebih sedikit lebih baik. Hindari melakukan pemanggilan yang sering dan berulang untuk data yang sama. Hindari membangun klien yang melakukan permintaan RPC secara langsung. \"dApp tanpa backend\" adalah mitos; Anda hanya membebani infrastruktur orang lain. Cache pemanggilan yang mahal (terutama getProgramAccount, getSignaturesForAddress2, dan getConfirmedBlock) dengan cara yang dioptimalkan untuk aplikasi dan layani pengguna Anda dari cache. Meluangkan waktu untuk mengoptimalkan kode Anda sebelum go-live dapat menghemat banyak masalah dari laporan pengalaman pengguna yang buruk, dan dapat secara signifikan mengurangi pengeluaran infrastruktur Anda.\n\n## Layanan Gratis\n\nBeberapa penyedia menawarkan akses RPC gratis ke kluster Solana publik. Layanan ini baik untuk pengujian di dunia nyata, demo awal, dan program beta pribadi berskala kecil. Perlu diingat bahwa Anda mendapatkan persis apa yang Anda bayar. Layanan gratis biasanya tidak melakukan autoscale, dibatasi rate-nya, tidak menawarkan SLA, dan tidak ragu untuk memblokir penyalahguna. Ketika aplikasi siap dibuka untuk publik, saatnya berinvestasi dalam akses RPC privat.\n\n**Beberapa penyedia RPC gratis:**\n\n**Testnet**\n\n- [https://api.testnet.solana.com](https://api.testnet.solana.com/)\n\n**Devnet**\n\n- [https://api.devnet.solana.com](https://api.devnet.solana.com/)\n- [https://rpc.ankr.com/solana_devnet](https://rpc.ankr.com/solana_devnet)\n- [Helius](https://www.helius.dev/solana-rpc-nodes)\n- [OrbitFlare](https://orbitflare.com/)\n- [Quicknode](https://www.quicknode.com/chains/sol) ([x402-enabled](https://www.quicknode.com/docs/build-with-ai/x402-payments))\n- [Chainstack](https://chainstack.com/build-better-with-solana/)\n\n**Mainnet-beta**\n\n- [https://api.mainnet-beta.solana.com](https://api.mainnet-beta.solana.com/)\n- [Solana Vibe Station](https://solanavibestation.com)\n- [Syndica](https://syndica.io/)\n- [Blockdaemon](https://www.blockdaemon.com/protocols/solana)\n- [https://rpc.ankr.com/solana](https://rpc.ankr.com/solana)\n- [GetBlock](https://getblock.io/nodes/sol/)\n- [FluxRPC](https://fluxrpc.com/)\n- [Helius](https://www.helius.dev/solana-rpc-nodes)\n- [OrbitFlare](https://orbitflare.com/)\n- [Quicknode](https://www.quicknode.com/chains/sol) ([x402-enabled](https://www.quicknode.com/docs/build-with-ai/x402-payments))\n- [InstantNodes](https://instantnodes.io/)\n- [Chainstack](https://chainstack.com/build-better-with-solana/)\n\n## Layanan Privat\n\nKarena variabilitas dalam kebutuhan RPC antar aplikasi, infrastruktur RPC publik yang digeneralisasi jarang memenuhi kebutuhan. Untuk memastikan pengguna mendapatkan pengalaman yang baik, aplikasi yang menghadap publik perlu mengamankan akses RPC privat mereka sendiri. Ini akan memungkinkan Anda melakukan autoscale berdasarkan permintaan pengguna, melonggarkan batasan rate sesuai dengan aplikasi Anda, dan merasa tenang bahwa pengguna aplikasi lain tidak akan mendesak pengguna Anda. Beberapa organisasi menawarkan layanan RPC ketersediaan tinggi dan on-demand; lihat di bawah. Jika tidak ada penyedia yang cocok dan Anda siap untuk menjalankan layanan RPC Anda sendiri, silakan hubungi Solana Foundation untuk panduan.\n\n- [Quicknode](https://www.quicknode.com/chains/sol) (shared, [x402-enabled](https://www.quicknode.com/docs/build-with-ai/x402-payments))\n- [Triton/RPC Pool](https://triton.one/) (shared dan dedicated)\n- [Chainflow](https://chainflow.io/contact/) (dedicated)\n- [Chainstack](https://chainstack.com/build-better-with-solana/) (shared dan dedicated)\n- [GenesysGo](https://genesysgo.com/) (dedicated)\n- [Figment](https://datahub.figment.io/sign_up?service=solana) (shared)\n- [FluxRPC](https://fluxrpc.com/)\n- [Foundation Server Program](https://solana.org/delegation-program) - bare metal dengan diskon untuk run-your-own\n- [Solana Vibe Station](https://solanavibestation.com) (shared dan dedicated)\n- [Syndica](https://syndica.io/)\n- [Alchemy](https://www.alchemy.com/solana) (shared)\n- [Blockdaemon](https://blockdaemon.com/marketplace/solana/)\n- [Ankr](https://www.ankr.com/)\n- [GetBlock](https://getblock.io/nodes/sol/)\n- [Helius](https://helius.dev/solana-rpc-nodes)\n- [OrbitFlare](https://orbitflare.com/) (shared dan dedicated)\n- [NOWNodes](https://nownodes.io/nodes/solana-sol) (shared dan dedicated)\n- [InstantNodes](https://instantnodes.io/) (hybrid)\n- [Digital Energy](https://rpc.digital-energy.io) (shared, [x402-enabled](https://agents.digital-energy.io))"
   },
   "2024outlook": {
     "meta": {
@@ -10344,13 +10378,13 @@
   },
   "developers-evm-to-svm": {
     "meta": {
-      "seoTitle": "Migrasi ke Solana — Hub Migrasi Chain",
+      "seoTitle": "Migrasi ke Solana: Hub Migrasi Chain",
       "seoDescription": "Panduan untuk memigrasikan proyekmu dari Ethereum, CosmWasm, atau chain lain ke Solana."
     },
     "hero": {
       "eyebrow": "Panduan Migrasi Rantai",
       "headline": "Migrasi ke Solana",
-      "body": "<p>Panduan lengkap untuk memigrasikan produk Anda dari Ethereum, Cosmos, atau blockchain lainnya ke Solana. Setiap panduan disesuaikan dengan rantai sumber Anda — mencakup perbedaan utama, perkakas, dan pola migrasi langkah demi langkah.</p>",
+      "body": "<p>Panduan lengkap untuk memigrasikan produk Anda dari Ethereum, Cosmos, atau blockchain lainnya ke Solana. Setiap panduan disesuaikan dengan rantai sumber Anda, mencakup perbedaan utama, perkakas, dan pola migrasi langkah demi langkah.</p>",
       "buttons": [
         {
           "label": "Jelajahi panduan EVM"
@@ -10473,7 +10507,7 @@
         {
           "eyebrow": "",
           "heading": "Programs and Smart Contracts",
-          "body": "Jelajahi program—yang dikenal sebagai smart contract di ekosistem lain—dan cara kerjanya di Solana",
+          "body": "Jelajahi program (dikenal sebagai smart contract di ekosistem lain) dan cara kerjanya di Solana",
           "callToAction": {
             "label": "Read"
           }
@@ -10529,7 +10563,7 @@
         "accordions": [
           {
             "title": "Apa perbedaan arsitektur terbesar antara EVM dan SVM?",
-            "body": "<p>Di Ethereum, smart contract menyimpan state-nya sendiri. Di Solana, program bersifat stateless — semua state berada di akun terpisah yang dimiliki oleh program. Pemisahan ini memungkinkan eksekusi transaksi paralel Solana dan merupakan konsep inti yang harus dipahami sebelum bermigrasi.</p>"
+            "body": "<p>Di Ethereum, smart contract menyimpan state-nya sendiri. Di Solana, program bersifat stateless: semua state berada di akun terpisah yang dimiliki oleh program. Pemisahan ini memungkinkan eksekusi transaksi paralel Solana dan merupakan konsep inti yang harus dipahami sebelum bermigrasi.</p>"
           },
           {
             "title": "Bisakah saya men-deploy kontrak Solidity saya di Solana?",
@@ -10585,12 +10619,12 @@
       "complete": {
         "eyebrow": "Panduan lengkap",
         "headline": "Panduan migrasi menyeluruh",
-        "body": "Panduan langkah demi langkah yang mencakup setiap fase migrasi app chain Cosmos ke Solana — mulai dari tata kelola dan penghentian chain hingga klaim token dan deployment program."
+        "body": "Panduan langkah demi langkah yang mencakup setiap fase migrasi app chain Cosmos ke Solana, mulai dari tata kelola dan penghentian chain hingga klaim token dan deployment program."
       }
     },
     "evmPage": {
       "meta": {
-        "seoTitle": "EVM ke SVM — Panduan Migrasi Solana untuk Developer Ethereum",
+        "seoTitle": "EVM ke SVM: Panduan Migrasi Solana untuk Developer Ethereum",
         "seoDescription": "Panduan langkah demi langkah untuk developer Ethereum yang bermigrasi ke Solana: akun, program, standar token (ERC20, ERC721, ERC4337), konsensus, dan perbedaan klien."
       }
     },
@@ -11616,7 +11650,7 @@
       "blocks": {
         "intro": "<p>ERC20 sets a standard for Fungible Tokens, which means that each token is the same as another token (both in type and value). For example, an ERC20 Token works similarly to the ETH token, where 1 Token is always equal to any other Token.</p>",
         "tokenProgram": "<h2><strong>The Token Program</strong></h2><p>The <a href=\"https://spl.solana.com/token\" rel=\"noopener noreferrer\" target=\"_blank\">Token Program</a> on Solana is the single smart contract that is used for most token operations. This is different from Ethereum, where you deploy a new smart contract for every token. Why is there only one main smart contract for tokens on Solana?</p><p>The <a href=\"https://solana.com/docs/core/accounts\" rel=\"noopener noreferrer\" target=\"_blank\">Solana Account Model </a>separates the state from execution logic on Solana, making interfaces very difficult to create like ERC20 does on Ethereum. Instead of multiple smart contracts, the single Token Program handles tokens in separate “accounts” known as “mint accounts”, while user tokens are stored in individual “token accounts”. The account model gives a significant benefit in program reusability and predetermined definition, avoiding unknown side effects of anyone being able to write their own ERC20 token functions.</p>",
-        "tokensNoContractAddress": "<h3><strong>Token Tidak Memiliki Contract Address, Hanya Mint Address</strong></h3><p>Di Ethereum, setiap token diidentifikasi secara unik oleh Contract Address-nya. Di Solana, setiap token diidentifikasi secara unik oleh Mint Address. Ide dasarnya serupa—ini adalah penunjuk onchain untuk token spesifik tersebut. Namun karena Token Program Solana bersifat universal, Anda tidak perlu men-deploy \"contract address\" terpisah. Sebaliknya, Anda menyediakan runtime Solana dengan mint account baru.</p>",
+        "tokensNoContractAddress": "<h3><strong>Token Tidak Memiliki Contract Address, Hanya Mint Address</strong></h3><p>Di Ethereum, setiap token diidentifikasi secara unik oleh Contract Address-nya. Di Solana, setiap token diidentifikasi secara unik oleh Mint Address. Ide dasarnya serupa: ini adalah penunjuk onchain untuk token spesifik tersebut. Namun karena Token Program Solana bersifat universal, Anda tidak perlu men-deploy “contract address” terpisah. Sebaliknya, Anda menyediakan runtime Solana dengan mint account baru.</p>",
         "noApprovalFlow": "<h3><strong>No Approval Flow Needed</strong></h3><p>On Ethereum, transferring ERC20 tokens between two addresses often requires <code>approve</code> + <code>transferFrom</code> if you're doing it on behalf of a user. On Solana, each user already has an ATA (<a href=\"https://spl.solana.com/associated-token-account\" rel=\"noopener noreferrer\" target=\"_blank\">Associated token accounts</a>) recognized by the Token Program. A single Solana transaction can atomically call multiple instructions, so no separate approval step is required. You can directly transfer from one user’s token account to another in one go.</p>",
         "tokenProgramLookLike": "<h3><strong>What Does A Solana Token Program Look Like?</strong></h3><p>A very rough translation of the Solana Token Program would look like this:</p>",
         "tokenProgramExplanation": "<p>As you can see in the contract, instead of an approval flow, there is only a transfer function to move tokens. On Solana, a single transaction can call multiple smart contract functions atomically, removing the need for the approval flow. Another difference is that everything is stored in a token account on Solana, keeping the details of the owner’s tokens separate from the other state.</p>",
@@ -12903,26 +12937,63 @@
   },
   "wsop": {
     "metadata": {
-      "title": "Solana × World Series of Poker",
-      "description": "Solana menghadirkan pembelian chip digital instan dan pembayaran ke World Series of Poker — serta tokoh-tokoh terbesar kripto ke meja utama.",
-      "socialImageAlt": "Solana × World Series of Poker"
+      "title": "WSOP Paradise, diselenggarakan oleh Solana",
+      "description": "Ikuti buy-in WSOP Paradise secara onchain dengan Solana Pay di aplikasi World Series of Poker. Baha Mar, Nassau, mulai Rabu, 2 Desember.",
+      "socialImageAlt": "WSOP Paradise, diselenggarakan oleh Solana"
     },
     "accessibility": {
       "skipToMain": "Lewati ke konten utama"
     },
     "marquee": {
-      "shuffleUp": "Kocok & bagikan kartu"
+      "skipWire": "Lewati transfer bank",
+      "buyInSolana": "Buy-in di Solana",
+      "settles": "Settle dalam hitungan detik",
+      "nothingToDeclare": "Tak ada yang perlu dideklarasikan",
+      "anyDay": "Kapan saja, hari apa saja",
+      "shuffleUp": "Kocok & bagikan kartu",
+      "noCash": "Tanpa perlu bawa uang tunai",
+      "paradise": "Baha Mar, Nassau"
     },
-    "hero": {},
+    "hero": {
+      "topline": "WSOP Paradise · Baha Mar, Nassau",
+      "presentedBy": "Diselenggarakan oleh Solana",
+      "lockupAlt": "WSOP Paradise, diselenggarakan oleh Solana",
+      "eyebrow": "Mulai Rabu, 2 Desember",
+      "title": "Ikut buy-in WSOP Paradise secara onchain.",
+      "description": "Bayar dengan Solana Pay di aplikasi World Series of Poker. Baha Mar, Nassau, mulai Rabu, 2 Desember.",
+      "cta": "Lihat cara buy-in"
+    },
     "stories": {
-      "ariaLabel": "Cerita kampanye WSOP",
-      "fallbackLabel": "Cerita",
-      "empty": {
-        "chip": "Permainan pertama · 4 Agu",
-        "title": "Cerita dari meja poker akan segera hadir.",
-        "description": "Pengungkapan pemain, obrolan meja, dan sorotan akan muncul di sini seiring berjalannya kampanye.",
-        "action": "Ikuti aksinya"
+      "label": "Solana Stories",
+      "title": "Para pemain di balik alasannya",
+      "description": "Tiga juara WSOP membahas apa yang berubah ketika buy-in berpindah ke onchain. Episode baru setiap minggu.",
+      "episode": "Ep. {number}",
+      "watch": "Tonton episode",
+      "goesLive": "Tayang {date}",
+      "comingSoon": "Segera hadir",
+      "profiles": {
+        "jamieGold": {
+          "title": "Juara Main Event 2006",
+          "biography": "Pemenang Main Event WSOP 2006, yang terbesar dalam sejarah pada masanya, dengan hadiah rekor $12 juta. Gold adalah salah satu sosok paling berkarakter di dunia poker dan figur penting era ESPN awal WSOP.",
+          "theme": "Akses",
+          "themeLine": "Siapa yang kini bisa ikut turnamen"
+        },
+        "michaelMizrachi": {
+          "title": "The Grinder",
+          "biography": "Juara Main Event WSOP 2025 ini meraih gelar dengan hadiah $10 juta. Sembilan gelang juaranya mencakup rekor empat kemenangan Poker Players Championship. Dilantik ke Poker Hall of Fame pada 2025, total pendapatan kariernya melampaui $30 juta.",
+          "theme": "Kecepatan dan settlement",
+          "themeLine": "Secepat apa kursi dikonfirmasi"
+        },
+        "philHellmuth": {
+          "title": "Pemenang 17 gelang WSOP",
+          "biography": "Pemenang Main Event WSOP 1989 dan pemimpin sepanjang masa dunia poker dengan rekor 17 gelang. Dilantik ke Poker Hall of Fame pada 2007, Hellmuth telah membangun salah satu karier paling gemilang dalam sejarah WSOP.",
+          "theme": "Cara permainan membayar",
+          "themeLine": "Cara baru untuk buy-in"
+        }
       }
+    },
+    "news": {
+      "title": "Berita WSOP"
     },
     "start": {
       "label": "Tangan pertama Anda",
@@ -12930,7 +13001,106 @@
       "description": "Siapkan dompet, pelajari dasar-dasarnya, dan bersiaplah saat aksi berpindah ke onchain.",
       "findWallet": "Temukan dompet",
       "guide": "Panduan kripto untuk pemain poker",
+      "guideDescription": "Pengantar trading kripto, dibangun dari keterampilan yang sudah Anda miliki.",
+      "guideCta": "Baca panduan",
       "comingSoon": "Segera hadir"
+    },
+    "howTo": {
+      "label": "Cara buy-in",
+      "title": "Buy-in Anda, langkah demi langkah",
+      "description": "Buy-in Paradise diproses melalui aplikasi World Series of Poker dengan Solana Pay. Tonton panduan videonya atau ikuti tujuh langkahnya.",
+      "videoTitle": "Panduan video buy-in WSOP Paradise",
+      "videoNote": "Panduan video lengkap tayang Senin, 26 Oktober.",
+      "steps": {
+        "1": "Unduh <link>aplikasi WSOP Live</link>.",
+        "2": "Buat akun. Masuk dengan Google adalah cara tercepat.",
+        "3": "Gulir ke acara terakhir di halaman, <strong>2026 WSOP Paradise</strong>.",
+        "4": "Pilih acara yang ingin Anda ikuti.",
+        "5": "Ketuk <strong>Register</strong> (kanan atas), centang <strong>acknowledge the terms</strong>, lalu <strong>Purchase ticket</strong>.",
+        "6": "Pilih <strong>Crypto Solana</strong>.",
+        "7": "Hubungkan wallet yang kompatibel seperti Phantom, atau salin alamat wallet penerima dan kirim dana secara manual."
+      },
+      "download": {
+        "label": "Dapatkan aplikasi WSOP Live",
+        "viewOn": "Lihat di",
+        "appStore": "App Store",
+        "googlePlay": "Google Play",
+        "appStoreAria": "Lihat WSOP Live di App Store (dibuka di tab baru)",
+        "googlePlayAria": "Lihat WSOP Live di Google Play (dibuka di tab baru)"
+      }
+    },
+    "whyOnchain": {
+      "label": "Mengapa buy-in secara onchain",
+      "title": "Lewati transfer bank. Buy-in di Solana.",
+      "description": "Membayar secara onchain lebih unggul daripada transfer bank atau membawa uang tunai, terutama jika Anda terbang dari luar AS.",
+      "cards": {
+        "speed": {
+          "title": "Settle dalam hitungan detik",
+          "body": "Kursi Anda terkonfirmasi saat Anda masih berada di aplikasi."
+        },
+        "fees": {
+          "title": "Pecahan sen",
+          "body": "Tanpa biaya transfer bank, tanpa biaya tambahan kartu, tanpa potongan persentase di awal."
+        },
+        "crossBorder": {
+          "title": "Tanpa biaya transfer internasional",
+          "body": "Membayar dari Lagos biayanya sama dengan membayar dari Las Vegas."
+        },
+        "availability": {
+          "title": "Kapan saja, setiap hari",
+          "body": "Tanpa jam operasional bank, tanpa akhir pekan, tanpa batas waktu."
+        },
+        "customs": {
+          "title": "Tidak ada yang perlu dideklarasikan",
+          "body": "Tak perlu membawa uang buy-in melewati bandara."
+        },
+        "security": {
+          "title": "Tanpa uang tunai di tangan",
+          "body": "Tidak ada yang bisa hilang, dan tidak ada yang bisa menjadikan Anda sasaran."
+        }
+      }
+    },
+    "showdown": {
+      "label": "The Solana Showdown",
+      "lockupAlt": "WSOP Solana Showdown, didukung oleh Phantom",
+      "chip": "Satu game · Streaming",
+      "title": "The Bahamas Invitational",
+      "description": "Satu game invitational di Baha Mar, disiarkan langsung. Sembilan kursi, dengan para pemain diumumkan sebelum tangan pertama dimainkan.",
+      "ticket": {
+        "topline": "WSOP Paradise",
+        "type": "Invitational",
+        "name": "Solana Showdown",
+        "subtitle": "Bahamas Invitational",
+        "dateLabel": "Tanggal game:",
+        "dateValue": "Sab, 12 Desember 2026",
+        "venue": "Baha Mar, Nassau",
+        "streamed": "Streaming",
+        "inviteOnly": "Hanya undangan"
+      },
+      "details": {
+        "when": {
+          "label": "Kapan",
+          "value": "Sabtu, 12 Desember 2026"
+        },
+        "where": {
+          "label": "Lokasi",
+          "value": "Baha Mar, Nassau, Bahama"
+        },
+        "format": {
+          "label": "Format",
+          "value": "Satu game invitational, disiarkan streaming"
+        }
+      },
+      "lineup": {
+        "eyebrow": "Di meja",
+        "title": "Sembilan kursi.<br></br>Segera diumumkan.",
+        "seat": "Kursi {number}",
+        "unrevealed": "Akan diumumkan"
+      },
+      "cta": {
+        "description": "Ikuti @Solana di X untuk pengumuman pemain di setiap kursi dan siaran streaming-nya.",
+        "action": "Ikuti @Solana"
+      }
     }
   },
   "sdp": {
@@ -13163,7 +13333,7 @@
     },
     "hero": {
       "eyebrow": "CosmWasm -> Solana / Anchor",
-      "headline": "Tulis ulang kontrak CosmWasm sebagai program Solana",
+      "headline": "Porting kontrak CosmWasm",
       "body": "Gunakan panduan ini saat Anda melakukan porting logika smart contract dari CosmWasm ke program Solana. Panduan ini disusun berdasarkan pekerjaan penulisan ulang yang sebenarnya: pergeseran model mental, <a href=\"/docs/core/accounts\">akun Solana</a> sebagai objek status yang dibaca dan ditulis oleh program Anda, <a href=\"/docs/core/cpi\">pola CPI</a> untuk panggilan antar-program, pengujian, <a href=\"/docs/core/programs/program-deployment\">upgrade program</a>, dan aturan keamanan khusus Solana."
     },
     "contentEditor": {
@@ -13198,7 +13368,7 @@
     },
     "hero": {
       "eyebrow": "App Chain Cosmos -> Solana",
-      "headline": "Pindahkan App Chain Cosmos ke Solana",
+      "headline": "Migrasi app chain Cosmos",
       "body": "Gunakan panduan ini saat Anda menonaktifkan chain Cosmos SDK atau CosmWasm yang sedang berjalan dan memindahkan pengguna, aset, tata kelola, serta infrastruktur produk ke Solana. Panduan ini mengikuti urutan migrasi yang sebenarnya: pengambilan keputusan, operasi penghentian, <a href=\"/docs/tokens\">arsitektur token</a>, peluncuran di Solana, <a href=\"/docs/core/programs\">migrasi program</a>, komunikasi pengguna, dan dekomisioning."
     },
     "contentEditor": {

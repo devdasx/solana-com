@@ -2438,7 +2438,7 @@
       "sha256": "f37a850c5e9ea5ddcf8372924ddcc37ec7cce391eb7398d761ffae433d421408"
     },
     "apps/docs/content/docs/ar/core/transactions/versioned-transactions.mdx": {
-      "sha256": "8d4bebd40eb5c7cc2a9e9645b21a7d2b2f41577c413b9c94363f65e0b9717d77"
+      "sha256": "4828857018f4ce166bd96701d154e0cb3654788604a882c71d069b17172e781c"
     },
     "apps/docs/content/docs/ar/defi/dvp-program/create-a-trade.mdx": {
       "sha256": "843bbeddeb8f90f79e0c5d46dbe93a87bd970c0aea7f7351ec97bd279e0acdf8"
@@ -2915,7 +2915,7 @@
       "sha256": "c9dbd0ad896f54b81a5051118d1259f9c76349e3cbbc24fd52722e23b55e0b8f"
     },
     "apps/docs/content/docs/ar/tokens/extensions/transfer-hook.mdx": {
-      "sha256": "05bd14f2aab78725e1ed2afe9a1a52d9583504eaf54bcbbebf8b56f00019e3bf"
+      "sha256": "fd4ca378da6836b6d073ac4e7c7c769df5898bfc9044f3a648dc4a286b206b0e"
     },
     "apps/docs/content/docs/ar/tokens/how-to-verify-a-token.mdx": {
       "sha256": "c4e8eab066ae819adbab6d2070c6780beec132ec930118575ce9b2f5c19a115b"
@@ -3005,7 +3005,7 @@
       "sha256": "1427bbeaa73d8a53c206a8680ca9bebabc7e1a9605db4eae0ea3ee45d5ded539"
     },
     "apps/docs/content/docs/ar/tools/index.mdx": {
-      "sha256": "5648fb209687179e47a8fad8407717be26971ede1e1575c7e30ca87a3fc22a35"
+      "sha256": "380a11bd3fd029a21863e998baa7e92683e81ef9faa7319870cd89e1a44d9903"
     },
     "apps/docs/content/docs/ar/tools/keychain/adding-signers.mdx": {
       "sha256": "7bc7b09b23bf7346e24ea52b847162a4eefe6e076ee0322b7ab013d95123ddc0"
@@ -3383,7 +3383,7 @@
       "sha256": "63df6fa45128dea5393a50dd426476e33c16c1be2e4481af23b638e8c7c99bf8"
     },
     "apps/docs/content/docs/ar/tools/meta.json": {
-      "sha256": "986efdd1a7445bfecde65a92017a93bef39b2ae591be4908245648c6a8e6fc0e"
+      "sha256": "e6e477aacd6c746c0408be0b0b4f11d4332941a8327d316277b2838761eb86a7"
     },
     "apps/docs/content/docs/ar/tools/private-channels/concepts/auth.mdx": {
       "sha256": "63098b51899a6460af23158f56cfd54f545df745d2abb07a41f43fd85a7ef340"
@@ -3474,6 +3474,9 @@
     },
     "apps/docs/content/docs/ar/tools/production-readiness.mdx": {
       "sha256": "c191b1344765c1c727ff6c36b4f18364b92f65486f752316c4777820915ac8d4"
+    },
+    "apps/docs/content/docs/ar/tools/rewards.mdx": {
+      "sha256": "efc91eaf683d7fbd483fc05b50831b224d6f2c9c8ac8c84c84196494a205ce8e"
     },
     "apps/docs/content/docs/ar/tools/solana-pay/index.mdx": {
       "sha256": "8e5be51af63f60d4269f5101521cf63063648daec58952534222bcf5188b6abc"
@@ -3845,7 +3848,7 @@
       "sha256": "8e6fcf989bec1116974a83b03c85804b4ca350a65d7b3da22ff01e8660888586"
     },
     "apps/docs/content/docs/de/core/transactions/versioned-transactions.mdx": {
-      "sha256": "c46dd35c7a6b8db7f1c0ad9ccd8e30c05978a87fccf6e0f74f677d4358f06d04"
+      "sha256": "2cb19760fd3fe5025a8edac64cdecbd95a89d0f7c8ed40fb3ab41bb2d54faae2"
     },
     "apps/docs/content/docs/de/defi/dvp-program/create-a-trade.mdx": {
       "sha256": "26b3c54051b97472db1e1175c57fbc3cf5bff34c0c7ec278ecbdc7bf3b323374"
@@ -4322,7 +4325,7 @@
       "sha256": "b234839c21e207b6e3bf7e99ac9d0ccb2befd93e8b8f34d9dd04b11006bef575"
     },
     "apps/docs/content/docs/de/tokens/extensions/transfer-hook.mdx": {
-      "sha256": "dedfdb0e49e0b02401cc0f8823233099f7b15c46993be17f3116e04f18e5279b"
+      "sha256": "a707d8238f676d8ccfa0ca20310c69dce3541778b53d8d7b9feb083e944123fd"
     },
     "apps/docs/content/docs/de/tokens/how-to-verify-a-token.mdx": {
       "sha256": "eec1e0d3a5c50a4ea791660d33bf2f906a1d7624a2d84340e4d1da71917a1a81"
@@ -4412,7 +4415,7 @@
       "sha256": "76912f86540a4200a62d1a820cca8586bca21e3bbf734a1ce06418ad916dc29f"
     },
     "apps/docs/content/docs/de/tools/index.mdx": {
-      "sha256": "97a7f05dc77c894b8b5c5dfa28737a8f04a90b77b177c1815d73f1d002d28d3f"
+      "sha256": "efbdf5f05256f90f31bdd504fbf820c9cb1378f0e9404e07c103fbd169eafb48"
     },
     "apps/docs/content/docs/de/tools/keychain/adding-signers.mdx": {
       "sha256": "ed7b30eb103e63fcbd9cdea9db4d7e8199632dca2e7d4783f34f40fa346b9f97"
@@ -4790,7 +4793,7 @@
       "sha256": "02b063a1da54022efce94f57ec634a50ce8331dd2cdfb4ff65aa0ef40b5f986e"
     },
     "apps/docs/content/docs/de/tools/meta.json": {
-      "sha256": "ebc34f7454a98c0d899e654447d789b721a3403ee2009964a9740a529199c47e"
+      "sha256": "b917acc397f064dcc3cdc8bc61373a19cc97df06a94e7b8c9215b44fa8358978"
     },
     "apps/docs/content/docs/de/tools/private-channels/concepts/auth.mdx": {
       "sha256": "b8b53ea4eb7161501b5e10bc7132c9bc033a07322c134c5c30003f940b68769f"
@@ -4881,6 +4884,9 @@
     },
     "apps/docs/content/docs/de/tools/production-readiness.mdx": {
       "sha256": "4fee11299a5852258f6b6df4075c792483378aaf14490b922fef38ae9331f20b"
+    },
+    "apps/docs/content/docs/de/tools/rewards.mdx": {
+      "sha256": "16c19afd4d8ad2f731d2996766082919a63e01fd21c746ab333a02253e787d14"
     },
     "apps/docs/content/docs/de/tools/solana-pay/index.mdx": {
       "sha256": "8f029f2d89b79758ae131bee3337a75f60788a2dc3bc8672b39c2315650b40fa"
@@ -5252,7 +5258,7 @@
       "sha256": "03a9e9c21f92b344e31836781a78bc228119c93bcfcf82eada84a5c22fd837e0"
     },
     "apps/docs/content/docs/el/core/transactions/versioned-transactions.mdx": {
-      "sha256": "406909c2e744454962ea880a7a4c438dc7edf7b942dd8eeb4d2688b284adc797"
+      "sha256": "7b75a622e69ee70f936d0890b4922eb88ff35fbaf44fd2ce4f96ea9bbf818084"
     },
     "apps/docs/content/docs/el/defi/dvp-program/create-a-trade.mdx": {
       "sha256": "2a0d412362239c68e2af9e0cb922eec0929cd22a659ce7d20a19336d70cc828e"
@@ -5729,7 +5735,7 @@
       "sha256": "b88177148bd606ad17b6734c41e986bb2302487e3bb2d19836f146e4aa05833d"
     },
     "apps/docs/content/docs/el/tokens/extensions/transfer-hook.mdx": {
-      "sha256": "bcd9738e520cdb041f163d77d0c5b317d496c4c3f365a2686f770e9d7168c0d5"
+      "sha256": "9f0cfa7eb30aa4feb3b4c0ebc0d11efa1e9c2464addcda4814782325cf9f1888"
     },
     "apps/docs/content/docs/el/tokens/how-to-verify-a-token.mdx": {
       "sha256": "70086ee7371c5e164b1adf0326ed9285feab55f8d624dea4d35f3746351d1fb4"
@@ -5819,7 +5825,7 @@
       "sha256": "cd86e429f2547d3ab95bc9a56f4317ebbe2b3d2654e27408e554a925d22ef63c"
     },
     "apps/docs/content/docs/el/tools/index.mdx": {
-      "sha256": "ab0988cb20b959b39aad5db54876262e104fc5ea140680ffb40e5b3bd3892d9a"
+      "sha256": "f525d61d2b1b89b71bedd35d1de32f1f489406c2c87b3b75334dc9f81d8f5cad"
     },
     "apps/docs/content/docs/el/tools/keychain/adding-signers.mdx": {
       "sha256": "7445ac0b7ae3c57406f0f22349a4f28107cbbcc122bdf2448787228363fb60ef"
@@ -6197,7 +6203,7 @@
       "sha256": "72c5654f9663d51319f589f90d9ffac135120e7c7df56b981b72b95f8c5251f0"
     },
     "apps/docs/content/docs/el/tools/meta.json": {
-      "sha256": "c729b6a40290c94c6f6e33e4cdc76b77594eb0afd539441b8b168a2cfcec3f01"
+      "sha256": "2c063c83f1ce7b5f559f810f3313a1cd5d71e865514d845b03416840983a15ca"
     },
     "apps/docs/content/docs/el/tools/private-channels/concepts/auth.mdx": {
       "sha256": "000fe77279a6b8af76f3a03487aa2cb57adc19d23e656a83711de11ca0c68455"
@@ -6288,6 +6294,9 @@
     },
     "apps/docs/content/docs/el/tools/production-readiness.mdx": {
       "sha256": "5da86fb3c5677972f2063b1c137135ec155d51522e75c5521bb5456c86ba370c"
+    },
+    "apps/docs/content/docs/el/tools/rewards.mdx": {
+      "sha256": "a37d4d4ed2496efbc1a1ab3873de6f9e8edc5c3734532ff21bd571b473ccae24"
     },
     "apps/docs/content/docs/el/tools/solana-pay/index.mdx": {
       "sha256": "5592eb7b90338ad2a0e0af8f80b65915c4d1c2c7bb90adb86dcd60333713a04c"
@@ -6659,7 +6668,7 @@
       "sha256": "d174e7f20a3279cf8c436dc932917a27bb788b3fce4fd1b8797604fbf4f5a26e"
     },
     "apps/docs/content/docs/en/core/transactions/versioned-transactions.mdx": {
-      "sha256": "a342bb10f49068ad3213615a365e9c608079ecf2eda7f04f8005f3542fd34157"
+      "sha256": "bac005bce0b74b4375aafc779bd36e966cd0cadfb90bff84c28990760f10e779"
     },
     "apps/docs/content/docs/en/defi/dvp-program/create-a-trade.mdx": {
       "sha256": "4d6aa7e7d3ae54f39e5a66f55a58f3d52fb38c2556a2c1ff532a5e40002a82ab"
@@ -7148,7 +7157,7 @@
       "sha256": "f7e70e30ae02a63f17b71d2590cccb1eaab5a1f7ccd11b7c21e70a025e2e500a"
     },
     "apps/docs/content/docs/en/tokens/extensions/transfer-hook.mdx": {
-      "sha256": "569ff24476d0640624aac48c15752e36fbfd0ee3c6907809417fa0b0b65eb037"
+      "sha256": "39aa09ec6fb0b269b7120dc9bc269965d0fb1f372a39a7ba968bd261ceed1af9"
     },
     "apps/docs/content/docs/en/tokens/how-to-verify-a-token.mdx": {
       "sha256": "a1c164e762f3f4207e0d44a8f539f3eee543a47570ac0a247e87d7925878cdb6"
@@ -7238,7 +7247,7 @@
       "sha256": "b21a0cecbfffacd994ef4af314ddc0a0cad92a811aff37619fcb3745b41dc3ac"
     },
     "apps/docs/content/docs/en/tools/index.mdx": {
-      "sha256": "79eb9e98d599c558a01dfa2b1105ddbe66e549a521dac96bc95288beebd3f8b8"
+      "sha256": "9b47d3e1ea90097e8ff560de58e171945394e1ddb3032eccd8a2e33e791eff27"
     },
     "apps/docs/content/docs/en/tools/keychain/adding-signers.mdx": {
       "sha256": "4940d99523ad51bacbd1c1d8c8e559026eae143b6040c3ffc2ebbb864e552df2"
@@ -7616,7 +7625,7 @@
       "sha256": "143f82852add4267759abc93899b6a4c9a327b5e85fe3df8fc435ebdbd2a947c"
     },
     "apps/docs/content/docs/en/tools/meta.json": {
-      "sha256": "b4b4a5d1bfd47369c17a13f0971679080645eb16a0c3b9c6e6048a129fe13855"
+      "sha256": "8a89678b93e07d60def387197c7433768d0945c997cf01739349ef8db465b9a7"
     },
     "apps/docs/content/docs/en/tools/private-channels.mdx": {
       "sha256": "99088cde6ae9b78ab19b3abd4bcb8d68a076e3bb8f28181ec2389651ebe2b339"
@@ -7710,6 +7719,9 @@
     },
     "apps/docs/content/docs/en/tools/production-readiness.mdx": {
       "sha256": "0cc90d6b2497c94dd187fc408c5c898d3d7bc2619aaada0e35333a7b3c83b8d7"
+    },
+    "apps/docs/content/docs/en/tools/rewards.mdx": {
+      "sha256": "cbe2f92c2f5c526ecc4654e59c99f7f0f6728e9871c5ba1a5ff3309217f20bb1"
     },
     "apps/docs/content/docs/en/tools/solana-pay/index.mdx": {
       "sha256": "2f14998c47cba114e23b840533eb5b7bf835aa8b779dfdcfabec4fa814dd704a"
@@ -8081,7 +8093,7 @@
       "sha256": "8d107257ae4642df9b75687eb05ed080e9f31cefe41c480cab95dbef1fc5cec1"
     },
     "apps/docs/content/docs/es/core/transactions/versioned-transactions.mdx": {
-      "sha256": "8ac92bef700eafa95f23b184a877ec15494e0e4e479b4cac9ab5ed636e295ff7"
+      "sha256": "abfa4a093466a9eed5ade3c82148614b542d5a3d25e8a1f301a5af2b050121fa"
     },
     "apps/docs/content/docs/es/defi/dvp-program/create-a-trade.mdx": {
       "sha256": "bbec9d6ea94a562c3291a9454d5e4576b89a9088f9bc4310efc07ded10410ee1"
@@ -8558,7 +8570,7 @@
       "sha256": "7f9212c7b0de902bd3d8311a7a0434d6a7f8505f42d63c14b94c021e9b83b4b0"
     },
     "apps/docs/content/docs/es/tokens/extensions/transfer-hook.mdx": {
-      "sha256": "c2902e844ce66a21a62f76ce47270db46e96aac164d7b7049d286bae1b263d6e"
+      "sha256": "baab9f122eb79d97664e0412bb598b424af377967bbac61afd60a96147691dcd"
     },
     "apps/docs/content/docs/es/tokens/how-to-verify-a-token.mdx": {
       "sha256": "cc458893204f307e63946ecb715948425e9ebc55b39e78990495bc19cbedba9c"
@@ -8648,7 +8660,7 @@
       "sha256": "fb2c813fb16af0ebe28762bf9ebd6537bd443d89662efc357587be6797b42bb8"
     },
     "apps/docs/content/docs/es/tools/index.mdx": {
-      "sha256": "10f8ebb5f5bc4d3b04b49f91cefcd15712271b79d4812e5f563edbe7b15555cc"
+      "sha256": "73dab5bee07077f631d7e04c7fab2adea546e70267e31899cb5de68e34187f7f"
     },
     "apps/docs/content/docs/es/tools/keychain/adding-signers.mdx": {
       "sha256": "c16e772411954d8619b05bf9b20b0ca4fb8afdc540ae621e3fc80e918423bda0"
@@ -9026,7 +9038,7 @@
       "sha256": "b42a598e4b27abbb5c75720d38e5e7cad674c89b079c8e979cfd372a1793d3fb"
     },
     "apps/docs/content/docs/es/tools/meta.json": {
-      "sha256": "d4d14bcc54edb4d62bdb7a30487aeb12f5493600698a9f4e1f37c3d7eec2bb4e"
+      "sha256": "50fcc74cb029918a2bdb686bcc4ce831cee10da1750f1f0472d4aa662cfb7f8e"
     },
     "apps/docs/content/docs/es/tools/private-channels/concepts/auth.mdx": {
       "sha256": "f9204bf13f1fc3e2e515e77d811967a56779a6abb6b340c30b47abc39bcfa963"
@@ -9117,6 +9129,9 @@
     },
     "apps/docs/content/docs/es/tools/production-readiness.mdx": {
       "sha256": "f8c43580095c0d4ed6e8cc67717ea881b0245a23e49c91979d678a39b792e5cb"
+    },
+    "apps/docs/content/docs/es/tools/rewards.mdx": {
+      "sha256": "1797cdfac614bc489ae60cf240a03b5161ff13608e480d0ae3258a863b4ac1fa"
     },
     "apps/docs/content/docs/es/tools/solana-pay/index.mdx": {
       "sha256": "479a3acb82bcaee547b50c93680e94086e38260254790674ed8dba7001fc98f4"
@@ -9488,7 +9503,7 @@
       "sha256": "6433762cf6e7329877eab98e624331ddcd25e20ffe4366db37e0969cad8ee348"
     },
     "apps/docs/content/docs/fi/core/transactions/versioned-transactions.mdx": {
-      "sha256": "31a1fd325a8e6f19b611ecba42bb60e9383dff188e6ca831ae32ffa821f8f99a"
+      "sha256": "65b44b4011edf48445bfb218d5f18bf6cdec33bb19fa8e9d32995af5b56ecbe9"
     },
     "apps/docs/content/docs/fi/defi/dvp-program/create-a-trade.mdx": {
       "sha256": "c204de1255557a84edf9b625233635d431092c7dc8052d7ecd179e4f1135b7dd"
@@ -9965,7 +9980,7 @@
       "sha256": "45184b069c9900b9b9933290a30e7e2ffd0b694f77b2e5eb0609ed1f6ba3c08c"
     },
     "apps/docs/content/docs/fi/tokens/extensions/transfer-hook.mdx": {
-      "sha256": "a698e2057388bb434e14e1c7b79e582b8c5e29c20a355779144e45da6c5a5b10"
+      "sha256": "5ad9d55c4568f38bd535f33435c9e2a6057fa7926df66bd351e7fee5c31e3604"
     },
     "apps/docs/content/docs/fi/tokens/how-to-verify-a-token.mdx": {
       "sha256": "9ae90a485d7d4f34b48ffac53da952e9bea042d2ab8aad334fc7878c3ffae2f2"
@@ -10055,7 +10070,7 @@
       "sha256": "c0585587cdf86ffdd2710ce1f4d6d50d4380a15c3b3467f665be20363c298003"
     },
     "apps/docs/content/docs/fi/tools/index.mdx": {
-      "sha256": "cec0f12aadd575aeeaa7aeeb0d0bd96fec72f495099006f66fd284018c88693a"
+      "sha256": "88d093c19b0d483c0ab8dfc3a3358076114e00701a37bee2cac08205a39310af"
     },
     "apps/docs/content/docs/fi/tools/keychain/adding-signers.mdx": {
       "sha256": "e5e1394ffbd6b78600912cc1a30de01f672c92b273e1ce1266c81f279a0a9c94"
@@ -10433,7 +10448,7 @@
       "sha256": "b707f59891fa0c85d915c7936c5eff90b30a467be5460b6525909bafcc52b10f"
     },
     "apps/docs/content/docs/fi/tools/meta.json": {
-      "sha256": "297d9f9a2a3bcf694906fc8dfc18f33290c82ca67deea8c3475121126655f0de"
+      "sha256": "adbab34157ff5ee1ffc8414abd1b53978ae1778f770ec6013f67dde85a9c092c"
     },
     "apps/docs/content/docs/fi/tools/private-channels/concepts/auth.mdx": {
       "sha256": "97077d53ca0969cb35b27db30c4a83afa6547ad264c3e161d7a5d1580cce2637"
@@ -10524,6 +10539,9 @@
     },
     "apps/docs/content/docs/fi/tools/production-readiness.mdx": {
       "sha256": "a3e0bbf7d318fc395016a109fe99a6c65c241f9a1966ada6818d6bb68f1b3ffe"
+    },
+    "apps/docs/content/docs/fi/tools/rewards.mdx": {
+      "sha256": "cab45de931126f158095564398faa417c054336989679bf6a351129d23719326"
     },
     "apps/docs/content/docs/fi/tools/solana-pay/index.mdx": {
       "sha256": "ce98b783463b28ed8f7eafe477cf9edfccb731088f04b5d0adee61e30c32d1f5"
@@ -10895,7 +10913,7 @@
       "sha256": "9486cd3305bc1de7db8edd79a4fcf8d5461fc175fa0b910bca46bfef211cb5b8"
     },
     "apps/docs/content/docs/fr/core/transactions/versioned-transactions.mdx": {
-      "sha256": "9b183883e9cd7cb1af65d122d436606efc3f8d9bbfd1190b7b7fe88214fcb647"
+      "sha256": "de5857c8031ee7409f66783ed1e6d50d2609dd1b01e89183a11e7a972c2e6566"
     },
     "apps/docs/content/docs/fr/defi/dvp-program/create-a-trade.mdx": {
       "sha256": "b0aa254d2f0a7e28f7f5c1893b51f8a4937e86719342bd6312ed45397adce3ac"
@@ -11372,7 +11390,7 @@
       "sha256": "19bd1f64f117c625a215b38442a757bfac4f37461e0eb11220b6cc826c277467"
     },
     "apps/docs/content/docs/fr/tokens/extensions/transfer-hook.mdx": {
-      "sha256": "693ce41bc44c43e3faaf17b1d5fa4324f8647d41da2d337c5fe86ea0b3c39bf1"
+      "sha256": "7a2710aee12a424c02c5315dfc8ca1fdc08607dd6fff1c253e265e1dd7c7fba5"
     },
     "apps/docs/content/docs/fr/tokens/how-to-verify-a-token.mdx": {
       "sha256": "c4bdf06ecd5381e5dba14f0510a5081dc21daa0b210a752cddc17cc6e3a41339"
@@ -11462,7 +11480,7 @@
       "sha256": "7325c2b336555cfba07eb27331f68e0b09f3580d1b03606b75502cb4a312fde3"
     },
     "apps/docs/content/docs/fr/tools/index.mdx": {
-      "sha256": "b53b0a0209ae04c6d295fc1ca5274183410a1e5bacecf1b66d170d60938cb549"
+      "sha256": "68778f6e7439012b41c015b5cca92332daa65dbc3de347e738fd7c305ed511a4"
     },
     "apps/docs/content/docs/fr/tools/keychain/adding-signers.mdx": {
       "sha256": "13303575a20e632355f462ee36e88be2834446fae724a0a15d33a45869b55b87"
@@ -11840,7 +11858,7 @@
       "sha256": "860cba0e87db0982336b06580dd4acd2e26a10bb8f87df76b7fb815288a6db0a"
     },
     "apps/docs/content/docs/fr/tools/meta.json": {
-      "sha256": "cd76a8ee417c80ee0d815c7bd2bd57c5903f70e00e22d4ee96e7af525ba72a6e"
+      "sha256": "43544579b3c61fd47d25339858ea29515ffcbe91d6d7785ccbb6f7650cfd0f69"
     },
     "apps/docs/content/docs/fr/tools/private-channels/concepts/auth.mdx": {
       "sha256": "0010aa0f99af273f1d1b88bb92c5aadba684bf7b76c34f329ff74a2c580fb22e"
@@ -11931,6 +11949,9 @@
     },
     "apps/docs/content/docs/fr/tools/production-readiness.mdx": {
       "sha256": "772442c3f30b1b34940c4515b0adc62230faa1fbfcab0c744917c878d4dcb594"
+    },
+    "apps/docs/content/docs/fr/tools/rewards.mdx": {
+      "sha256": "3152c9a3ad59861d538b7a5962ed71a9a2f1863b97d0b7e7f477149ef63e6cbb"
     },
     "apps/docs/content/docs/fr/tools/solana-pay/index.mdx": {
       "sha256": "1bc501eccafeca3122f4467b5e988151e68296a75bcd6c612827ec52ada9c08a"
@@ -12302,7 +12323,7 @@
       "sha256": "03ce2642ee3389d605a467aa2a70c28450dac7381333dc879ab70192e2930e34"
     },
     "apps/docs/content/docs/id/core/transactions/versioned-transactions.mdx": {
-      "sha256": "dd38c03503ea55a8a5f52cb7a013a94517e3f1696befb1b559f766b7107cc67b"
+      "sha256": "676ea7db43d50cc810b970a4818cb0e44101996db38998bf2b48aec4db00e571"
     },
     "apps/docs/content/docs/id/defi/dvp-program/create-a-trade.mdx": {
       "sha256": "bf9d2e12b9bba4447807600245a217426a27a777d294653d26a768c743c3cc40"
@@ -12779,7 +12800,7 @@
       "sha256": "2b8ffb456451f66c824f4700b0ae9179f78dc702847e0f0bddacea146a77fcd8"
     },
     "apps/docs/content/docs/id/tokens/extensions/transfer-hook.mdx": {
-      "sha256": "0de118431a290131967e32fd860716e0cb69c1471da11319a13ce7c3f219f3dc"
+      "sha256": "3b6ba936c147f068ffeb4ca24abbc228acf63a66ec8f2efabad64bc7d540d19f"
     },
     "apps/docs/content/docs/id/tokens/how-to-verify-a-token.mdx": {
       "sha256": "6761bd0344b90161e0cb21b054e20b24e251be7342ff4c192672d0e0e23b50ae"
@@ -12869,7 +12890,7 @@
       "sha256": "80490a18d3983e63361fea2e28840ec48d4dd2bac871da704bdffd1321c5d79b"
     },
     "apps/docs/content/docs/id/tools/index.mdx": {
-      "sha256": "6703949080c754f04a249c21eb1c1f6337d9c0c75ca65ea3c6d99d3138566244"
+      "sha256": "054bf9283b90dc5392a5f85b18c237f743212a23f5192fb207649e42326cc0a2"
     },
     "apps/docs/content/docs/id/tools/keychain/adding-signers.mdx": {
       "sha256": "4f709aec4f7bcfd01293cd5698b1576fee13b604d4f7ccb518081ffa61837fb4"
@@ -13247,7 +13268,7 @@
       "sha256": "257912b257c2727118f53a239b054798a66ed1a91848cdd54ad93b0391d6a1b9"
     },
     "apps/docs/content/docs/id/tools/meta.json": {
-      "sha256": "ab427bc8c88e837b595ecee60e449cb8467f5ba72231f982413f840e196e3c9b"
+      "sha256": "94864ed5a8dc50062edf5ee5cfdf2fc921103dac3f47f9cca079823823d85935"
     },
     "apps/docs/content/docs/id/tools/private-channels/concepts/auth.mdx": {
       "sha256": "9100e903460d6036e6c9c4a2e22e59a33e2260b97308c85da5859343f2e3879d"
@@ -13338,6 +13359,9 @@
     },
     "apps/docs/content/docs/id/tools/production-readiness.mdx": {
       "sha256": "783fd847eed354146edd85840a814682d52a2d180ca3a4965aa9c9536b42fce5"
+    },
+    "apps/docs/content/docs/id/tools/rewards.mdx": {
+      "sha256": "803ed8ac6b8454ee670bd00f49704124e23f52dace3c9ebc4fbc5a95994a55ad"
     },
     "apps/docs/content/docs/id/tools/solana-pay/index.mdx": {
       "sha256": "349a4c40731a3b8796795b943e4eb156c27007e2f2171d883b56d902d0fe8037"
@@ -13709,7 +13733,7 @@
       "sha256": "4d3311a7708bd2ab345af4fec701f9f898423b64d87b749c5952904217ed9b6c"
     },
     "apps/docs/content/docs/it/core/transactions/versioned-transactions.mdx": {
-      "sha256": "67ae40af17a2b9ebc4febd7a3782dfe953e1f76f2ab9e67420168e2141d89593"
+      "sha256": "dcef4fea77a6abf85b1f84308d8df4160e073316924e937b565217772031b70e"
     },
     "apps/docs/content/docs/it/defi/dvp-program/create-a-trade.mdx": {
       "sha256": "acf5eb780a7538c5bccccb82a8c248b1df632292adeb231ccaaf30278043c90d"
@@ -14186,7 +14210,7 @@
       "sha256": "0bb61667db6696a4e2364640fc77bb45c051e484d2551c067a495dac22a54a31"
     },
     "apps/docs/content/docs/it/tokens/extensions/transfer-hook.mdx": {
-      "sha256": "411f2bf553336454bd183a09c7bec3856aabc3b42727afad721e2f2e2b145b5a"
+      "sha256": "a98cf46007be8e34f28c7f03e25d9d1dae47acea1333f65c09d5ed04565f8e32"
     },
     "apps/docs/content/docs/it/tokens/how-to-verify-a-token.mdx": {
       "sha256": "1b3521c01877dc6189b5314d42111148f69ef3477a32ae24419b782f4e4eecfa"
@@ -14276,7 +14300,7 @@
       "sha256": "f7ccecf2a49387add7bf86293338b4e5750b06fdfec553fab6a6db98746b3383"
     },
     "apps/docs/content/docs/it/tools/index.mdx": {
-      "sha256": "dfeefdf0e9a2479a06f7f8f697fe634bcf74c112d146315ce8bfa31e62bd3d50"
+      "sha256": "77506ce2479524b1e317048c7ae2efb544aa01cb90fd8cc52656c68624261c87"
     },
     "apps/docs/content/docs/it/tools/keychain/adding-signers.mdx": {
       "sha256": "21ec53c7171b39b356574a969f3cce0f0855f47f1f4a92a0685d5694cb997a36"
@@ -14654,7 +14678,7 @@
       "sha256": "c2207622a6a037e231b3c6b43b9a5b1fad1ecfd865c3b9def61c8c13d898e580"
     },
     "apps/docs/content/docs/it/tools/meta.json": {
-      "sha256": "58b5deeb49b3809d00578fd3299d07ba709c2294813d451b54edfe24aeb768e4"
+      "sha256": "edda6c5ba76c6c24815549584836fb04665a9897ed6b8be7e80c285d1296df00"
     },
     "apps/docs/content/docs/it/tools/private-channels/concepts/auth.mdx": {
       "sha256": "b71dafd89edcf34a997519d7e154e92ab67102cd7b4f4baa71e095c90ab1664e"
@@ -14745,6 +14769,9 @@
     },
     "apps/docs/content/docs/it/tools/production-readiness.mdx": {
       "sha256": "3a3e446c0c163c170a40ecb199c7308f128556f7473d18164cb329fd69ad4b4a"
+    },
+    "apps/docs/content/docs/it/tools/rewards.mdx": {
+      "sha256": "9b04444dbcf6c6f85afcd4bd2779fa460c39b6957cba983b79c94da3c6d9832b"
     },
     "apps/docs/content/docs/it/tools/solana-pay/index.mdx": {
       "sha256": "44bf5f85aa84dd65f617faa2350b0141057b9b2f6c9bd01567b6a7ce3179f0d9"
@@ -15116,7 +15143,7 @@
       "sha256": "798e4cefefe7e9f1a433e86a125af37781f68c0176953dc15567acc76d10d77b"
     },
     "apps/docs/content/docs/ja/core/transactions/versioned-transactions.mdx": {
-      "sha256": "98746f1c20f6f562613882976c8cfc8f1bf53e5896b4350ca239cb0f3ec1c3b8"
+      "sha256": "38bf866bd9b54814a06452077f2c26074ddd08c7a0f022ce0575ecad3cf8be0e"
     },
     "apps/docs/content/docs/ja/defi/dvp-program/create-a-trade.mdx": {
       "sha256": "c4426bd1818a0a6d01e780381a8fcf8f391efbc8fc0b4299f741e73fae394172"
@@ -15593,7 +15620,7 @@
       "sha256": "82378ae0a04a5d69e408fa613746ea939c6ab8b294e0fd41b3f8b9d6757f49e1"
     },
     "apps/docs/content/docs/ja/tokens/extensions/transfer-hook.mdx": {
-      "sha256": "1df364aa5a8c0b25073334882a543e807dacabeb428d19369d54cb26f644f6b6"
+      "sha256": "747d7993d08c526240a72e4dd6c319174ae27add82d46890e745a3c23a3c745c"
     },
     "apps/docs/content/docs/ja/tokens/how-to-verify-a-token.mdx": {
       "sha256": "cfd67bd617a3b6d1705bd848938313b1f69cc65b9d10ea9c397203c01a642588"
@@ -15683,7 +15710,7 @@
       "sha256": "e83b58e8048abf14a31a7ef6531ab84df14d3ff32b0f6f29da7301b29bd786dd"
     },
     "apps/docs/content/docs/ja/tools/index.mdx": {
-      "sha256": "72c22d3e196d8eeab334fd3f740f72a3026eb723b20b59d727aa8f78d15cbc53"
+      "sha256": "29f99d6d9f13f8f630d79658c73a8e3b31a0f98a0f7c693033946809e7d63367"
     },
     "apps/docs/content/docs/ja/tools/keychain/adding-signers.mdx": {
       "sha256": "153a6547b46c107b7192c6845d2dc05c9e7b464ca9cb6b382b12fb1d2a9d1002"
@@ -16061,7 +16088,7 @@
       "sha256": "da90dd9626f90879b40530239079e175d84b2c67aca1b8c8c205ad500d399e0a"
     },
     "apps/docs/content/docs/ja/tools/meta.json": {
-      "sha256": "6dac90ac8da1185ca6a647082476d65bf9a78a9152864a6485a553eda5757b20"
+      "sha256": "c7442ec440c33ff9ca6dfaaa1cd9c54d826deb6459e97efbfd72e02f0b7b83da"
     },
     "apps/docs/content/docs/ja/tools/private-channels/concepts/auth.mdx": {
       "sha256": "b1ac28a3c208b7bbd5c23af850f9560aed1a692d90ddc90261ce2ea46b52ef90"
@@ -16152,6 +16179,9 @@
     },
     "apps/docs/content/docs/ja/tools/production-readiness.mdx": {
       "sha256": "77cdc6eef7e77128e4e2c0452ea86205190f1f0dc1fa21e96099d2c50e3c8e5f"
+    },
+    "apps/docs/content/docs/ja/tools/rewards.mdx": {
+      "sha256": "137061c484a30e34241368c78ace14645220f1366df5f1645b888efb2e9154bb"
     },
     "apps/docs/content/docs/ja/tools/solana-pay/index.mdx": {
       "sha256": "1e4c5e7256d1616211bf33682942dda332a9bcf233e73da626ba1d5b86282251"
@@ -16523,7 +16553,7 @@
       "sha256": "042a0bccad9f52117bf72771f1e89a22ac080e3e15158f62fe35dee84c840cd8"
     },
     "apps/docs/content/docs/ko/core/transactions/versioned-transactions.mdx": {
-      "sha256": "540ddb2d19bca9e744ca42f354d56187b980415187c67dc42c71efff40488cd9"
+      "sha256": "c0cf2c2eaf4a93dfd0fc656612a75fc0cafd8c5d7fbd485bfda39fdd80cc1488"
     },
     "apps/docs/content/docs/ko/defi/dvp-program/create-a-trade.mdx": {
       "sha256": "b92923dd1628e1f68c34fa87fdc4e44e4bb96d9d76dde7727d2b0f39f6765f06"
@@ -17000,7 +17030,7 @@
       "sha256": "1e451093839369212f440427e477d256dcaf7585707587b4baec5f38d9bca405"
     },
     "apps/docs/content/docs/ko/tokens/extensions/transfer-hook.mdx": {
-      "sha256": "f63f158e500fddc3bd5676533145e85b5327ed16c4a9b6d884d6f3ab30a02f93"
+      "sha256": "eba3532ffa680cae119d8477d7c790aa3a3933e7c7377d764498f1f56916964d"
     },
     "apps/docs/content/docs/ko/tokens/how-to-verify-a-token.mdx": {
       "sha256": "57455c2f27c5e51be6fe654749d3bd8749e582a2947caa2860dc6c78bdb7d0c9"
@@ -17090,7 +17120,7 @@
       "sha256": "8f203ae2d536c66118cd6995b87de75db741e5ac0ff5aef0f521bc73358c065e"
     },
     "apps/docs/content/docs/ko/tools/index.mdx": {
-      "sha256": "9d52a28d840b8dc08c613ed0a4bde915dcd0e3f0f6f84f34a25509014dd85b8c"
+      "sha256": "8b055cc106d7948236e21013e328e2cd4514c6a487c60c3669087fff53ecf659"
     },
     "apps/docs/content/docs/ko/tools/keychain/adding-signers.mdx": {
       "sha256": "2598e52f94e74c4722d8e0b514d496c27fbf0acbd1b1d761638d8c961d45eb39"
@@ -17468,7 +17498,7 @@
       "sha256": "d88d2dd1a775b06e4cd0bc8015c84e3b8c56ab051d51e954b25be586989c8e12"
     },
     "apps/docs/content/docs/ko/tools/meta.json": {
-      "sha256": "3b91ef2118b2af3729c6f99ff4d911178f9fd64d82eeab9ab487cc67c7086032"
+      "sha256": "08475c229f8c935e73ae9c74cdf24081d775183880f2f2780b9b8fb02954e3d3"
     },
     "apps/docs/content/docs/ko/tools/private-channels/concepts/auth.mdx": {
       "sha256": "3e197af20b5671bee51751550e2741fbfaa55e36aeae13c77dd960bbdfbd46c2"
@@ -17559,6 +17589,9 @@
     },
     "apps/docs/content/docs/ko/tools/production-readiness.mdx": {
       "sha256": "dbddcce44cfbefb7798b6b32d47bc62d84a1e1b8c1fb09c7c50b193713cd9f61"
+    },
+    "apps/docs/content/docs/ko/tools/rewards.mdx": {
+      "sha256": "0d2a0cddbb16e34b5d342e2afedd2d2438321c01ed7d0309fecc74fc87bb5f3d"
     },
     "apps/docs/content/docs/ko/tools/solana-pay/index.mdx": {
       "sha256": "255886d48b65e29825401ce79a17da7709b15bd390d99ac372a2241d8e2ec89b"
@@ -17930,7 +17963,7 @@
       "sha256": "3f034e167c52d57bdadc95b274c87d2d20b244e97b9f7d0105fc179178291c54"
     },
     "apps/docs/content/docs/nl/core/transactions/versioned-transactions.mdx": {
-      "sha256": "fd870f48874ebf8742d7eafd55e51f09a6d7385a7f4612767673f432fce3d161"
+      "sha256": "31eb563fef3a99da64f34db7d995ec45c907cc116e35ba8a31b5979ceb69d154"
     },
     "apps/docs/content/docs/nl/defi/dvp-program/create-a-trade.mdx": {
       "sha256": "dc2c7a71c8358fa78ca2eb0f06febdc134ec30a68797b8635d0f29077fb87aff"
@@ -18407,7 +18440,7 @@
       "sha256": "4fd7954205c6325cc4b8e77f96ab807e1b9dff25a66f93f59fc4390603f0eef4"
     },
     "apps/docs/content/docs/nl/tokens/extensions/transfer-hook.mdx": {
-      "sha256": "bf7fcf1d32e67c364213bbbe371db0ffd50050765721782ce984225f2bc975e9"
+      "sha256": "47b7775cfd484f79056f978fba440256a328543ec005e256bb4e6aa22eed6d24"
     },
     "apps/docs/content/docs/nl/tokens/how-to-verify-a-token.mdx": {
       "sha256": "0208e2c3ccffc0c380b3011d2ee3450b0f82ad791b5f34125d61a2aacdb1bc2a"
@@ -18497,7 +18530,7 @@
       "sha256": "881e959e8d0ee2a59e62fe1c3d468c9754ff5faab000c26e2608a682d0520f3b"
     },
     "apps/docs/content/docs/nl/tools/index.mdx": {
-      "sha256": "8c6273f4bf1eed1bee083cde1b1012807ba292deeffdf58564b346b172d61b4d"
+      "sha256": "aa91953f39268c599303f1590697964248e35403280ebfae8c6bad5063ec6f0c"
     },
     "apps/docs/content/docs/nl/tools/keychain/adding-signers.mdx": {
       "sha256": "1539c56b2bd6fa1023e453f1d27e6f9182908a1a9ad700d10e94c9a372da7bad"
@@ -18875,7 +18908,7 @@
       "sha256": "58fbccaa46eea13bfe4cdfa43f60dedd35a4986a05ef3ccab3f141dd0f47f969"
     },
     "apps/docs/content/docs/nl/tools/meta.json": {
-      "sha256": "9fc3e93da78895e450bf8dddd76f5db829746fe74e0fdbea65aa03c48d52802b"
+      "sha256": "365b8d3e02188ed2a10d166857234c54c119599fa909da0c0ad200c9b1dea249"
     },
     "apps/docs/content/docs/nl/tools/private-channels/concepts/auth.mdx": {
       "sha256": "ee7dd49299f262f4d00e76faf2b2d145a152f52b69a5639d96e0411a3337eade"
@@ -18966,6 +18999,9 @@
     },
     "apps/docs/content/docs/nl/tools/production-readiness.mdx": {
       "sha256": "08676c47d5d34e06ad9c355be016dfb54a8c08002e02c075703edb5015c09f45"
+    },
+    "apps/docs/content/docs/nl/tools/rewards.mdx": {
+      "sha256": "24750592c55118c479c9a04c8a1d548d38f4ae9865653b3f4e2ee51e263b6a27"
     },
     "apps/docs/content/docs/nl/tools/solana-pay/index.mdx": {
       "sha256": "f4e09c2e78a6b82895004856afce2f18f08e4c43378d99aafa87fe0600afb63c"
@@ -19337,7 +19373,7 @@
       "sha256": "b8b0d6754a20bfaabc23f23b28aa9d45e6d9da9f531b446d9c73a40d9dc09aec"
     },
     "apps/docs/content/docs/pl/core/transactions/versioned-transactions.mdx": {
-      "sha256": "93e09cc1150136d9dea335e40428ca02b2f2fe026942d195801c27a2bdba9e4c"
+      "sha256": "800aa1e329a344e15126a349831a669b0cde2768c33e167e4009aa23457231c2"
     },
     "apps/docs/content/docs/pl/defi/dvp-program/create-a-trade.mdx": {
       "sha256": "d91fc58d176fea05e57e0b415ca059ccb95ad70316f0ac4b351c01e3777a171a"
@@ -19814,7 +19850,7 @@
       "sha256": "9697e4fee47624c150d8d0583e1cc3d50a6514eea726d0f27745a7bd838bcc8b"
     },
     "apps/docs/content/docs/pl/tokens/extensions/transfer-hook.mdx": {
-      "sha256": "ed304a4574e750599ec8616c188b6c7528af4bba82fdfc8cfdaa30b700284aec"
+      "sha256": "740fca139576a20065cf6e84ceccfdc5d835aa641d5a717aba3ae110fb51f206"
     },
     "apps/docs/content/docs/pl/tokens/how-to-verify-a-token.mdx": {
       "sha256": "cec960c5ffe84e2bdc637b5332fcc835dc871242e62b32e063044028c84061de"
@@ -19904,7 +19940,7 @@
       "sha256": "76ec4344600cbbde849937f6196798d076a3d15fd7d02c04b821a7220a926187"
     },
     "apps/docs/content/docs/pl/tools/index.mdx": {
-      "sha256": "2d93d399a2b1a05bf550b500c45d5316cc88dd71aa42f6949c05043c30400207"
+      "sha256": "b8495e764c4b47bfdc36d3222b26c320794725aca58c4d1fc114a22cd6cd11ac"
     },
     "apps/docs/content/docs/pl/tools/keychain/adding-signers.mdx": {
       "sha256": "08fc2c78eb62f2cb67efd55ee8ae544de82cc49e921d2414b3209d2c3b5d0bc7"
@@ -20282,7 +20318,7 @@
       "sha256": "89bcac2a57c3fc2f13379d606321abf1b38e7a3d53c9d622f2cbf348effc8020"
     },
     "apps/docs/content/docs/pl/tools/meta.json": {
-      "sha256": "f83abffbed53ba97fbfd3b10976c9e16edcf3aac926782f0057f1d02d7af4499"
+      "sha256": "321ca0ba239147c8982df702dafcb9285f2954e9b0a5199333eba0437cf580f1"
     },
     "apps/docs/content/docs/pl/tools/private-channels/concepts/auth.mdx": {
       "sha256": "73db04414227abb516d57982fab903528a3e73e39c02338a046d9b1682ec29c5"
@@ -20373,6 +20409,9 @@
     },
     "apps/docs/content/docs/pl/tools/production-readiness.mdx": {
       "sha256": "951040c3135340a1b2bd9abb795efd76842fe911f3c61dbf164404af0a6d598e"
+    },
+    "apps/docs/content/docs/pl/tools/rewards.mdx": {
+      "sha256": "5b73153a42de6e8d58b3ec9d8398b66ffc3a9707819751c457fb8d20caa7bec2"
     },
     "apps/docs/content/docs/pl/tools/solana-pay/index.mdx": {
       "sha256": "30333053def7ebf8a50c9459a0b98e26345bc7bc2aec5b842024ac39ca786763"
@@ -20744,7 +20783,7 @@
       "sha256": "fac9eff1d10d8824366f79cafb6939fd74414c34e1bb01a55a0b1ab38720b8b8"
     },
     "apps/docs/content/docs/pt/core/transactions/versioned-transactions.mdx": {
-      "sha256": "a4e2720d4b893e84787dae3b55966ad791f222406e81f846dc49bbf667cc1e97"
+      "sha256": "3946fb6f03d41ee8c24ba1af45bf3b326ebd0d71cea043e8f2b4b02927361b6d"
     },
     "apps/docs/content/docs/pt/defi/dvp-program/create-a-trade.mdx": {
       "sha256": "4c0f46214e2aa9414cf84306e651942cfcc8e977d8a9bf6f9919f38f1031ce34"
@@ -21221,7 +21260,7 @@
       "sha256": "3c45094af8b7600ebcea3f84553592b26e7ffd2c1854d703d94adb5fe296a7ef"
     },
     "apps/docs/content/docs/pt/tokens/extensions/transfer-hook.mdx": {
-      "sha256": "45ecdc83cf20d6be80c6370afe772faf4bca9cc9bc6315afceba2a7b0fff01a9"
+      "sha256": "b4d0fa6da0b6bf089c79138579dfe14cc5fb771cd9b5bbf7c5b7ee7c07ba740e"
     },
     "apps/docs/content/docs/pt/tokens/how-to-verify-a-token.mdx": {
       "sha256": "78e95728075e348d23725f3dc923393e61767bca545ea02e5b79299d65300156"
@@ -21311,7 +21350,7 @@
       "sha256": "44b1705d649f2f5cbf6b539b177b2e2b0018bbd98b1a6f0641d3687cecb88d80"
     },
     "apps/docs/content/docs/pt/tools/index.mdx": {
-      "sha256": "877ba488835af6f41cfef4558dccf8f0d7ae4aa1dad4b5ba37a63c0461722df0"
+      "sha256": "d3debfac3865f790d8b9b75c37a464ffb1657adc9f6cd9d14599bc23de4f3c43"
     },
     "apps/docs/content/docs/pt/tools/keychain/adding-signers.mdx": {
       "sha256": "71a233c9fc97d2e9289b9796c803cfe1b49f476a8c8e5cc0a05808ddbd8d85e5"
@@ -21689,7 +21728,7 @@
       "sha256": "258979f1536c259a5537b986aed49649b16db09faf2d417e3351e2e90c83355c"
     },
     "apps/docs/content/docs/pt/tools/meta.json": {
-      "sha256": "d4d14bcc54edb4d62bdb7a30487aeb12f5493600698a9f4e1f37c3d7eec2bb4e"
+      "sha256": "50fcc74cb029918a2bdb686bcc4ce831cee10da1750f1f0472d4aa662cfb7f8e"
     },
     "apps/docs/content/docs/pt/tools/private-channels/concepts/auth.mdx": {
       "sha256": "bd63e1d3316d0101a9f9c18e2a93c673d9659390759c5d25b41f830337478268"
@@ -21780,6 +21819,9 @@
     },
     "apps/docs/content/docs/pt/tools/production-readiness.mdx": {
       "sha256": "29a3e8855801b5bfa69e05981cff2f2298aca7a948c7076d7b0484a75a26389f"
+    },
+    "apps/docs/content/docs/pt/tools/rewards.mdx": {
+      "sha256": "d3d604b219468ddec2d89d37d5907157fe06bc59db097d91ba636848362897bd"
     },
     "apps/docs/content/docs/pt/tools/solana-pay/index.mdx": {
       "sha256": "cf626fa87c607e06c1f013a57e18e2d6030c644d8dd140886ca2e45cb33e3016"
@@ -22151,7 +22193,7 @@
       "sha256": "5b9669afd98a76732a3b311b1b6aaa0c973ce76dad76884a21630c6b0057a578"
     },
     "apps/docs/content/docs/ru/core/transactions/versioned-transactions.mdx": {
-      "sha256": "dc88cf015e9a1dba6f55851d9687c60ddcf8e0cf224fe9d08f8eac22428b35ad"
+      "sha256": "bf887102c2bb6de16d8dd40326d59cf0d37d7d80ae2a35aadbe592e146cb510b"
     },
     "apps/docs/content/docs/ru/defi/dvp-program/create-a-trade.mdx": {
       "sha256": "adf12cd2d83a0eeb5861be4997f9369d2da65495ff4355d12e5b4a0e4898b040"
@@ -22628,7 +22670,7 @@
       "sha256": "6f8cee95832f0b861b5189c4a8f06678ac7109e762c33bc21b205de303297f94"
     },
     "apps/docs/content/docs/ru/tokens/extensions/transfer-hook.mdx": {
-      "sha256": "c1919bc281b7f57ded714594f68d6a36cca3af2dc0239e22dd0a323ef7785b30"
+      "sha256": "e536389fdb322132ce8833fdde9e188e653084267c2e4f9305f43c546a96a081"
     },
     "apps/docs/content/docs/ru/tokens/how-to-verify-a-token.mdx": {
       "sha256": "02350460169777a7bc7ea6624336bfd57b2b016cd15db41bf0d23c0036e340b3"
@@ -22718,7 +22760,7 @@
       "sha256": "6f2e4c4ea95407d87cb6de3617915798677ab4dc6a7a78ddfb58da1c9896e321"
     },
     "apps/docs/content/docs/ru/tools/index.mdx": {
-      "sha256": "c2a108f3580a2eb837e0699b977b20dd1320f2143ce4674b089285823a4d6d6a"
+      "sha256": "f2bfc95303846756d6e372992cea94cbf08ddbf7eaa20d9a0971bb6c78105820"
     },
     "apps/docs/content/docs/ru/tools/keychain/adding-signers.mdx": {
       "sha256": "25700aaff487566be448b3a8f93ead9371bcdf7a49212dda9d132a2e14a97d14"
@@ -23096,7 +23138,7 @@
       "sha256": "f220f8dac591d9e3754b488b18d71bbae076aa02ec05a73c9123777157d91326"
     },
     "apps/docs/content/docs/ru/tools/meta.json": {
-      "sha256": "477f2e77dfa18569354b50a94db5e0247456b14f1f38266e6b7e3c0c54bedc97"
+      "sha256": "8990ae20e77489d96fe0f69b6d64d5c7c480846a0b1a94e27b9f4c84b6fa700b"
     },
     "apps/docs/content/docs/ru/tools/private-channels/concepts/auth.mdx": {
       "sha256": "2d6b9f8185993a5429104d7cc1082f754ee9bac274d6fb1e0867ee8c8f941670"
@@ -23187,6 +23229,9 @@
     },
     "apps/docs/content/docs/ru/tools/production-readiness.mdx": {
       "sha256": "649fa9994a4ca6f23906352762a9197c7b6a61b2686cf417547a7e78786d668d"
+    },
+    "apps/docs/content/docs/ru/tools/rewards.mdx": {
+      "sha256": "bf110b87c35ff9ab8b6a5480682509dfd07ccc0b40156845febffe13e8f6a69b"
     },
     "apps/docs/content/docs/ru/tools/solana-pay/index.mdx": {
       "sha256": "79c18b7010c4e5f54b71ddf36ba4ec367c13fe41cbe296c3b66cead06f2c2453"
@@ -23558,7 +23603,7 @@
       "sha256": "c89367683b93ba0a3be11dd8e6677f335c0256a511eafd63ba458d1494e82d1a"
     },
     "apps/docs/content/docs/tr/core/transactions/versioned-transactions.mdx": {
-      "sha256": "b55b785adfe0cff9bbccf54fc69b54efedb4837656672dcb81a10013cbc20364"
+      "sha256": "ecb9ad29a68dd792c9aac22606e9121ebd6abc09b60ae91b84899d77bac2e1fc"
     },
     "apps/docs/content/docs/tr/defi/dvp-program/create-a-trade.mdx": {
       "sha256": "0cdd9fc270d3bfcbac86937e25adcc2bda491ebcbecf19180e6b56fa1bece9bb"
@@ -24035,7 +24080,7 @@
       "sha256": "345131b7c88f3cae6d7f908354f4075500f6a0fdbe5fcc5dcd7428164843b569"
     },
     "apps/docs/content/docs/tr/tokens/extensions/transfer-hook.mdx": {
-      "sha256": "3b40744e3db02f4a69f83131a8e5ab3321a796604eb054eec55846914321a7d5"
+      "sha256": "6896caf2cc9eff0839ebcbd4a10776e71ce2d74560126b209a9200898a0d0a99"
     },
     "apps/docs/content/docs/tr/tokens/how-to-verify-a-token.mdx": {
       "sha256": "efccf23f9280ae57eb5ba38acf5ff1bab7d851a23936f7238bf87c24f1995e7f"
@@ -24125,7 +24170,7 @@
       "sha256": "7829fa5bd6620cf22cbeeec35d121c5f5656aa9e28f9114951c8aa350b6d95a1"
     },
     "apps/docs/content/docs/tr/tools/index.mdx": {
-      "sha256": "bf90a7a5237ec7b7c8c7794419fb800b0fca0399f68c233b50a77821c0c629ba"
+      "sha256": "017d2cf19536b941fa658683dcbb6da4a9d93dc66ea6a5797194359ef0d2a900"
     },
     "apps/docs/content/docs/tr/tools/keychain/adding-signers.mdx": {
       "sha256": "f4064c62930eb37509684b1f439f4f2d44d62da16bf4d87e93136c5876472c27"
@@ -24503,7 +24548,7 @@
       "sha256": "f08b2e04a6de70e60f2dc0bb6b69af8ce1280d011ce0aa9806230b67ac91e1c8"
     },
     "apps/docs/content/docs/tr/tools/meta.json": {
-      "sha256": "1e518f74b3304fd6548722632840b773bdbd7c1e21396d052c722074469a2a08"
+      "sha256": "eeade4005372e6b263c2202dcc2d1c92d260f7fde61088132b1025d10ded4e08"
     },
     "apps/docs/content/docs/tr/tools/private-channels/concepts/auth.mdx": {
       "sha256": "5f40a889088b66223044c6bfdaf68dba59a83d365a97e64be2db98a047c58de9"
@@ -24594,6 +24639,9 @@
     },
     "apps/docs/content/docs/tr/tools/production-readiness.mdx": {
       "sha256": "dfe17e39602282e406c6d916b02339aa623f9c6c1d2d096ec1d6fbe135fa6727"
+    },
+    "apps/docs/content/docs/tr/tools/rewards.mdx": {
+      "sha256": "215b4af79eb9a69d10c9be2f9edb58015a6a2bce63d8979a149110f6f9ad24dc"
     },
     "apps/docs/content/docs/tr/tools/solana-pay/index.mdx": {
       "sha256": "f2580d1239b3b0a3b0c8e02f8154d3422c9864e56fb8fc3bf050cc0500d50eb4"
@@ -24965,7 +25013,7 @@
       "sha256": "15e8948841425f38cc279e8e17752f897b0e200aeab739b40d2bcf0676983df5"
     },
     "apps/docs/content/docs/uk/core/transactions/versioned-transactions.mdx": {
-      "sha256": "3c1da2406725fc553c2ee98e7a9a540d2197a2fb8d80abd68ec555d003ae2ce9"
+      "sha256": "329e95a20ff1cbb0f1909fd79f05d10b3a214089f4668b350e48a32f10d05151"
     },
     "apps/docs/content/docs/uk/defi/dvp-program/create-a-trade.mdx": {
       "sha256": "0cba54c5fd7ac316f2e0bea7d3410819444d491498596fed963ec85e02e0ed4d"
@@ -25442,7 +25490,7 @@
       "sha256": "4a8b3656f49ece540b8093a3dfea5755b625992283e8700b89c3d19c0be434f9"
     },
     "apps/docs/content/docs/uk/tokens/extensions/transfer-hook.mdx": {
-      "sha256": "3e47d07440da70f16b870d70d69a58f5485a21cb124a3742ea4c936ef6a9cb64"
+      "sha256": "14e71fe6e5f2434a7d6737c27cea096e1d6467606acb0b25cf2dc853636d1ef5"
     },
     "apps/docs/content/docs/uk/tokens/how-to-verify-a-token.mdx": {
       "sha256": "d602cc0963e8fb6efff9d3245411809d51d4aafde5d70eae622d45765e2c7a83"
@@ -25532,7 +25580,7 @@
       "sha256": "5d999519d3f7cc4f1089e3c1fda23644f4d5b217ff5a49d7502cb393baf8d597"
     },
     "apps/docs/content/docs/uk/tools/index.mdx": {
-      "sha256": "b265fc30f9e2339168432103df083c0db4c9b36939fc1832c037f7523c2670f8"
+      "sha256": "8b11402fd91b2375285e4a8a9a8ed9d4afb86aeb45949a218baa7b7cd503952a"
     },
     "apps/docs/content/docs/uk/tools/keychain/adding-signers.mdx": {
       "sha256": "50b577017b31fe71af4afdc3a61863d2d22bccc0a08383ce8dc8b27084f7a71d"
@@ -25910,7 +25958,7 @@
       "sha256": "341eea14bbfa2f7549a46e26f4e845abeb6f4421c4d33d739e2972f1da3326ae"
     },
     "apps/docs/content/docs/uk/tools/meta.json": {
-      "sha256": "202e5c9404c4fbe8b56ec864110d64006483b48137dbb1904e2aec57bfdcbc0b"
+      "sha256": "77b182d965cb309418cacbd906d04c7780716ee3dfd9d876d531563014681123"
     },
     "apps/docs/content/docs/uk/tools/private-channels/concepts/auth.mdx": {
       "sha256": "2657ad12a6bc2b044ec5187b666f4b05b104830c9059c3a4dfe7b8c1e1144407"
@@ -26001,6 +26049,9 @@
     },
     "apps/docs/content/docs/uk/tools/production-readiness.mdx": {
       "sha256": "ebea4e9e262394dcbcc45b2391890bda9bbbddf429cbc17a4c3a37f0c8f516d5"
+    },
+    "apps/docs/content/docs/uk/tools/rewards.mdx": {
+      "sha256": "a143ce6b249e36b5f0fa6ef36b7677eabec8d1208b1738d5dc8c76ac0524d1d0"
     },
     "apps/docs/content/docs/uk/tools/solana-pay/index.mdx": {
       "sha256": "f01dc61da082807777e41c20e9edb347753852918eac6e76691b065d8489cd58"
@@ -26372,7 +26423,7 @@
       "sha256": "8764b2e7f735645bba3d713b5f88279a04eda000e4d3fb59269e6294db382cb3"
     },
     "apps/docs/content/docs/vi/core/transactions/versioned-transactions.mdx": {
-      "sha256": "4ece41bef38811adefb93459014cc172a7679fa10dec013d8227fcdd752f730c"
+      "sha256": "1fb95ff771ea7d914287735fb189d4e8acd266c9382cbc0785616d20ef7de240"
     },
     "apps/docs/content/docs/vi/defi/dvp-program/create-a-trade.mdx": {
       "sha256": "c550ed0030e012d9f7c34b00eeec0d32c9b4573715d821fc2fc64941fef5ffcf"
@@ -26849,7 +26900,7 @@
       "sha256": "91cf85b80b54c67c5134f7c5fd7b0ffa12b2c06cb22500b52f4d2fa0cdb1c7a4"
     },
     "apps/docs/content/docs/vi/tokens/extensions/transfer-hook.mdx": {
-      "sha256": "a4b20484a791cdce5e7484b03a56e494e75917651e967743fad8f7cf21b4f386"
+      "sha256": "ea489ece767b99b323e8628cefbc561ca8e6af6ed6300f306f53be8e9bd811b2"
     },
     "apps/docs/content/docs/vi/tokens/how-to-verify-a-token.mdx": {
       "sha256": "a7dcfe59a31cae098ec2f6c787efd8e1b4c9962ddc539447f0ce406d72639b1c"
@@ -26939,7 +26990,7 @@
       "sha256": "c4f46db30ed42a9889ff0a71cb218556402da22648ccc7bb23d1372381287088"
     },
     "apps/docs/content/docs/vi/tools/index.mdx": {
-      "sha256": "a7cc700dfa9d518dcaf47cf496aceeb358f33227edefc3e88ee2b21de70da07b"
+      "sha256": "6de74a1b14e22d0ee6427de8989e4d00711fec20a42011d664227d22690d3e78"
     },
     "apps/docs/content/docs/vi/tools/keychain/adding-signers.mdx": {
       "sha256": "5c95f65edc0e1ff9566fcfd4de2cf9a616459592ba2efd6dbdef36021dbaff92"
@@ -27317,7 +27368,7 @@
       "sha256": "ef72bcdd7ae498be72b975f1088916725f6950ff0e9d0e215a0eff3a7a6181b9"
     },
     "apps/docs/content/docs/vi/tools/meta.json": {
-      "sha256": "fe7c60c46d7717ea2f2408ad3ed84ee5348b8dc12859917984ed734d13985b83"
+      "sha256": "6249687daa0e71dddd858f8b0c2b18f054657c52a567f832783776b732deefc1"
     },
     "apps/docs/content/docs/vi/tools/private-channels/concepts/auth.mdx": {
       "sha256": "68b4e1b2f6d025f84092a99952498c9fcb7ec787e7f9dd1a7a9aef8f8d8d21a2"
@@ -27408,6 +27459,9 @@
     },
     "apps/docs/content/docs/vi/tools/production-readiness.mdx": {
       "sha256": "828fad5ce831fb4d5841314524105a5261f1e17b5fc054eb2caa84e05656d3ee"
+    },
+    "apps/docs/content/docs/vi/tools/rewards.mdx": {
+      "sha256": "6eb1b3c3e8f9ed22667ac932ab1ee1eda85b0f33dc03ab2c2c777dc6be1574b3"
     },
     "apps/docs/content/docs/vi/tools/solana-pay/index.mdx": {
       "sha256": "af4317df1b5349e88efe43fb12fa86d188b3e14d0066d191f55eb5de5ad5c4db"
@@ -27779,7 +27833,7 @@
       "sha256": "e162ac0dd32592fdb00208f1f194f8971d4832d4d40a3c3d08d0086b1b2ccaea"
     },
     "apps/docs/content/docs/zh/core/transactions/versioned-transactions.mdx": {
-      "sha256": "26b60d44ac078d24207a09d2c04113aaaa085a601169a22f8ea5b59946c25f43"
+      "sha256": "f2d8990fdf9780be3863b46dcbf7686d10a7fee1d28446b78bf27286c285e637"
     },
     "apps/docs/content/docs/zh/defi/dvp-program/create-a-trade.mdx": {
       "sha256": "955748e307175f5b8f3dbec8644249f0152e6d51f3a52dc259b8c7514e18edea"
@@ -28256,7 +28310,7 @@
       "sha256": "738597a45236c8739195a60f4a308d2b3206e1beb1c1162d6e01e540eda756f0"
     },
     "apps/docs/content/docs/zh/tokens/extensions/transfer-hook.mdx": {
-      "sha256": "b1723704e8ccf59be8277056092145c980f18eae4ce8fff527188bed37979983"
+      "sha256": "4204e88405b7305d0c6aa812f4bfc5405b3c0a101ac72345f9824e64316285bc"
     },
     "apps/docs/content/docs/zh/tokens/how-to-verify-a-token.mdx": {
       "sha256": "118bd9a3b5d6742f3aefc6ac7a128fd7a18aefc7cbbd4c709ee29b1dfb982773"
@@ -28346,7 +28400,7 @@
       "sha256": "c5f86db1f30b1aaa5f79e933ac3d1c06839362271e3a7551dee3f00b88e7387e"
     },
     "apps/docs/content/docs/zh/tools/index.mdx": {
-      "sha256": "c81424cb3bed798e709bd1d65c49adf614ae1307fb949988eb0ebe0c02ceef73"
+      "sha256": "beab9770a0d75f2fbc10085e26707ca64e6a2772feada13012b9aed2210782da"
     },
     "apps/docs/content/docs/zh/tools/keychain/adding-signers.mdx": {
       "sha256": "22d335309d540f0baba9aae809a0ea52f5000c7ce456ced12bd24907dc0c6ce5"
@@ -28724,7 +28778,7 @@
       "sha256": "3d04ab3d64f692f75fae27003718bd07630b0951862b51b314f1b65870950eae"
     },
     "apps/docs/content/docs/zh/tools/meta.json": {
-      "sha256": "ca5e38f5a1be16dde54ef7714045ab9761b3e092137453803285290ea6c358e4"
+      "sha256": "eeebe33bb68c432411482e596e526a0d83c7e44a2fd10320d74ffde88b92cda7"
     },
     "apps/docs/content/docs/zh/tools/private-channels/concepts/auth.mdx": {
       "sha256": "9339fa39a2877d69de2c3ef9580745ba83014c61880356f3f930fbc422099311"
@@ -28815,6 +28869,9 @@
     },
     "apps/docs/content/docs/zh/tools/production-readiness.mdx": {
       "sha256": "e693996e277a4ca15655b6409b71c20dc9c73aecb4b6223e7854cae94f49c3bc"
+    },
+    "apps/docs/content/docs/zh/tools/rewards.mdx": {
+      "sha256": "288047be0e999bc7272376afefb1e99848e410d720b0be6361993d6e13a7ff29"
     },
     "apps/docs/content/docs/zh/tools/solana-pay/index.mdx": {
       "sha256": "9c33b7d2a00fdccef9d28c736d7a955fa82aa38109ba8fcb6a4ab9f498962937"
@@ -29714,61 +29771,61 @@
       "sha256": "b41e8c8f7e399088e6077ecf6357bb8a61b140fd27fe6d58d169eb153bd4c20e"
     },
     "packages/i18n/messages/breakpoint/ar/breakpoint.json": {
-      "sha256": "cbb2efff0942fe28ee2b4dd117426e90322466df743fbdff3b494a15fd4984ee"
+      "sha256": "4ce6f4052df874296cf378bea74bc97d06400ed00c0130d300021e924eaa2679"
     },
     "packages/i18n/messages/breakpoint/de/breakpoint.json": {
-      "sha256": "511edf13619546fc99efeff460d7b67c7ff7d2d20691a7c16929e9c30d5945b8"
+      "sha256": "99f88f5c06b50f0a1d32cbcf4e607ed8c44e8c3c6ffa33bedf30e415ae25725e"
     },
     "packages/i18n/messages/breakpoint/el/breakpoint.json": {
-      "sha256": "fdf1ff463161920ae7f98f335f1fcadb668db05c77ac8bf0eaebf086a2009d84"
+      "sha256": "0b1295dbfe461245ac94e729e40c9578f376969b60d404511d58ffc0e348d93e"
     },
     "packages/i18n/messages/breakpoint/en/breakpoint.json": {
-      "sha256": "79fed77725eef3f87b858e576c3281a93bf410ddca427785bd6e92eb247217de"
+      "sha256": "57f496fb9e8ccf4e36148ea188482a89a5c3eb6ca67933d893a637992f2d0000"
     },
     "packages/i18n/messages/breakpoint/es/breakpoint.json": {
-      "sha256": "9db152ca6a5d9fae9e2b54d937f02dd913b3a3f20ce7ea53bb5925eabe529975"
+      "sha256": "0fbf9bc3181aefeb0306d00256a17671c3ac51ae08e7b417f42f0a5baebdbbc6"
     },
     "packages/i18n/messages/breakpoint/fi/breakpoint.json": {
-      "sha256": "e7406c0df15d0c8239351f13024918e54eda532f11e0a051a6c68fc68a2d89d9"
+      "sha256": "91549c90a86a6c8e9b92dfea4a0a8f9479b91c39c41e335f1f460208fd31233d"
     },
     "packages/i18n/messages/breakpoint/fr/breakpoint.json": {
-      "sha256": "353953206223b66c69351df37fde053309d3536a9cb8877994faa4b4a51dd934"
+      "sha256": "641ebb8c0ae67a251a2702a3ad0ecf4dfa2530de4f1e498e47ebd0ef9d2f4df4"
     },
     "packages/i18n/messages/breakpoint/id/breakpoint.json": {
-      "sha256": "47cd866c284b508bfc127c472b07c15026805163bfde882909aa41e48ad67d06"
+      "sha256": "d2db854e0332ade3a249d3f662d5c4397af1af22ef1bb5a298d362bbe8939aa6"
     },
     "packages/i18n/messages/breakpoint/it/breakpoint.json": {
-      "sha256": "4e0b16e93925f1114c78f8dabcd8956f0a575919b59fea11d331307f51889337"
+      "sha256": "c1c15476b16a132e89b2185aeb8fd1b96f40612f2b8fe634e0e09100ef660a93"
     },
     "packages/i18n/messages/breakpoint/ja/breakpoint.json": {
-      "sha256": "3a153a54bac476aa2b66179219968460f409aedd705e29ce790e3ddde86a01de"
+      "sha256": "d3eb5c34f9a3361f8cdf038484f1540743e1af038987572b0a0c5b5210e57ab9"
     },
     "packages/i18n/messages/breakpoint/ko/breakpoint.json": {
-      "sha256": "2a2aae1952b4669a6c240c67ad9eefa7914f6225e4ab3dd3e5cc26a00dbe2309"
+      "sha256": "b9f43dbb90db33c8e44af6c92949103fea7beb37c3e67a81ec99d0a3eaad2a47"
     },
     "packages/i18n/messages/breakpoint/nl/breakpoint.json": {
-      "sha256": "b842c0bd0731b73cd394d69af1c0ae0b699cbc59572cd3a4242ff8a570389dee"
+      "sha256": "9ba800be014e5a37dfbe22c076211de4ea01aba7f71c87c3d5ca79ab1c91a95d"
     },
     "packages/i18n/messages/breakpoint/pl/breakpoint.json": {
-      "sha256": "0f4517a4ae0abf217078488fc469403de2b6254661f596f5cfb083747e25125a"
+      "sha256": "a1ecfc1b4db14711b41bd4af3c9ec6f02a17ef38e18ed5211bfa033d01c9d92c"
     },
     "packages/i18n/messages/breakpoint/pt/breakpoint.json": {
-      "sha256": "4583037fc30220f2134532933b3c7ef2ff8eb66e993a49831f337b94dfd6df1a"
+      "sha256": "872c630ee051ac37d328021a4ae07f53b7ed32fbb540e29544a23c7e76cc7342"
     },
     "packages/i18n/messages/breakpoint/ru/breakpoint.json": {
-      "sha256": "a086965f231e42c79509e6df2de4a9a153d9238b99dad7a95219bba52199dd9c"
+      "sha256": "b3fe967082963f760541a5813dd43e917e3ef0f36a7e48e9f46a86b601dbd5be"
     },
     "packages/i18n/messages/breakpoint/tr/breakpoint.json": {
-      "sha256": "2cffb6ae86865129d71e17e4f789a3f4e2fdf115c18a22d69e995b1683f45496"
+      "sha256": "f5fb9a13da8443917f5787c497097634c6be325fb51be0d597e8cb9d2b4e3e70"
     },
     "packages/i18n/messages/breakpoint/uk/breakpoint.json": {
-      "sha256": "063d4b544167ebe89877cecf4f8f728c17f23d7cb811d271273bbad084b30145"
+      "sha256": "fdb5c066e2c5233956c8e5c0169c8a18ad38389f65bbb3f54290856856f59fff"
     },
     "packages/i18n/messages/breakpoint/vi/breakpoint.json": {
-      "sha256": "368833813ef0ddd789dbefb6703bdd5e8f3abd27e8fc1c9cfec8020da6c6b648"
+      "sha256": "93f5bcfd45d41772ced09203b1d930caff0c5ca309e5c6315f5551e9c4c3fc25"
     },
     "packages/i18n/messages/breakpoint/zh/breakpoint.json": {
-      "sha256": "2110c85721e02b31cabb562e5cb1676cf110d5cf124d88ac38a081d8e571ff5c"
+      "sha256": "b35fb78d1206bae99719ae243c247b329905ac4cbec4e918924897c2da557896"
     },
     "packages/i18n/messages/media/ar/common.json": {
       "sha256": "142d7dc90b179a745715e8dfe655db2eee9e9b5c4d981b0a3ee422e523a3bd48"
@@ -29885,61 +29942,61 @@
       "sha256": "1df76877e6636fd468cfb0d917c94fb44cb5990c47c28adbd21ebf314da97cf7"
     },
     "packages/i18n/messages/web/ar/common.json": {
-      "sha256": "f2e1ec358178f1c6554307ae0e43b9f5aaff898b174afe2d01db5bb304fca0e9"
+      "sha256": "b48ffffd6fe0b44e45555647aaefdc7554e2208ad2fdfe307b160a276b802df1"
     },
     "packages/i18n/messages/web/de/common.json": {
-      "sha256": "ce1e0961b658262d64dba0b7ac1f0b69f02f9a42abedbcc06e0b7f38837bd755"
+      "sha256": "f1d045f03cef4342eaf54ddc640616350f91fc11d7104355bc28c824daade326"
     },
     "packages/i18n/messages/web/el/common.json": {
-      "sha256": "076b76aacb02bd1c5501c3518480e29cbdfe3e5628304157ba10e463fe1d376a"
+      "sha256": "324a8c794525da47f70edf53f36d1180281b1d2955b78c9a972d4660b69c3bc6"
     },
     "packages/i18n/messages/web/en/common.json": {
-      "sha256": "18fe9b522ecdf5142706f2097ba9e23a5fc523d7a88da37b81d875ab15204f42"
+      "sha256": "bbc301133d0f5cf3d07f0112e1392411e87bcfd10a0c4ed9f182553274abc66d"
     },
     "packages/i18n/messages/web/es/common.json": {
-      "sha256": "a39a1396fabb7625990f1d3bfcf3244c6ac6ed1b50c213a65615382fddacf1a6"
+      "sha256": "7cbeee4fc7d4aa69e5eff13e0a5d815f7ff7a5c279b6feb2aa243792900eb23b"
     },
     "packages/i18n/messages/web/fi/common.json": {
-      "sha256": "bbd85b13e24e26eb37e9d7b6865c18edc9e7b87e7dbc84cc98059849c9a89251"
+      "sha256": "c724730d5007eae3fc8dafbd813fad279c72080ed46ade6597de1fa1c53e2ec6"
     },
     "packages/i18n/messages/web/fr/common.json": {
-      "sha256": "5e308a8dbe7c8474b5c9e3fb0807a5da196c022e555b83ae63e6445ed36ddabb"
+      "sha256": "103f482aec2f01b0ef4a9562203c1ceb1fec92f201536bd9f99ac0d8dc0c39f7"
     },
     "packages/i18n/messages/web/id/common.json": {
-      "sha256": "fde196ae84f6712e579862dd89f6dd64cada1a5da3307b79bf60428e7ae8992e"
+      "sha256": "82663bf8c37a983fafacaa7702f5d2ffb6e2b24c8694b8ab703665f3ce78555f"
     },
     "packages/i18n/messages/web/it/common.json": {
-      "sha256": "d4150064d6dd38bbb06abafa0f0020d0b8cbb0e634cfebfc804f074ca98298be"
+      "sha256": "cc85e1fae30a2467890a2f6f9f9121d7c8084b11b37dd9d1af3e38a57051ff5d"
     },
     "packages/i18n/messages/web/ja/common.json": {
-      "sha256": "8df90b70791c9ec6b88c46533416304aa2cdba1ba09c6a45b33df73c6f09b2c6"
+      "sha256": "82f5e79cd4f9352453c72fabe5317641b1d28311952f8524167eb1f0b99bcaea"
     },
     "packages/i18n/messages/web/ko/common.json": {
-      "sha256": "4ab8e164285e1d2f0a19598037ac658ead9b22083340e39c5672533b49b08eed"
+      "sha256": "50ba014f079b48e042cd3052f4d165fd8b83968efcadae319401f78c9ae40dd0"
     },
     "packages/i18n/messages/web/nl/common.json": {
-      "sha256": "2bbff722c12fced30f739468a1345564fb130f32cc0dfa7ec72baa3339c8896c"
+      "sha256": "f1400e34cdbf3edc9e7f0ab4f6347bf26dff7848a171a5364c1f4b08569c89e5"
     },
     "packages/i18n/messages/web/pl/common.json": {
-      "sha256": "9d4499d2d9ada768244f27ea18dd332dfa8b12ec77498ffaf0d2bfe674c5bd08"
+      "sha256": "67f1a01772e010fcaafb940b391e8481a6cebb9fc306de50039ddef10f081257"
     },
     "packages/i18n/messages/web/pt/common.json": {
-      "sha256": "0ac446d003737c1a53b2a1d006afe051e35f1b3faffa8a284b9b1803fd57d94d"
+      "sha256": "b36297fdac600065dc2e6d07a5507b55639dc84501da53a6992e173ebe45876d"
     },
     "packages/i18n/messages/web/ru/common.json": {
-      "sha256": "8a8c1044c5d204e4c3e54c7c01f2b286fa0c7006ddf939ee80dc35e10716554b"
+      "sha256": "effbffd9baf5ed8685c2e0ccac9010aaefd03d2250714c219f3476331400ea6d"
     },
     "packages/i18n/messages/web/tr/common.json": {
-      "sha256": "c88188eed98487d434f28bf7568f423c71cd969b32fb4427b7e16af0214ad4ac"
+      "sha256": "41cbec0d638a16b68865766d9cbc1109849ec1557347c3ad04aa9c5993c81cd8"
     },
     "packages/i18n/messages/web/uk/common.json": {
-      "sha256": "88337bbc7fcc1d794283aae9b514ef99a9a387501c06860c6d9d7df3efaf15bd"
+      "sha256": "aa616e77db7e9189ca700ae9a527adffba7efbdc4725246325c835a86ef47853"
     },
     "packages/i18n/messages/web/vi/common.json": {
-      "sha256": "aee4729eb4d9b75ece44dafb04f9c5488d3d481bf36f6bfa47f839d901d314c4"
+      "sha256": "da03497c3b14eda19a4c7c369b688c99e00eed9f4b0923bc53b780c9a04cccdc"
     },
     "packages/i18n/messages/web/zh/common.json": {
-      "sha256": "e60a5c19ae5171d21ff75158631a70bc3540ea6e4e61e003dbdfaeb3ce9c7e58"
+      "sha256": "205e15c73a5591b3b146ffee1eb578389e3552042388405f9eff7d62ee3e597b"
     }
   }
 }

@@ -598,6 +598,35 @@
           "name": "Vuoden kampanja -palkinto",
           "description": "Kampanjalle, joka sai Solana-yhteisön huomion."
         }
+      },
+      "voting": {
+        "metadataDescription": "Äänestä Breakpoint 2026 -yhteisöpalkintojen finalisteja yksi kategoria kerrallaan.",
+        "heroCta": "Äänestä finalisteja",
+        "viewAwards": "Näytä palkinnot",
+        "heroDescription": "Valitse yksi finalisti jokaisesta yhteisöpalkintojen kategoriasta. Lähettämiäsi ääniä ei voi muuttaa.",
+        "eyebrow": "Yhteisöpalkintojen äänestys",
+        "headline": "Äänestä finalisteja.",
+        "description": "Valitse yksi finalisti jokaisesta kategoriasta. Lähetettyä ääntä ei voi muuttaa.",
+        "status": {
+          "finalistsPending": "Finalisteja tarkistetaan. Äänestys avautuu, kun finalistit on julkistettu.",
+          "notStarted": "Äänestys ei ole vielä alkanut. Palaa asiaan ehdotusajan päätyttyä.",
+          "open": "Äänestys on käynnissä.",
+          "closed": "Äänestys on päättynyt. Kiitos osallistumisesta."
+        },
+        "progress": "Äänestetty: {count} / {total} kategoriaa",
+        "voted": "Äänestetty",
+        "submitted": "Ääni lähetetty",
+        "finalVote": "Äänesi tässä kategoriassa on lopullinen.",
+        "share": "Jaa ääni",
+        "chooseFinalist": "Valitse finalisti",
+        "submit": "Lähetä ääni",
+        "submitting": "Lähetetään…",
+        "shareText": "Äänestin ehdokasta {name} palkinnon saajaksi: {category} @SolanaConf. 🏆",
+        "errors": {
+          "load": "Äänien lataus epäonnistui. Päivitä sivu.",
+          "save": "Äänesi tallennus epäonnistui. Yritä uudelleen.",
+          "alreadyVoted": "Aiempi äänesi palautettiin. Ääniä ei voi muuttaa."
+        }
       }
     },
     "accessibility": {
@@ -684,6 +713,238 @@
         "hours": "Tuntia",
         "minutes": "Minuuttia",
         "seconds": "Sekuntia"
+      }
+    },
+    "hereFor": {
+      "metadata": {
+        "title": "Löydä BP26-vastavuoroiset yhteytesi",
+        "description": "Lisää kolme ihmistä, jotka haluat tavata Breakpoint 2026 -tapahtumassa, katso mistä yhteisö yhdistyy ja löydä ihmiset, jotka ovat yhden askeleen päässä sinusta.",
+        "personTitle": "Kolme ihmistä, joiden vuoksi {handle} ylittäisi Lontoon",
+        "personDescription": "Katso, ketä {handle} lisäsi Breakpoint 2026 -tapahtumaan, ketkä lisäsivät hänet ja miten olette yhteydessä."
+      },
+      "hero": {
+        "eyebrow": "Breakpoint 2026",
+        "title": "Löydä BP26-vastavuoroiset yhteytesi",
+        "description": "Lisää kolme ihmistä, jotka haluat tavata Lontoossa, ja tutki, mistä yhteisö yhdistyy.",
+        "cta": "Lisää kolmesi",
+        "ticketsCta": "Hanki lippusi"
+      },
+      "marquee": {
+        "community": "YHTEISÖ",
+        "connections": "YHTEYDET",
+        "mutuals": "VASTAVUOROISET",
+        "london": "LONTOO",
+        "hereFor": "KENET HALUAT TAPAAA?"
+      },
+      "nav": {
+        "add": "Lisää kolmesi",
+        "back": "Takaisin karttaan",
+        "map": "Avaa kartta"
+      },
+      "explorer": {
+        "eyebrow": "Tutki karttaa",
+        "stats": {
+          "people": "{people} henkilöä",
+          "adds": "{adds} lisäystä",
+          "mutuals": "{mutuals} vastavuoroista"
+        },
+        "searchLabel": "Etsi henkilö",
+        "searchPlaceholder": "käyttäjänimi",
+        "noResults": "Kartalla ei ole vielä ketään tällä käyttäjänimellä.",
+        "viewsLabel": "Näkymä",
+        "views": {
+          "all": "Kaikki",
+          "mutuals": "Vain vastavuoroiset",
+          "network": "Verkostosi",
+          "most": "Eniten lisätyt",
+          "communities": "Yhteisöt"
+        },
+        "legend": {
+          "out": "Lisäsi",
+          "in": "Lisäsi sinut",
+          "mutual": "Vastavuoroinen",
+          "path": "Reittisi heihin"
+        },
+        "findMutuals": "Löydä vastavuoroiset",
+        "zoomControls": "Zoomaus",
+        "zoomIn": "Lähennä",
+        "zoomOut": "Loitonna",
+        "fit": "Näytä kaikki",
+        "centreOnYou": "Keskitä itseesi",
+        "refresh": "Päivitä kartta",
+        "hint": "Kierrä vetämällä · zoomaa vierittämällä tai nipistämällä · näppäimet + / –",
+        "trail": "Jälki",
+        "you": "Sinä",
+        "around": "Käyttäjän {handle} ympärillä",
+        "loading": "Ladataan karttaa",
+        "error": "Karttaa ei voitu ladata. Päivitä sivu ja yritä uudelleen.",
+        "empty": "Kukaan ei ole vielä lisännyt kolmeaan. Ole ensimmäinen kartalla.",
+        "mapLabel": "Yhteyskartta"
+      },
+      "panel": {
+        "label": "Valittu henkilö",
+        "yourNode": "Sinun solmusi",
+        "inYour3": "Kolmesi joukossa",
+        "steps": "{count, plural, one {# askeleen päässä sinusta} other {# askeleen päässä sinusta}}",
+        "notConnected": "Ei vielä yhteydessä sinuun",
+        "selectSomeone": "Valitse kuka tahansa kartalta",
+        "selectHint": "Napsauta solmua tai hae käyttäjänimellä nähdäksesi, ketä hän lisäsi ja miten olette yhteydessä.",
+        "added": "Lisäsi",
+        "addedBy": "Lisääjät",
+        "mutuals": "Vastavuoroiset",
+        "their3": "Heidän kolmensa",
+        "your3": "Sinun kolmesi",
+        "nobodyAdded": "Ei vielä ketään. Merkitse heidät X:ssä.",
+        "notJoined": "Ei ole vielä lisännyt kolmeaan.",
+        "more": "+{count} lisää",
+        "howYouConnect": "Miten olette yhteydessä",
+        "noPath": "Ei vielä reittiä. Lisää heidät luodaksesi yhteyden.",
+        "joinToConnect": "Lisää kolmesi nähdäksesi, miten olette yhteydessä.",
+        "mutual": "Vastavuoroinen",
+        "addToYour3": "Lisää kolmeesi",
+        "postYour3": "Julkaise kolmesi",
+        "share": "Jaa"
+      },
+      "add": {
+        "metadataTitle": "Lisää kolmesi",
+        "metadataDescription": "Valitse kolme ihmistä, jotka haluat nähdä Breakpoint 2026 -tapahtumassa Lontoossa, vahvista X:llä ja julkaise heidät, jotta heidät merkitään.",
+        "eyebrow": "Lisää kolmesi",
+        "title": "Kenet haluat nähdä Lontoossa?",
+        "description": "Rakentajia, tekijöitä tai joku, jonka tunnet vain vastauksista.",
+        "progress": "Lisätty {count} / 3",
+        "steps": {
+          "picks": "Valitse kolmesi",
+          "handle": "Vahvista X:llä",
+          "post": "Julkaise X:ssä"
+        },
+        "signInHint": "Tallennus pyytää X:ää vahvistamaan, että se olet sinä, jotta kukaan muu ei voi tehdä valintoja käyttäjänimesi puolesta. X näyttää suppeimman tarjoamansa käyttöoikeuden. Luemme @käyttäjänimesi kerran ja palautamme käyttöoikeuden. Emme voi julkaista, seurata ketään tai nähdä viestejäsi.",
+        "signOut": "Kirjaudu ulos",
+        "picksLabel": "Sinun kolmesi",
+        "addLabel": "Etsi henkilö",
+        "addPlaceholder": "Aloita kirjoittaminen tai liitä heidän X-linkkinsä",
+        "remove": "Poista {handle}",
+        "empty": "Tyhjä",
+        "suggestionsNear": "Lähelläsi kartalla",
+        "suggestionsTop": "Eniten lisätyt kartalla",
+        "addedYou": "Lisäsi sinut",
+        "addedCount": "{count, plural, one {Lisännyt # henkilö} other {Lisännyt # henkilöä}}",
+        "postPreview": "Julkaisusi",
+        "save": "Tallenna kolmesi",
+        "saving": "Tallennetaan",
+        "update": "Päivitä kolmesi",
+        "closed": "Lisääminen on päättynyt. Kartta pysyy avoinna.",
+        "saved": "Olet nyt kartalla",
+        "savedDescription": "Julkaise kolmesi, jotta heidät merkitään. Jokainen heistä saa linkin, jolla lisätä omansa.",
+        "newMutualEyebrow": "Uusi vastavuoroinen yhteys",
+        "newMutualTitle": "Sinä ja {handle} lisäsitte toisenne",
+        "newMutualDescription": "Julkaise tämä, jotta löydätte toisenne Olympiassa.",
+        "postMutual": "Julkaise vastavuoroinen yhteys",
+        "postYour3": "Julkaise kolmesi",
+        "openMap": "Katso itsesi kartalla",
+        "findMutuals": "Löydä vastavuoroiset yhteytesi",
+        "signInToSave": "Kirjaudu X:llä tallentaaksesi",
+        "alreadyAdded": "Oletko jo lisännyt omasi? Kirjaudu X:llä",
+        "savingAs": "Tallennetaan käyttäjänä",
+        "noMatch": "Jatka kirjoittamista. Käyttäjänimessä voi olla kirjaimia, numeroita ja alaviivoja.",
+        "notOnMap": "Ei vielä kartalla",
+        "onMapCount": "{count, plural, =0 {Kartalla} one {Lisännyt # henkilö} other {Lisännyt # henkilöä}}"
+      },
+      "errors": {
+        "invalid_handle": "Anna kelvollinen X-käyttäjänimi: kirjaimia, numeroita ja alaviivoja, enintään 15 merkkiä.",
+        "auth_required": "Kirjaudu X:llä tallentaaksesi kolmesi.",
+        "x_denied": "X-kirjautuminen peruttiin. Valintasi ovat yhä tallessa.",
+        "x_error": "X-kirjautuminen ei onnistunut. Yritä hetken kuluttua uudelleen.",
+        "logout_error": "Uloskirjautuminen ei onnistunut. Yritä hetken kuluttua uudelleen.",
+        "invalid_adds": "Lisää kolme eri henkilöä.",
+        "self_add": "Et voi lisätä itseäsi.",
+        "handle_claimed": "Joku tallensi samaan käyttäjänimeen samalla hetkellä. Yritä uudelleen.",
+        "rate_limited": "Liian monta yritystä. Odota hetki ja yritä uudelleen.",
+        "closed": "Lisääminen on päättynyt.",
+        "unavailable": "Tallennus ei onnistunut. Yritä hetken kuluttua uudelleen.",
+        "duplicate": "{handle} on jo kolmesi joukossa.",
+        "full": "Kolmesi on täynnä. Poista ensin joku."
+      },
+      "mutuals": {
+        "metadataTitle": "Löydä vastavuoroiset yhteytesi",
+        "metadataDescription": "Katso Breakpoint 2026 -vastavuoroiset yhteytesi ja ihmiset, jotka ovat yhden askeleen päässä sinusta, järjestettynä sen mukaan, ketä sinä ja kolmesi lisäsitte.",
+        "eyebrow": "Löydä vastavuoroiset yhteytesi",
+        "title": "Ihmiset yhden askeleen päässä sinusta",
+        "description": "Järjestetty sen perusteella, ketä sinä ja ympärilläsi olevat ihmiset lisäsitte. Lisää joku tai sano moi X:ssä. Jos he lisäävät sinut takaisin, olette vastavuoroisia.",
+        "yourMutuals": "Vastavuoroiset yhteytesi · {count}",
+        "noMutuals": "Ei vielä yhtään. Julkaise kolmesi, jotta lisäämäsi ihmiset näkevät sen.",
+        "filtersLabel": "Miksi he ovat tässä",
+        "filters": {
+          "all": "Kaikki ehdotukset",
+          "addedYou": "Lisäsi sinut",
+          "sharedAdd": "Samat lisäykset",
+          "step": "Yksi askel päässä"
+        },
+        "count": "{from}–{to} / {total} ehdotusta",
+        "pagination": "Ehdotussivut",
+        "previous": "Edellinen",
+        "next": "Seuraava",
+        "page": "Sivu {page} / {pages}",
+        "your3": "Sinun kolmesi: {handles}",
+        "scoring": "Pisteet kertyvät: lisäsi sinut (5), molemmat lisäsitte jonkun (2 kummastakin), joku kolmestasi lisäsi heidät (2 kustakin), joku sinut lisännyt lisäsi myös heidät (1 kustakin).",
+        "reasons": {
+          "addedYou": "Lisäsi sinut",
+          "sharedAdd": "Molemmat lisäsitte käyttäjän {handle}",
+          "yourAddAdded": "{handle} lisäsi heidät",
+          "coAdded": "{handle} lisäsi teidät molemmat"
+        },
+        "sayHi": "Sano moi",
+        "swapIn": "Lisää",
+        "inYour3": "Kolmesi joukossa",
+        "viewOnMap": "Näytä {handle} kartalla",
+        "postMutuals": "Julkaise vastavuoroiset yhteytesi",
+        "needsHandle": "Lisää ensin kolmesi. Sen jälkeen tällä sivulla näkyvät ihmiset, jotka ovat yhden askeleen päässä sinusta.",
+        "empty": "Ei vielä ehdotuksia. Ne ilmestyvät, kun useammat lisäävät kolmensa.",
+        "loading": "Etsitään vastavuoroisia yhteyksiäsi"
+      },
+      "how": {
+        "eyebrow": "Näin se toimii",
+        "step1Title": "Lisää kolmesi",
+        "step1Body": "Kirjaudu X:llä ja valitse kolme ihmistä, jotka haluat tavata. Kuka tahansa yhteisöstä kelpaa.",
+        "step2Title": "Tutki karttaa",
+        "step2Body": "Valitse kuka tahansa nähdäksesi, ketä hän lisäsi, ketkä lisäsivät hänet ja kuinka monen askeleen päässä hän on sinusta.",
+        "step3Title": "Löydä vastavuoroiset yhteytesi",
+        "step3Body": "Saat listan kartalla lähelläsi olevista ihmisistä perusteluineen. Lisää heidät takaisin tai sano moi X:ssä."
+      },
+      "shareSection": {
+        "eyebrow": "Jaa se",
+        "title": "Jokainen julkaisu merkitsee siinä mainitut ihmiset",
+        "description": "Merkityt ihmiset saavat linkin, jolla lisätä oma kolmensa. Näin kartta kasvaa.",
+        "your3": "Sinun kolmesi · merkitsee kaikki kolme",
+        "mutual": "Vastavuoroinen yhteys · merkitsee hänet",
+        "mutuals": "Vastavuoroiset yhteytesi · merkitsee vastavuoroiset ja ehdotukset"
+      },
+      "share": {
+        "ask": "Ketkä ovat sinun kolmesi?",
+        "your3": "Kolme ihmistä, joiden vuoksi ylittäisin Lontoon: {handles}. Nähdään Breakpointissa.",
+        "mutual": "{handle} ja minä valitsimme toisemme Breakpointiin. Se on molemminpuolista. Nähdään Lontoossa.",
+        "mutuals": "Breakpoint-porukkani toistaiseksi: {mutuals}. Toivon yhä tapaavani {next}.",
+        "mutualsNone": "Kokoan Breakpoint-porukkaani. Toivon tapaavani {next}.",
+        "sayHi": "Moi {handle}, Breakpoint-kartan mukaan olemme yhden askeleen päässä toisistamme. Kahville Lontoossa?",
+        "person": "Bongasin käyttäjän {handle} Breakpoint-kartalta."
+      },
+      "card": {
+        "isHereFor": "{handle} ylittäisi Lontoon näiden vuoksi",
+        "mutualEyebrow": "Vastavuoroinen · lisäsivät toisensa",
+        "mutualsEyebrow": "Käyttäjän {handle} Breakpoint-porukka",
+        "mutualsLabel": "Vastavuoroiset",
+        "nextLabel": "Vielä tapaamatta",
+        "footer": "Breakpoint 2026 · Lontoo · 15.–17. marraskuuta",
+        "question": "Ketkä ovat sinun kolmesi?",
+        "mutual": "Vastavuoroinen"
+      },
+      "egg": {
+        "eyebrow": "Solmu löytyi // ei yhteyksiä",
+        "title": "Kukaan ei lisännyt tätä. Löysit sen silti.",
+        "description": "Saat 25 % alennuksen Breakpoint 2026 -passista, kunnes koodit loppuvat.",
+        "copy": "Kopioi koodi",
+        "copied": "Kopioitu",
+        "claim": "Lunasta Lumassa",
+        "close": "Sulje"
       }
     }
   }

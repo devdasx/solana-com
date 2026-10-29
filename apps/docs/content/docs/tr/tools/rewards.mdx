@@ -1,0 +1,130 @@
+---
+title: Rewards Programı
+seoTitle: Token Vesting ve Merkle Dağıtımları için Solana Rewards Programı
+description:
+  SPL Token ve Token-2022 token'larını, alıcı başına hesaplar veya bir merkle root kullanarak, vesting takvimleriyle ve isteğe bağlı iptal (revocation) ile geri alma (clawback) seçenekleriyle dağıtın.
+---
+
+Rewards programı, token'ları programa ait bir vault'tan, her biri bir vesting takvimine
+sahip alıcılara dağıtır. Bir yetkili (authority) vault'u fonlar ve kimin ne alacağını
+belirler. Alıcılar hak ettikleri token'ları zaman içinde talep eder (claim); yetkili ise
+dağıtım izin veriyorsa alıcıları iptal edebilir veya artakalan token'ları geri alabilir.
+Program, Solana Foundation tarafından sürdürülen Pinocchio ile geliştirilmiştir ve
+transfer hook uzantısına sahip Token-2022 mint'leri hariç hem SPL Token hem de
+Token-2022 mint'leriyle çalışır.
+
+Program ID'si (mainnet ve devnet):
+
+```text
+REWArDioXgQJ2fZKkfu9LCLjQfRwYWVVfsvcsR5hoXi
+```
+
+<Callout type="info">
+  Program, OtterSec tarafından denetlendi. Denetlenen commit için
+  [AUDIT_STATUS.md](https://github.com/solana-foundation/rewards/blob/main/audits/AUDIT_STATUS.md)
+  dosyasına bakın.
+</Callout>
+
+## Dağıtım türünü seçin
+
+Program iki dağıtım türünü destekler. Her ikisi de aynı vesting takvimlerini
+ve iptal modlarını kullanır.
+
+|                  | Direct                                       | Merkle                                                                   |
+| ---------------- | -------------------------------------------- | ------------------------------------------------------------------------ |
+| **Nasıl çalışır** | Her alıcı için onchain bir hesap oluşturur     | Onchain'de tek bir merkle root saklar; alıcılar talep etmek için kanıt (proof) sunar  |
+| **Başlangıç maliyeti** | Ödeyen taraf her alıcı hesabı için rent'i karşılar | Biri talepte bulunana kadar alıcı başına hesap oluşturulmaz                           |
+| **Ölçek**        | Birkaç bin alıcıya kadar pratiktir  | Milyonlarca alıcıya ölçeklenir; depolama yalnızca alıcılar talepte bulundukça büyür |
+| **Değiştirilebilirlik**   | Alıcılar oluşturulduktan sonra eklenebilir       | Alıcı kümesi oluşturulurken sabitlenir                                       |
+| **Kullanım alanı**   | Zaman içinde değişen küçük dağıtımlar    | Airdrop gibi büyük ve sabit dağıtımlar                              |
+
+## Vesting takvimleri
+
+Her tahsis dört takvimden birini taşır. Zaman damgaları Unix saniyesi cinsindendir.
+
+| Takvim      | Davranış                                                                                                               |
+| ------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `Immediate`   | Tüm token'lar hemen talep edilebilir                                                                                    |
+| `Linear`      | Token'lar `startTs` ile `endTs` arasında orantılı olarak açılır                                                             |
+| `Cliff`       | `cliffTs` zamanına kadar hiçbir şey açılmaz, ardından her şey bir anda açılır                                                       |
+| `CliffLinear` | `startTs` ile `endTs` arasında doğrusal vesting; `cliffTs` zamanına kadar hiçbir şey talep edilemez, daha önce biriken miktar cliff anında açılır |
+
+## Hesaplar
+
+| Hesap              | PDA seed'leri                                        | Depoladığı veriler                                       |
+| -------------------- | ------------------------------------------------ | -------------------------------------------- |
+| `DirectDistribution` | `["direct_distribution", mint, authority, seed]` | Yetkili, mint ve tahsis toplamları       |
+| `DirectRecipient`    | `["direct_recipient", distribution, recipient]`  | Bir alıcının tahsisi ve vesting bilgisi       |
+| `MerkleDistribution` | `["merkle_distribution", mint, authority, seed]` | Yetkili, mint, toplamlar ve merkle root |
+| `MerkleClaim`        | `["merkle_claim", distribution, claimant]`       | Bir talep sahibinin şu ana kadar talep ettiği miktar        |
+| `Revocation`         | `["revocation", distribution, user]`             | İptal edilmiş bir merkle talep sahibini engelleyen işaretçi |
+
+`seed`, oluşturma sırasında geçirilen ek bir imzalayanın adresidir; böylece tek bir
+yetkili aynı mint için birden fazla dağıtım yürütebilir. Her dağıtımın vault'u,
+mint'i için dağıtım PDA'sının associated token account'udur.
+
+## Talimatlar
+
+### Direct dağıtım
+
+1. Yetkili, dağıtım PDA'sını ve vault'unu oluşturmak için `CreateDirectDistribution`
+   talimatını çağırır.
+2. Yetkili, her alıcı için bir miktar ve bir vesting takvimiyle bir kez
+   `AddDirectRecipient` çağırır. Her çağrı, bu miktarı yetkilinin
+   token account'undan vault'a aktarır.
+3. Alıcılar, hak edilmiş token'ları çekmek için `ClaimDirect` çağırır. Şu anda hak
+   edilmiş her şeyi talep etmek için `amount: 0` geçirin.
+4. Bir alıcı her şeyi talep ettiğinde veya dağıtım kapatıldığında,
+   `CloseDirectRecipient` alıcı hesabını kapatır ve rent'i hesabı
+   finanse eden hesaba iade eder.
+5. Yetkili, vault'ta kalan bakiyeyi ve rent'i geri almak için `CloseDirectDistribution`
+   çağırır. `clawbackTs` ayarlanmışsa kapatmaya yalnızca bu zamandan sonra izin verilir.
+
+### Merkle dağıtımı
+
+1. Yetkili, offchain olarak bir merkle ağacı oluşturur. Her yaprak (leaf) bir talep sahibini,
+   o talep sahibinin toplam miktarını ve bir vesting takvimini taahhüt eder.
+2. Yetkili, root'u, talep edilebilir toplam miktarı ve bir `clawbackTs` değerini vererek
+   `CreateMerkleDistribution` çağırır ve vault'u aynı talimatta fonlar.
+3. Talep sahipleri, yaprak verileri ve kanıtlarıyla `ClaimMerkle` çağırır. İlk talep,
+   talep sahibinin `MerkleClaim` hesabını oluşturur. Şu anda hak edilmiş her şeyi
+   talep etmek için `amount: 0` geçirin.
+4. `clawbackTs` sonrasında yetkili, vault'ta kalan bakiyeyi ve rent'i geri almak için
+   `CloseMerkleDistribution` çağırır.
+5. Dağıtım kapatıldıktan sonra talep sahipleri, talep hesaplarının rent'ini geri almak için
+   `CloseMerkleClaim` çağırır.
+
+Program, yaprakları Keccak-256 ile şu şekilde hash'ler:
+`keccak256(0x00 || keccak256(claimant || totalAmount || schedule))`. Burada
+`totalAmount` little-endian bir `u64`'tür ve `schedule`, talimatın `VestingSchedule`
+argümanıyla aynı kodlamayı kullanır. Kanıt düğümleri sıralı çiftler halinde hash'lenir;
+küçük hash önce gelir.
+
+### İptal (Revocation)
+
+İptal isteğe bağlıdır (opt-in). Oluşturma sırasında ayarlanan `revocable` bitmask'i,
+yetkilinin hangi modları kullanabileceğini belirler: bit 0 `NonVested`'ı, bit 1 `Full`'u
+etkinleştirir ve `0` iptali devre dışı bırakır.
+
+| Mod        | Talimat                                    | Sonuç                                                                           |
+| ----------- | ---------------------------------------------- | -------------------------------------------------------------------------------- |
+| `NonVested` | `RevokeDirectRecipient` veya `RevokeMerkleClaim` | Hak edilmiş ancak talep edilmemiş token'lar kullanıcıya gider; henüz hak edilmemiş token'lar yetkiliye döner |
+| `Full`      | `RevokeDirectRecipient` veya `RevokeMerkleClaim` | Hak edilmiş ve edilmemiş, talep edilmemiş tüm token'lar yetkiliye döner               |
+
+Bir merkle talep sahibini iptal etmek, hiç talepte bulunmamış olsa bile gelecekteki
+talepleri engelleyen bir `Revocation` işaretçisi oluşturur. Bir direct alıcıyı iptal etmek
+ise `DirectRecipient` hesabını kapatır ve rent'i iade eder.
+
+## İstemciler
+
+Depo, Codama ile program IDL'inden üretilen [`@solana/kit`](/docs/clients/official/javascript) ve
+Rust istemcilerini [`clients/`](https://github.com/solana-foundation/rewards/tree/main/clients) dizininde içerir.
+İstemci henüz npm'de yayımlanmadı. Kaynaktan `just generate-clients` ile derleyin.
+
+## Kaynaklar
+
+- [Kaynak kodu](https://github.com/solana-foundation/rewards)
+- [OtterSec denetim raporu](https://github.com/solana-foundation/rewards/blob/main/audits/2026-ottersec-solana-foundation-rewards-audit.pdf)
+- [Sorun bildirin](https://github.com/solana-foundation/rewards/issues/new)
+- [Solana StackExchange](https://solana.stackexchange.com/), etiket
+  `rewards-program`

@@ -598,6 +598,35 @@
           "name": "Yılın Kampanyası Ödülü",
           "description": "Solana topluluğunun dikkatini çeken kampanya için."
         }
+      },
+      "voting": {
+        "metadataDescription": "Breakpoint 2026 Topluluk Ödülleri finalistleri için her seferinde bir kategori olacak şekilde oy verin.",
+        "heroCta": "Finalistlere oy verin",
+        "viewAwards": "Ödülleri görüntüle",
+        "heroDescription": "Topluluk Ödülleri'nin her kategorisinde bir finalist seçin. Gönderdiğiniz oylar kesindir.",
+        "eyebrow": "Topluluk Ödülleri oylaması",
+        "headline": "Finalistlere oy verin.",
+        "description": "Her kategoride bir finalist seçin. Oy gönderildikten sonra değiştirilemez.",
+        "status": {
+          "finalistsPending": "Finalistler inceleniyor. Oylama, finalistler açıklandıktan sonra başlayacak.",
+          "notStarted": "Oylama henüz başlamadı. Aday gösterimi sona erdikten sonra tekrar kontrol edin.",
+          "open": "Oylama açık.",
+          "closed": "Oylama sona erdi. Katıldığınız için teşekkür ederiz."
+        },
+        "progress": "{count}/{total} kategoride oy kullanıldı",
+        "voted": "Oy verildi",
+        "submitted": "Oy gönderildi",
+        "finalVote": "Bu kategorideki oyunuz kesindir.",
+        "share": "Oyu paylaş",
+        "chooseFinalist": "Bir finalist seçin",
+        "submit": "Oyu gönder",
+        "submitting": "Gönderiliyor…",
+        "shareText": "@SolanaConf'ta {category} kategorisinde {name} için oy kullandım. 🏆",
+        "errors": {
+          "load": "Oylarınız yüklenemedi. Lütfen sayfayı yenileyin.",
+          "save": "Oyunuz kaydedilemedi. Lütfen tekrar deneyin.",
+          "alreadyVoted": "Önceki oyunuz geri yüklendi. Oylar değiştirilemez."
+        }
       }
     },
     "accessibility": {
@@ -684,6 +713,238 @@
         "hours": "Saat",
         "minutes": "Dakika",
         "seconds": "Saniye"
+      }
+    },
+    "hereFor": {
+      "metadata": {
+        "title": "BP26 karşılıklı bağlantılarını bul",
+        "description": "Breakpoint 2026'da tanışmak istediğiniz üç kişiyi ekleyin, topluluğun nerede bir araya geldiğini görün ve size bir adım uzaktaki kişileri bulun.",
+        "personTitle": "{handle} kullanıcısının görmek için Londra'yı baştan sona geçeceği 3 kişi",
+        "personDescription": "{handle} kullanıcısının Breakpoint 2026 için kimleri eklediğini, kimlerin onu eklediğini ve sizin onunla nasıl bağlantılı olduğunuzu görün."
+      },
+      "hero": {
+        "eyebrow": "Breakpoint 2026",
+        "title": "BP26 karşılıklı bağlantılarını bul",
+        "description": "Londra'da tanışmak istediğiniz üç kişiyi ekleyin, ardından topluluğun nerede bir araya geldiğini keşfedin.",
+        "cta": "3 kişinizi ekleyin",
+        "ticketsCta": "Biletinizi alın"
+      },
+      "marquee": {
+        "community": "TOPLULUK",
+        "connections": "BAĞLANTILAR",
+        "mutuals": "KARŞILIKLI BAĞLANTILAR",
+        "london": "LONDRA",
+        "hereFor": "KİMİ GÖRMEK İSTİYORSUNUZ?"
+      },
+      "nav": {
+        "add": "3 kişinizi ekleyin",
+        "back": "Haritaya dön",
+        "map": "Haritayı aç"
+      },
+      "explorer": {
+        "eyebrow": "Haritayı keşfedin",
+        "stats": {
+          "people": "{people} kişi",
+          "adds": "{adds} ekleme",
+          "mutuals": "{mutuals} karşılıklı bağlantı"
+        },
+        "searchLabel": "Birini bulun",
+        "searchPlaceholder": "kullanıcı adı",
+        "noResults": "Bu kullanıcı adına sahip kimse henüz haritada yok.",
+        "viewsLabel": "Görünüm",
+        "views": {
+          "all": "Tümü",
+          "mutuals": "Yalnızca karşılıklı bağlantılar",
+          "network": "Ağınız",
+          "most": "En çok eklenenler",
+          "communities": "Topluluklar"
+        },
+        "legend": {
+          "out": "Onun eklediği",
+          "in": "Onu ekleyen",
+          "mutual": "Karşılıklı",
+          "path": "Ona giden yolunuz"
+        },
+        "findMutuals": "Karşılıklı bağlantıları bul",
+        "zoomControls": "Yakınlaştırma",
+        "zoomIn": "Yakınlaştır",
+        "zoomOut": "Uzaklaştır",
+        "fit": "Herkesi görünüme sığdır",
+        "centreOnYou": "Sizi ortala",
+        "refresh": "Haritayı yenile",
+        "hint": "Döndürmek için sürükleyin · yakınlaştırmak için kaydırın veya sıkıştırın · + / – tuşları",
+        "trail": "İz",
+        "you": "Siz",
+        "around": "{handle} çevresi",
+        "loading": "Harita yükleniyor",
+        "error": "Harita yüklenemedi. Tekrar denemek için sayfayı yenileyin.",
+        "empty": "Henüz kimse 3 kişisini eklemedi. Haritadaki ilk kişi siz olun.",
+        "mapLabel": "Bağlantı haritası"
+      },
+      "panel": {
+        "label": "Seçili kişi",
+        "yourNode": "Düğümünüz",
+        "inYour3": "3 kişinizin arasında",
+        "steps": "Sizden {count, plural, one {# adım} other {# adım}} uzakta",
+        "notConnected": "Henüz sizinle bağlantılı değil",
+        "selectSomeone": "Haritadan birini seçin",
+        "selectHint": "Eklediği kişileri ve sizinle nasıl bağlantılı olduğunuzu görmek için bir düğüme tıklayın veya bir kullanıcı adı arayın.",
+        "added": "Eklenenler",
+        "addedBy": "Ekleyenler",
+        "mutuals": "Karşılıklı bağlantılar",
+        "their3": "Onun 3 kişisi",
+        "your3": "3 kişiniz",
+        "nobodyAdded": "Henüz kimse yok. X'te etiketleyin.",
+        "notJoined": "Henüz 3 kişisini eklemedi.",
+        "more": "+{count} daha",
+        "howYouConnect": "Nasıl bağlantılısınız",
+        "noPath": "Henüz yol yok. Bağlanmak için onu ekleyin.",
+        "joinToConnect": "Nasıl bağlantılı olduğunuzu görmek için 3 kişinizi ekleyin.",
+        "mutual": "Karşılıklı",
+        "addToYour3": "3 kişinize ekleyin",
+        "postYour3": "3 kişinizi paylaşın",
+        "share": "Paylaş"
+      },
+      "add": {
+        "metadataTitle": "3 kişinizi ekleyin",
+        "metadataDescription": "Londra'daki Breakpoint 2026'da görmek istediğiniz üç kişiyi seçin, X ile doğrulayın ve etiketlenmeleri için paylaşın.",
+        "eyebrow": "3 kişinizi ekleyin",
+        "title": "Londra'da kimi görmek istiyorsunuz?",
+        "description": "Geliştiriciler, içerik üreticileri ya da yalnızca yanıtlardan tanıdığınız biri.",
+        "progress": "{count}/3 eklendi",
+        "steps": {
+          "picks": "3 kişinizi seçin",
+          "handle": "X ile doğrulayın",
+          "post": "X'te paylaşın"
+        },
+        "signInHint": "Kaydetme işlemi, X'ten bunun siz olduğunuzu doğrulamasını ister; böylece kimse sizin kullanıcı adınız adına seçim yapamaz. X, sunduğu en dar erişimi listeler. @ kullanıcı adınızı yalnızca bir kez okur, ardından erişimi geri veririz. Paylaşım yapamaz, kimseyi takip edemez veya mesajlarınızı göremeyiz.",
+        "signOut": "Çıkış yap",
+        "picksLabel": "3 kişiniz",
+        "addLabel": "Birini bulun",
+        "addPlaceholder": "Yazmaya başlayın veya X bağlantısını yapıştırın",
+        "remove": "{handle} kullanıcısını kaldır",
+        "empty": "Boş",
+        "suggestionsNear": "Haritada size yakın olanlar",
+        "suggestionsTop": "Haritada en çok eklenenler",
+        "addedYou": "Sizi ekledi",
+        "addedCount": "{count, plural, one {# kişi ekledi} other {# kişi ekledi}}",
+        "postPreview": "Paylaşımınız",
+        "save": "3 kişinizi kaydedin",
+        "saving": "Kaydediliyor",
+        "update": "3 kişinizi güncelleyin",
+        "closed": "Ekleme işlemi kapandı. Harita açık kalıyor.",
+        "saved": "Haritadasınız",
+        "savedDescription": "3 kişinizi paylaşın ki etiketlensinler. Her birine kendi kişilerini eklemeleri için bir bağlantı gider.",
+        "newMutualEyebrow": "Yeni karşılıklı bağlantı",
+        "newMutualTitle": "Siz ve {handle} birbirinizi eklediniz",
+        "newMutualDescription": "Olympia'da birbirinizi bulabilmeniz için paylaşın.",
+        "postMutual": "Karşılıklı bağlantıyı paylaşın",
+        "postYour3": "3 kişinizi paylaşın",
+        "openMap": "Kendinizi haritada görün",
+        "findMutuals": "Karşılıklı bağlantılarınızı bulun",
+        "signInToSave": "Kaydetmek için X ile giriş yapın",
+        "alreadyAdded": "Kendi listenizi zaten eklediniz mi? X ile giriş yapın",
+        "savingAs": "Şu olarak kaydediliyor",
+        "noMatch": "Yazmaya devam edin. Kullanıcı adları harf, rakam ve alt çizgi içerir.",
+        "notOnMap": "Henüz haritada değil",
+        "onMapCount": "{count, plural, =0 {Haritada} one {# kişi ekledi} other {# kişi ekledi}}"
+      },
+      "errors": {
+        "invalid_handle": "Geçerli bir X kullanıcı adı girin: harf, rakam ve alt çizgi, en fazla 15 karakter.",
+        "auth_required": "3 kişinizi kaydetmek için X ile giriş yapın.",
+        "x_denied": "X ile giriş iptal edildi. Seçimleriniz hâlâ burada.",
+        "x_error": "X ile giriş çalışmadı. Birazdan tekrar deneyin.",
+        "logout_error": "Çıkış yapılamadı. Birazdan tekrar deneyin.",
+        "invalid_adds": "Üç farklı kişi ekleyin.",
+        "self_add": "Kendinizi ekleyemezsiniz.",
+        "handle_claimed": "Başka biri aynı anda bu kullanıcı adına kayıt yaptı. Tekrar deneyin.",
+        "rate_limited": "Çok fazla deneme yapıldı. Bir dakika bekleyip tekrar deneyin.",
+        "closed": "Ekleme işlemi kapandı.",
+        "unavailable": "Kaydedilemedi. Birazdan tekrar deneyin.",
+        "duplicate": "{handle} zaten 3 kişinizin arasında.",
+        "full": "3 kişilik listeniz dolu. Önce birini kaldırın."
+      },
+      "mutuals": {
+        "metadataTitle": "Karşılıklı bağlantılarınızı bulun",
+        "metadataDescription": "Breakpoint 2026 karşılıklı bağlantılarınızı ve size bir adım uzaktaki kişileri, sizin ve 3 kişinizin eklediklerine göre sıralanmış şekilde görün.",
+        "eyebrow": "Karşılıklı bağlantılarınızı bulun",
+        "title": "Size bir adım uzaktaki kişiler",
+        "description": "Sizin ve çevrenizdekilerin eklediklerine göre sıralanır. Birini ekleyin veya X'te merhaba deyin. Sizi de eklerse karşılıklı bağlantı olursunuz.",
+        "yourMutuals": "Karşılıklı bağlantılarınız · {count}",
+        "noMutuals": "Henüz yok. Eklediğiniz kişilerin görmesi için 3 kişinizi paylaşın.",
+        "filtersLabel": "Neden burada",
+        "filters": {
+          "all": "Tüm öneriler",
+          "addedYou": "Sizi ekledi",
+          "sharedAdd": "Aynı eklemeler",
+          "step": "Bir adım ötede"
+        },
+        "count": "{total} öneriden {from}–{to}",
+        "pagination": "Öneri sayfaları",
+        "previous": "Önceki",
+        "next": "Sonraki",
+        "page": "Sayfa {page} / {pages}",
+        "your3": "3 kişiniz: {handles}",
+        "scoring": "Puanlar toplanır: sizi ekledi (5), ikiniz de aynı kişiyi eklediniz (her biri 2), 3 kişinizden biri onu ekledi (her biri 2), sizi ekleyen biri onu da ekledi (her biri 1).",
+        "reasons": {
+          "addedYou": "Sizi ekledi",
+          "sharedAdd": "İkiniz de {handle} kullanıcısını eklediniz",
+          "yourAddAdded": "{handle} onu ekledi",
+          "coAdded": "{handle} ikinizi de ekledi"
+        },
+        "sayHi": "Merhaba de",
+        "swapIn": "Ekle",
+        "inYour3": "3 kişinizin arasında",
+        "viewOnMap": "{handle} kullanıcısını haritada görüntüle",
+        "postMutuals": "Karşılıklı bağlantılarınızı paylaşın",
+        "needsHandle": "Önce 3 kişinizi ekleyin. Ardından bu sayfada size bir adım uzaktaki kişiler listelenir.",
+        "empty": "Henüz öneri yok. Daha fazla kişi 3 kişisini ekledikçe burada görünecekler.",
+        "loading": "Karşılıklı bağlantılarınız bulunuyor"
+      },
+      "how": {
+        "eyebrow": "Nasıl çalışır",
+        "step1Title": "3 kişinizi ekleyin",
+        "step1Body": "X ile giriş yapın, ardından tanışmak istediğiniz üç kişiyi seçin. Topluluktaki herkes sayılır.",
+        "step2Title": "Haritayı keşfedin",
+        "step2Body": "Kimleri eklediğini, kimlerin onu eklediğini ve sizden kaç adım uzakta olduğunu görmek için herhangi bir kişiyi seçin.",
+        "step3Title": "Karşılıklı bağlantılarınızı bulun",
+        "step3Body": "Haritada size yakın kişilerin, her biri için nedeniyle birlikte yer aldığı bir liste alın. Onları siz de ekleyin veya X'te merhaba deyin."
+      },
+      "shareSection": {
+        "eyebrow": "Paylaşın",
+        "title": "Her paylaşım, içindeki kişileri etiketler",
+        "description": "Etiketlenen kişiler kendi 3 kişisini eklemek için bir bağlantı alır. Harita böyle büyür.",
+        "your3": "3 kişiniz · üçünü de etiketler",
+        "mutual": "Bir karşılıklı bağlantı · o kişiyi etiketler",
+        "mutuals": "Karşılıklı bağlantılarınız · karşılıklı bağlantıları ve önerileri etiketler"
+      },
+      "share": {
+        "ask": "3 kişiniz kim?",
+        "your3": "Görmek için Londra'yı baştan sona geçeceğim 3 kişi: {handles}. Breakpoint'te görüşürüz.",
+        "mutual": "{handle} ve ben Breakpoint için birbirimizi seçtik. Karşılıklı. Londra'da görüşürüz.",
+        "mutuals": "Şimdiye kadarki Breakpoint ekibim: {mutuals}. Hâlâ {next} ile tanışmayı umuyorum.",
+        "mutualsNone": "Breakpoint ekibimi kuruyorum. {next} ile tanışmayı umuyorum.",
+        "sayHi": "Selam {handle}, Breakpoint haritası aramızda yalnızca bir adım olduğunu söylüyor. Londra'da bir kahve?",
+        "person": "Breakpoint haritasında {handle} kullanıcısını gördüm."
+      },
+      "card": {
+        "isHereFor": "{handle}, şu kişiler için Londra'yı baştan sona geçer",
+        "mutualEyebrow": "Karşılıklı · birbirlerini ekledi",
+        "mutualsEyebrow": "{handle} kullanıcısının Breakpoint ekibi",
+        "mutualsLabel": "Karşılıklı bağlantılar",
+        "nextLabel": "Tanışılacaklar",
+        "footer": "Breakpoint 2026 · Londra · 15–17 Kasım",
+        "question": "3 kişiniz kim?",
+        "mutual": "Karşılıklı"
+      },
+      "egg": {
+        "eyebrow": "Düğüm bulundu // bağlantı yok",
+        "title": "Bu kişiyi kimse eklemedi. Yine de buldunuz.",
+        "description": "Haklar tükenene kadar Breakpoint 2026 biletinde %25 indirim alın.",
+        "copy": "Kodu kopyala",
+        "copied": "Kopyalandı",
+        "claim": "Luma'da kullan",
+        "close": "Kapat"
       }
     }
   }

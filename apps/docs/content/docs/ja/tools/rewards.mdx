@@ -1,0 +1,98 @@
+---
+title: Rewards プログラム
+seoTitle: トークンのベスティングとMerkle配布のためのSolana Rewards プログラム
+description:
+  受取人ごとのアカウントまたはmerkle rootを使用して、ベスティングスケジュール付きでSPL TokenおよびToken-2022トークンを配布します。取り消しと回収(clawback)も任意で設定できます。
+---
+
+Rewardsプログラムは、プログラムが所有するvaultから複数の受取人にトークンを配布し、各受取人にベスティングスケジュールを適用します。authorityがvaultに資金を投入し、誰に何を付与するかを定義します。受取人はベスティング済みのトークンを時間の経過とともに請求でき、配布の設定で許可されている場合は、authorityが受取人を取り消したり、残りのトークンを回収したりできます。このプログラムはSolana FoundationがメンテナンスするPinocchioで構築されており、transfer hook拡張を持つToken-2022ミントを除き、SPL TokenとToken-2022の両方のミントに対応しています。
+
+プログラムID(mainnetおよびdevnet):
+
+```text
+REWArDioXgQJ2fZKkfu9LCLjQfRwYWVVfsvcsR5hoXi
+```
+
+<Callout type="info">
+  このプログラムはOtterSecによる監査を受けています。監査対象のコミットについては、
+  [AUDIT_STATUS.md](https://github.com/solana-foundation/rewards/blob/main/audits/AUDIT_STATUS.md)
+  を参照してください。
+</Callout>
+
+## 配布タイプを選択する
+
+このプログラムは2種類の配布タイプをサポートしています。どちらも同じベスティングスケジュールと取り消しモードを使用します。
+
+|                  | Direct                                       | Merkle                                                                   |
+| ---------------- | -------------------------------------------- | ------------------------------------------------------------------------ |
+| **仕組み** | 受取人ごとにオンチェーンアカウントを作成     | 単一のmerkle rootをオンチェーンに保存し、受取人はproofを提示して請求  |
+| **初期コスト** | 支払者がすべての受取人アカウントのrentを負担 | 誰かが請求するまで受取人ごとのアカウントは不要                           |
+| **スケール**        | 受取人数は数千人程度までが現実的  | 数百万人規模までスケール可能。ストレージは受取人が請求した分だけ増加 |
+| **変更可否**   | 作成後に受取人を追加可能       | 受取人セットは作成時に固定                                       |
+| **適した用途**   | 時間とともに変化する小規模な配布    | エアドロップなど、大規模で固定的な配布                              |
+
+## ベスティングスケジュール
+
+各割り当てには、次の4種類のスケジュールのいずれかが設定されます。タイムスタンプはUnix秒です。
+
+| スケジュール      | 動作                                                                                                               |
+| ------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `Immediate`   | すべてのトークンをすぐに請求可能                                                                                    |
+| `Linear`      | `startTs`から`endTs`までの間で、トークンが比例的にアンロックされる                                                             |
+| `Cliff`       | `cliffTs`になるまで何もアンロックされず、その時点ですべて一度にアンロックされる                                                       |
+| `CliffLinear` | `startTs`から`endTs`まで線形にベスティングされるが、`cliffTs`になるまで請求不可。それ以前に蓄積された分はクリフ時点でアンロックされる |
+
+## アカウント
+
+| アカウント              | PDA seeds                                        | 保存内容                                       |
+| -------------------- | ------------------------------------------------ | -------------------------------------------- |
+| `DirectDistribution` | `["direct_distribution", mint, authority, seed]` | authority、ミント、割り当て合計       |
+| `DirectRecipient`    | `["direct_recipient", distribution, recipient]`  | 1人の受取人の割り当てとベスティング       |
+| `MerkleDistribution` | `["merkle_distribution", mint, authority, seed]` | authority、ミント、合計、およびmerkle root |
+| `MerkleClaim`        | `["merkle_claim", distribution, claimant]`       | 1人の請求者がこれまでに請求した金額        |
+| `Revocation`         | `["revocation", distribution, user]`             | 取り消されたmerkle請求者をブロックするマーカー |
+
+`seed`は作成時に渡される追加の署名者のアドレスであり、これにより1つのauthorityが同じミントに対して複数の配布を実行できます。各配布のvaultは、そのミントに対する配布PDAのassociated token accountです。
+
+## Instructions
+
+### Direct配布
+
+1. authorityが`CreateDirectDistribution`を呼び出して、配布PDAとそのvaultを作成します。
+2. authorityは受取人ごとに1回`AddDirectRecipient`を呼び出し、金額とベスティングスケジュールを指定します。各呼び出しで、その金額がauthorityのtoken accountからvaultに移動されます。
+3. 受取人は`ClaimDirect`を呼び出して、ベスティング済みのトークンを引き出します。`amount: 0`を渡すと、現在ベスティング済みのすべてを請求します。
+4. 受取人がすべてを請求し終えたか、配布がクローズされると、`CloseDirectRecipient`で受取人アカウントがクローズされ、rentがそのアカウントの作成費用を支払ったアカウントに返金されます。
+5. authorityは`CloseDirectDistribution`を呼び出して、vaultの残高とrentを回収します。`clawbackTs`が設定されている場合、クローズはその時刻以降にのみ許可されます。
+
+### Merkle配布
+
+1. authorityはmerkle treeをオフチェーンで構築します。各リーフには、請求者、その請求者の合計金額、およびベスティングスケジュールがコミットされます。
+2. authorityはルート、請求可能な合計金額、`clawbackTs`を指定して`CreateMerkleDistribution`を呼び出し、同じinstructionでvaultに資金を投入します。
+3. 請求者は、自身のリーフデータとproofを指定して`ClaimMerkle`を呼び出します。最初の請求時に、請求者の`MerkleClaim`アカウントが作成されます。`amount: 0`を渡すと、現在ベスティング済みのすべてを請求します。
+4. `clawbackTs`の経過後、authorityは`CloseMerkleDistribution`を呼び出して、vaultの残高とrentを回収します。
+5. 配布がクローズされた後、請求者は`CloseMerkleClaim`を呼び出して、請求アカウントのrentを回収します。
+
+このプログラムは、Keccak-256を使用して`keccak256(0x00 || keccak256(claimant || totalAmount || schedule))`の形式でリーフをハッシュします。ここで`totalAmount`はリトルエンディアンの`u64`、`schedule`はinstructionの`VestingSchedule`引数と同じエンコーディングを使用します。proofノードは、ハッシュ値の小さい方を先にしたソート済みペアとしてハッシュされます。
+
+### 取り消し
+
+取り消しはオプトイン方式です。作成時に設定する`revocable`ビットマスクによって、authorityが使用できるモードが決まります。ビット0で`NonVested`が有効になり、ビット1で`Full`が有効になり、`0`の場合は取り消しが無効になります。
+
+| モード        | Instruction                                    | 結果                                                                           |
+| ----------- | ---------------------------------------------- | -------------------------------------------------------------------------------- |
+| `NonVested` | `RevokeDirectRecipient`または`RevokeMerkleClaim` | ベスティング済みで未請求のトークンはユーザーに渡り、未ベスティングのトークンはauthorityに返却される |
+| `Full`      | `RevokeDirectRecipient`または`RevokeMerkleClaim` | ベスティング済みか未ベスティングかを問わず、未請求のトークンはすべてauthorityに返却される               |
+
+merkle請求者を取り消すと、`Revocation`マーカーが作成され、まだ一度も請求していない場合でも、以後の請求がブロックされます。direct受取人を取り消すと、その`DirectRecipient`アカウントがクローズされ、rentが返金されます。
+
+## クライアント
+
+リポジトリの[`clients/`](https://github.com/solana-foundation/rewards/tree/main/clients)には、Codamaでプログラムのidlから生成された[`@solana/kit`](/docs/clients/official/javascript)およびRustのクライアントが含まれています。このクライアントはまだnpmに公開されていません。`just generate-clients`でソースからビルドしてください。
+
+## リソース
+
+- [ソースコード](https://github.com/solana-foundation/rewards)
+- [OtterSec監査レポート](https://github.com/solana-foundation/rewards/blob/main/audits/2026-ottersec-solana-foundation-rewards-audit.pdf)
+- [問題を報告する](https://github.com/solana-foundation/rewards/issues/new)
+- [Solana StackExchange](https://solana.stackexchange.com/)、タグ
+  `rewards-program`

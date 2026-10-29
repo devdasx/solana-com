@@ -598,6 +598,35 @@
           "name": "Premio a la Campaña del Año",
           "description": "Para la campaña que captó la atención de la comunidad de Solana."
         }
+      },
+      "voting": {
+        "metadataDescription": "Vota por los finalistas de los Premios de la comunidad de Breakpoint 2026, categoría por categoría.",
+        "heroCta": "Votar a los finalistas",
+        "viewAwards": "Ver premios",
+        "heroDescription": "Elige un finalista en cada categoría de los Premios de la comunidad. Los votos enviados son definitivos.",
+        "eyebrow": "Votación de los Premios de la comunidad",
+        "headline": "Vota por los finalistas.",
+        "description": "Elige un finalista en cada categoría. Una vez enviado, el voto no se puede cambiar.",
+        "status": {
+          "finalistsPending": "Estamos revisando los finalistas. La votación se abrirá cuando se anuncien.",
+          "notStarted": "La votación aún no ha abierto. Vuelve a consultar cuando se cierren las nominaciones.",
+          "open": "La votación está abierta.",
+          "closed": "La votación está cerrada. Gracias por participar."
+        },
+        "progress": "{count} de {total} categorías votadas",
+        "voted": "Votado",
+        "submitted": "Voto enviado",
+        "finalVote": "Tu voto en esta categoría es definitivo.",
+        "share": "Compartir voto",
+        "chooseFinalist": "Elige un finalista",
+        "submit": "Enviar voto",
+        "submitting": "Enviando…",
+        "shareText": "He votado a {name} en la categoría {category} en @SolanaConf. 🏆",
+        "errors": {
+          "load": "No se han podido cargar tus votos. Actualiza la página.",
+          "save": "No se ha podido guardar tu voto. Inténtalo de nuevo.",
+          "alreadyVoted": "Se ha restaurado tu voto anterior. Los votos no se pueden cambiar."
+        }
       }
     },
     "accessibility": {
@@ -684,6 +713,238 @@
         "hours": "Horas",
         "minutes": "Minutos",
         "seconds": "Segundos"
+      }
+    },
+    "hereFor": {
+      "metadata": {
+        "title": "Encuentra tus mutuals de BP26",
+        "description": "Añade a las tres personas que quieres conocer en Breakpoint 2026, descubre dónde conecta la comunidad y encuentra a quienes están a un paso de ti.",
+        "personTitle": "Las 3 personas por las que {handle} cruzaría Londres",
+        "personDescription": "Mira a quién ha añadido {handle} para Breakpoint 2026, quién le ha añadido y cómo conectas con esa persona."
+      },
+      "hero": {
+        "eyebrow": "Breakpoint 2026",
+        "title": "Encuentra tus mutuals de BP26",
+        "description": "Añade a las tres personas que quieres conocer en Londres y explora dónde conecta la comunidad.",
+        "cta": "Añade tus 3",
+        "ticketsCta": "Consigue tu entrada"
+      },
+      "marquee": {
+        "community": "COMUNIDAD",
+        "connections": "CONEXIONES",
+        "mutuals": "MUTUALS",
+        "london": "LONDRES",
+        "hereFor": "¿A QUIÉN QUIERES VER?"
+      },
+      "nav": {
+        "add": "Añade tus 3",
+        "back": "Volver al mapa",
+        "map": "Abrir el mapa"
+      },
+      "explorer": {
+        "eyebrow": "Explora el mapa",
+        "stats": {
+          "people": "{people} personas",
+          "adds": "{adds} añadidos",
+          "mutuals": "{mutuals} mutuals"
+        },
+        "searchLabel": "Buscar a alguien",
+        "searchPlaceholder": "usuario",
+        "noResults": "Todavía no hay nadie con ese usuario en el mapa.",
+        "viewsLabel": "Vista",
+        "views": {
+          "all": "Todos",
+          "mutuals": "Solo mutuals",
+          "network": "Tu red",
+          "most": "Más añadidos",
+          "communities": "Comunidades"
+        },
+        "legend": {
+          "out": "Ha añadido",
+          "in": "Le han añadido",
+          "mutual": "Mutual",
+          "path": "Tu ruta hacia esa persona"
+        },
+        "findMutuals": "Encontrar mutuals",
+        "zoomControls": "Zoom",
+        "zoomIn": "Acercar",
+        "zoomOut": "Alejar",
+        "fit": "Encuadrar a todos",
+        "centreOnYou": "Centrar en ti",
+        "refresh": "Actualizar el mapa",
+        "hint": "Arrastra para orbitar · desplázate o pellizca para hacer zoom · teclas + / –",
+        "trail": "Recorrido",
+        "you": "Tú",
+        "around": "Alrededor de {handle}",
+        "loading": "Cargando el mapa",
+        "error": "El mapa no se ha cargado. Actualiza la página para volver a intentarlo.",
+        "empty": "Todavía nadie ha añadido a sus 3. Sé la primera persona en aparecer en el mapa.",
+        "mapLabel": "Mapa de conexiones"
+      },
+      "panel": {
+        "label": "Persona seleccionada",
+        "yourNode": "Tu nodo",
+        "inYour3": "En tus 3",
+        "steps": "A {count, plural, one {# paso} many {# pasos} other {# pasos}} de ti",
+        "notConnected": "Todavía sin conexión contigo",
+        "selectSomeone": "Selecciona a cualquier persona del mapa",
+        "selectHint": "Haz clic en un nodo o busca un usuario para ver a quién ha añadido y cómo conectas.",
+        "added": "Añadidos",
+        "addedBy": "Añadido por",
+        "mutuals": "Mutuals",
+        "their3": "Sus 3",
+        "your3": "Tus 3",
+        "nobodyAdded": "Todavía nadie. Etiqueta a esa persona en X.",
+        "notJoined": "Todavía no ha añadido a sus 3.",
+        "more": "+{count} más",
+        "howYouConnect": "Cómo conectas",
+        "noPath": "Aún no hay ruta. Añade a esa persona para conectar.",
+        "joinToConnect": "Añade tus 3 para ver cómo conectas.",
+        "mutual": "Mutual",
+        "addToYour3": "Añadir a tus 3",
+        "postYour3": "Publica tus 3",
+        "share": "Compartir"
+      },
+      "add": {
+        "metadataTitle": "Añade tus 3",
+        "metadataDescription": "Elige a las tres personas que quieres ver en Breakpoint 2026 en Londres, confirma con X y publícalo para etiquetarlas.",
+        "eyebrow": "Añade tus 3",
+        "title": "¿A quién quieres ver en Londres?",
+        "description": "Builders, creadores o alguien a quien solo conoces por las respuestas.",
+        "progress": "{count} de 3 añadidos",
+        "steps": {
+          "picks": "Elige a tus 3",
+          "handle": "Confirma con X",
+          "post": "Publica en X"
+        },
+        "signInHint": "Al guardar, X te pide que confirmes que eres tú, para que nadie más pueda elegir con tu usuario. X muestra el acceso más limitado que ofrece. Leemos tu @usuario una sola vez y después devolvemos el acceso. No podemos publicar, seguir a nadie ni ver tus mensajes.",
+        "signOut": "Cerrar sesión",
+        "picksLabel": "Tus 3",
+        "addLabel": "Buscar a alguien",
+        "addPlaceholder": "Empieza a escribir o pega su enlace de X",
+        "remove": "Quitar a {handle}",
+        "empty": "Vacío",
+        "suggestionsNear": "Cerca de ti en el mapa",
+        "suggestionsTop": "Más añadidos en el mapa",
+        "addedYou": "Te ha añadido",
+        "addedCount": "{count, plural, one {Añadido por # persona} many {Añadido por # personas} other {Añadido por # personas}}",
+        "postPreview": "Tu publicación",
+        "save": "Guardar tus 3",
+        "saving": "Guardando",
+        "update": "Actualizar tus 3",
+        "closed": "Ya no se pueden añadir más personas. El mapa sigue abierto.",
+        "saved": "Ya estás en el mapa",
+        "savedDescription": "Publica tus 3 para etiquetar a esas personas. Cada una recibe un enlace para añadir sus propios 3.",
+        "newMutualEyebrow": "Nuevo mutual",
+        "newMutualTitle": "{handle} y tú os habéis añadido mutuamente",
+        "newMutualDescription": "Publícalo para encontraros en Olympia.",
+        "postMutual": "Publicar el mutual",
+        "postYour3": "Publica tus 3",
+        "openMap": "Mírate en el mapa",
+        "findMutuals": "Encuentra tus mutuals",
+        "signInToSave": "Inicia sesión con X para guardar",
+        "alreadyAdded": "¿Ya has añadido los tuyos? Inicia sesión con X",
+        "savingAs": "Guardando como",
+        "noMatch": "Sigue escribiendo. Los usuarios admiten letras, números y guiones bajos.",
+        "notOnMap": "Todavía no está en el mapa",
+        "onMapCount": "{count, plural, =0 {En el mapa} one {Añadido por # persona} many {Añadido por # personas} other {Añadido por # personas}}"
+      },
+      "errors": {
+        "invalid_handle": "Introduce un usuario de X válido: letras, números y guiones bajos, hasta 15 caracteres.",
+        "auth_required": "Inicia sesión con X para guardar tus 3.",
+        "x_denied": "Se ha cancelado el inicio de sesión con X. Tus elecciones siguen aquí.",
+        "x_error": "El inicio de sesión con X no ha funcionado. Inténtalo de nuevo en un momento.",
+        "logout_error": "No se ha podido cerrar la sesión. Inténtalo de nuevo en un momento.",
+        "invalid_adds": "Añade a tres personas distintas.",
+        "self_add": "No puedes añadirte a ti.",
+        "handle_claimed": "Alguien ha guardado ese usuario en el mismo momento. Inténtalo de nuevo.",
+        "rate_limited": "Demasiados intentos. Espera un minuto e inténtalo de nuevo.",
+        "closed": "Ya no se pueden añadir personas.",
+        "unavailable": "No se ha podido guardar. Inténtalo de nuevo en un momento.",
+        "duplicate": "{handle} ya está en tus 3.",
+        "full": "Tus 3 están completos. Quita antes a alguien."
+      },
+      "mutuals": {
+        "metadataTitle": "Encuentra tus mutuals",
+        "metadataDescription": "Mira tus mutuals de Breakpoint 2026 y a las personas a un paso de ti, ordenadas según a quién habéis añadido tú y tus 3.",
+        "eyebrow": "Encuentra tus mutuals",
+        "title": "Personas a un paso de ti",
+        "description": "Ordenadas según lo que habéis añadido tú y las personas de tu entorno. Añade a alguien o dile hola en X. Si te añade de vuelta, sois mutuals.",
+        "yourMutuals": "Tus mutuals · {count}",
+        "noMutuals": "Todavía ninguno. Publica tus 3 para que lo vean las personas que has añadido.",
+        "filtersLabel": "Por qué aparecen",
+        "filters": {
+          "all": "Todas las sugerencias",
+          "addedYou": "Te han añadido",
+          "sharedAdd": "Mismos añadidos",
+          "step": "A un paso"
+        },
+        "count": "{from}–{to} de {total} sugerencias",
+        "pagination": "Páginas de sugerencias",
+        "previous": "Anterior",
+        "next": "Siguiente",
+        "page": "Página {page} de {pages}",
+        "your3": "Tus 3: {handles}",
+        "scoring": "Las puntuaciones se acumulan: te ha añadido (5), ambos habéis añadido a la misma persona (2 por cada una), una de tus 3 la ha añadido (2 por cada una), alguien que te ha añadido también la ha añadido (1 por cada una).",
+        "reasons": {
+          "addedYou": "Te ha añadido",
+          "sharedAdd": "Ambos habéis añadido a {handle}",
+          "yourAddAdded": "{handle} ha añadido a esa persona",
+          "coAdded": "{handle} os ha añadido a los dos"
+        },
+        "sayHi": "Saludar",
+        "swapIn": "Añadir",
+        "inYour3": "En tus 3",
+        "viewOnMap": "Ver a {handle} en el mapa",
+        "postMutuals": "Publica tus mutuals",
+        "needsHandle": "Añade primero a tus 3. Después, esta página mostrará a las personas a un paso de ti.",
+        "empty": "Aún no hay sugerencias. Aparecerán a medida que más gente añada a sus 3.",
+        "loading": "Buscando tus mutuals"
+      },
+      "how": {
+        "eyebrow": "Cómo funciona",
+        "step1Title": "Añade tus 3",
+        "step1Body": "Inicia sesión con X y elige a las tres personas que quieres conocer. Cualquier miembro de la comunidad vale.",
+        "step2Title": "Explora el mapa",
+        "step2Body": "Selecciona a cualquier persona para ver a quién ha añadido, quién la ha añadido y a cuántos pasos está de ti.",
+        "step3Title": "Encuentra tus mutuals",
+        "step3Body": "Obtén una lista de personas cercanas a ti en el mapa, con el motivo de cada una. Añádelas de vuelta o salúdalas en X."
+      },
+      "shareSection": {
+        "eyebrow": "Compártelo",
+        "title": "Cada publicación etiqueta a las personas que aparecen en ella",
+        "description": "Las personas etiquetadas reciben un enlace para añadir sus propios 3. Así crece el mapa.",
+        "your3": "Tus 3 · etiqueta a las tres",
+        "mutual": "Un mutual · etiqueta a esa persona",
+        "mutuals": "Tus mutuals · etiqueta a mutuals y sugerencias"
+      },
+      "share": {
+        "ask": "¿Quiénes son tus 3?",
+        "your3": "Las 3 personas por las que cruzaría Londres: {handles}. Nos vemos en Breakpoint.",
+        "mutual": "{handle} y yo nos hemos elegido para Breakpoint. Es mutuo. Nos vemos en Londres.",
+        "mutuals": "Mi equipo de Breakpoint hasta ahora: {mutuals}. Sigo con ganas de conocer a {next}.",
+        "mutualsNone": "Formando mi equipo de Breakpoint. Con ganas de conocer a {next}.",
+        "sayHi": "Hola {handle}, el mapa de Breakpoint dice que estamos a un paso. ¿Un café en Londres?",
+        "person": "He visto a {handle} en el mapa de Breakpoint."
+      },
+      "card": {
+        "isHereFor": "{handle} cruzaría Londres por",
+        "mutualEyebrow": "Mutual · se han añadido mutuamente",
+        "mutualsEyebrow": "El equipo de Breakpoint de {handle}",
+        "mutualsLabel": "Mutuals",
+        "nextLabel": "Por conocer",
+        "footer": "Breakpoint 2026 · Londres · 15–17 nov",
+        "question": "¿Quiénes son tus 3?",
+        "mutual": "Mutual"
+      },
+      "egg": {
+        "eyebrow": "Nodo encontrado // sin conexiones",
+        "title": "Nadie ha añadido este nodo. Lo has encontrado igualmente.",
+        "description": "Consigue un 25 % de descuento en un pase de Breakpoint 2026 mientras queden canjes disponibles.",
+        "copy": "Copiar código",
+        "copied": "Copiado",
+        "claim": "Canjear en Luma",
+        "close": "Cerrar"
       }
     }
   }

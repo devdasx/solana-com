@@ -156,12 +156,16 @@
     "header": {
       "eyebrow": "Дані мережі оновлюються двічі на день",
       "title": "Дані Solana",
-      "description": "Метрики мережі, стейблкоїнів та DeFi, що оновлюються двічі на день від провідних on-chain провайдерів."
+      "description": "Метрики мережі, стейблкоїнів та DeFi, що оновлюються двічі на день від провідних on-chain провайдерів.",
+      "disclaimer": "Відмова від відповідальності: історичні дані відображають те, що кожен провайдер повідомив на відповідну дату. Для виправлення проблем із якістю даних потрібно подати запит на повторне заповнення (backfill) у <link>SDA</link>."
     },
     "controls": {
       "ariaLabel": "Елементи керування",
       "tabsAriaLabel": "Розділ даних",
       "rangeAriaLabel": "Діапазон дат",
+      "customRange": "Власний",
+      "customFrom": "Від",
+      "customTo": "До",
       "rpcMethodAriaLabel": "Метод RPC",
       "rpcMethodLabel": "Метод",
       "rpcInfraAriaLabel": "Інфраструктура RPC",
@@ -195,6 +199,10 @@
       "lending": {
         "label": "Кредитування",
         "description": "Метрики депозитів, позик і рівня використання для протоколів кредитування Solana за даними різних провайдерів."
+      },
+      "perps": {
+        "label": "Perps",
+        "description": "Обсяг торгів, відкритий інтерес і метрики трейдерів для майданчиків безстрокових ф'ючерсів Solana за провайдерами даних."
       },
       "rpc": {
         "label": "RPC",
@@ -357,14 +365,20 @@
           "avg": "Середнє місячне значення від добових показників",
           "last": "Значення на кінець місяця"
         },
-        "cumulative": "Підсумок наростаючим підсумком за останні {days} дн."
+        "cumulative": "Підсумок наростаючим підсумком за останні {days} дн.",
+        "cumulativeRange": "Наростаючий підсумок з {from} по {to}"
       }
+    },
+    "chartLink": {
+      "copy": "Скопіювати посилання на графік «{metric}»",
+      "copied": "Посилання скопійовано"
     },
     "footer": {
       "allProviders": "Усі постачальники",
       "noProviders": "Постачальників не вибрано",
       "providerListSeparator": " / ",
       "lastDays": "Останні {days, plural, one {# день} few {# дні} many {# днів} other {# дня}}",
+      "dateRange": "{from} – {to}",
       "lastHours": "{hours, plural, one {Остання # година} few {Останні # години} many {Останніх # годин} other {Останніх # годин}}",
       "lastTimeframe": "Останній {timeframe}",
       "refreshCadence": "Оновлюється двічі на день після 10:00 та 22:00 за ET",
@@ -466,6 +480,7 @@
       "milliseconds": "мс",
       "percent": "Відсоток",
       "sol": "SOL",
+      "tps": "TPS",
       "usd": "USD"
     },
     "charts": {
@@ -503,7 +518,8 @@
         "title": "Кількість транзакцій без голосування (невдалі)"
       },
       "vote-transactions": {
-        "title": "Кількість транзакцій (голосування)"
+        "title": "Кількість транзакцій (голосування)",
+        "note": "Транзакції голосування більше не враховуються з моменту запуску Alpenglow. Цей графік залишатиметься статичним до 1 січня 2027 року, після чого його буде видалено."
       },
       "slots": {
         "title": "Slots"
@@ -522,6 +538,9 @@
       },
       "sol-price-network": {
         "title": "Ціна SOL (мережа)"
+      },
+      "average-tps": {
+        "title": "Середній TPS"
       },
       "dex-volume": {
         "title": "Обсяг DEX"
@@ -546,6 +565,21 @@
       },
       "lending-protocol-count": {
         "title": "Кількість протоколів"
+      },
+      "perps-trading-volume": {
+        "title": "Обсяг торгів"
+      },
+      "perps-open-interest": {
+        "title": "Загальний відкритий інтерес"
+      },
+      "perps-transactions": {
+        "title": "Транзакції"
+      },
+      "perps-traders": {
+        "title": "Трейдери"
+      },
+      "perps-venue-count": {
+        "title": "Кількість майданчиків"
       },
       "rpc-error-rate": {
         "title": "Рівень помилок",
@@ -9105,7 +9139,7 @@
       "title": "RPC Infrastructure",
       "description": "RPC requests are an application's gateway to the Solana cluster. The requests are serviced by aptly named RPC Nodes, which are typically dedicated to the task rather than participating in consensus."
     },
-    "content": "# RPC-інфраструктура\n\n**Огляд:** RPC-запити є шлюзом додатка до кластера Solana. Ці запити обслуговуються відповідно названими RPC-вузлами, які зазвичай присвячені цьому завданню, а не участі в консенсусі. Тим не менш, з точки зору користувача додатка, погана продуктивність RPC нічим не відрізняється від поганої продуктивності кластера. Щоб забезпечити вашим користувачам чудовий досвід і продемонструвати швидкість та низьку затримку Solana, важливо мати RPC-інфраструктуру, яка відповідає завданню.\n\n**Розробка:** Розробникам рекомендується використовувати локальний кластер під час розробки, особливо на ранніх етапах і для тестування. Локальні кластери є більш гнучкими, ніж публічні пропозиції, надаючи свободу запускати неоптимізовані ранні ітерації. Найпростіший спосіб запустити локальний кластер — використовувати бінарний файл [solana-test-validator](https://docs.solana.com/developing/test-validator), включений до набору інструментів Solana CLI. Коли додаток досягає стабільного стану, розгортання в публічному кластері стає більш доцільним.\n\nЯк і при будь-якій оптимізації коду, коли справа стосується RPC-запитів, чим менше — тим краще. Уникайте частих повторюваних викликів для тих самих даних. Уникайте створення клієнтів, які роблять RPC-запити безпосередньо. \"Децентралізовані додатки без бекенду\" — це міф; ви просто навантажуєте чужу інфраструктуру. Кешуйте ресурсомісткі виклики (особливо getProgramAccount, getSignaturesForAddress2 та getConfirmedBlock) у спосіб, оптимізований для додатка, і обслуговуйте своїх користувачів з кешу. Витрачання часу на оптимізацію коду перед запуском може заощадити вам багато головного болю від звітів про поганий користувацький досвід і може значно знизити ваші витрати на інфраструктуру.\n\n## Безкоштовні сервіси\n\nДекілька провайдерів пропонують безкоштовний RPC-доступ до публічних кластерів Solana. Ці сервіси підходять для реальних тестів, ранніх демонстрацій і невеликих приватних бета-програм. Майте на увазі, що ви отримуєте саме те, за що платите. Безкоштовні сервіси зазвичай не масштабуються автоматично, мають обмеження за кількістю запитів, не пропонують SLA і не соромляться блокувати зловживачів. Коли додаток готовий до відкриття для публіки, настає час інвестувати в приватний RPC-доступ.\n\n**Деякі безкоштовні RPC-провайдери:**\n\n**Testnet**\n\n- [https://api.testnet.solana.com](https://api.testnet.solana.com/)\n\n**Devnet**\n\n- [https://api.devnet.solana.com](https://api.devnet.solana.com/)\n- [https://rpc.ankr.com/solana_devnet](https://rpc.ankr.com/solana_devnet)\n- [Helius](https://www.helius.dev/solana-rpc-nodes)\n- [OrbitFlare](https://orbitflare.com/)\n- [Quicknode](https://www.quicknode.com/chains/sol) ([з підтримкою x402](https://www.quicknode.com/docs/build-with-ai/x402-payments))\n- [Chainstack](https://chainstack.com/build-better-with-solana/)\n\n**Mainnet-beta**\n\n- [https://api.mainnet-beta.solana.com](https://api.mainnet-beta.solana.com/)\n- [Syndica](https://syndica.io/)\n- [Blockdaemon](https://www.blockdaemon.com/protocols/solana)\n- [https://rpc.ankr.com/solana](https://rpc.ankr.com/solana)\n- [GetBlock](https://getblock.io/nodes/sol/)\n- [FluxRPC](https://fluxrpc.com/)\n- [Helius](https://www.helius.dev/solana-rpc-nodes)\n- [OrbitFlare](https://orbitflare.com/)\n- [Quicknode](https://www.quicknode.com/chains/sol) ([з підтримкою x402](https://www.quicknode.com/docs/build-with-ai/x402-payments))\n- [InstantNodes](https://instantnodes.io/)\n- [Chainstack](https://chainstack.com/build-better-with-solana/)\n\n## Приватні сервіси\n\nЧерез варіативність вимог до RPC між додатками, узагальнена публічна RPC-інфраструктура рідко підходить. Щоб гарантувати користувачам гарний досвід, публічні додатки повинні забезпечити власний приватний RPC-доступ. Це дозволить вам автоматично масштабуватися відповідно до попиту користувачів, послабити обмеження швидкості відповідно до вашого додатка і мати спокій, що користувачі інших додатків не витіснять ваших. Декілька організацій пропонують високодоступні RPC-сервіси на вимогу; дивіться нижче. Якщо жоден із провайдерів не підходить і ви готові запустити власний RPC-сервіс, будь ласка, зв'яжіться з Solana Foundation для отримання рекомендацій.\n\n- [Quicknode](https://www.quicknode.com/chains/sol) (спільний, [з підтримкою x402](https://www.quicknode.com/docs/build-with-ai/x402-payments))\n- [Triton/RPC Pool](https://triton.one/) (спільний і виділений)\n- [Chainflow](https://chainflow.io/contact/) (виділений)\n- [Chainstack](https://chainstack.com/build-better-with-solana/) (спільний і виділений)\n- [GenesysGo](https://genesysgo.com/) (виділений)\n- [Figment](https://datahub.figment.io/sign_up?service=solana) (спільний)\n- [FluxRPC](https://fluxrpc.com/)\n- [Foundation Server Program](https://solana.org/delegation-program) - фізичні сервери зі знижкою для самостійного запуску\n- [Syndica](https://syndica.io/)\n- [Alchemy](https://www.alchemy.com/solana) (спільний)\n- [Blockdaemon](https://blockdaemon.com/marketplace/solana/)\n- [Ankr](https://www.ankr.com/)\n- [GetBlock](https://getblock.io/nodes/sol/)\n- [Helius](https://helius.dev/solana-rpc-nodes)\n- [OrbitFlare](https://orbitflare.com/) (спільний і виділений)\n- [NOWNodes](https://nownodes.io/nodes/solana-sol) (спільний і виділений)\n- [InstantNodes](https://instantnodes.io/) (гібридні)"
+    "content": "# RPC-інфраструктура\n\n**Огляд:** RPC-запити є шлюзом додатка до кластера Solana. Ці запити обслуговуються відповідно названими RPC-вузлами, які зазвичай присвячені цьому завданню, а не участі в консенсусі. Тим не менш, з точки зору користувача додатка, погана продуктивність RPC нічим не відрізняється від поганої продуктивності кластера. Щоб забезпечити вашим користувачам чудовий досвід і продемонструвати швидкість та низьку затримку Solana, важливо мати RPC-інфраструктуру, яка відповідає завданню.\n\n**Розробка:** Розробникам рекомендується використовувати локальний кластер під час розробки, особливо на ранніх етапах і для тестування. Локальні кластери є більш гнучкими, ніж публічні пропозиції, надаючи свободу запускати неоптимізовані ранні ітерації. Найпростіший спосіб запустити локальний кластер — використовувати бінарний файл [solana-test-validator](https://docs.solana.com/developing/test-validator), включений до набору інструментів Solana CLI. Коли додаток досягає стабільного стану, розгортання в публічному кластері стає більш доцільним.\n\nЯк і при будь-якій оптимізації коду, коли справа стосується RPC-запитів, чим менше — тим краще. Уникайте частих повторюваних викликів для тих самих даних. Уникайте створення клієнтів, які роблять RPC-запити безпосередньо. \"Децентралізовані додатки без бекенду\" — це міф; ви просто навантажуєте чужу інфраструктуру. Кешуйте ресурсомісткі виклики (особливо getProgramAccount, getSignaturesForAddress2 та getConfirmedBlock) у спосіб, оптимізований для додатка, і обслуговуйте своїх користувачів з кешу. Витрачання часу на оптимізацію коду перед запуском може заощадити вам багато головного болю від звітів про поганий користувацький досвід і може значно знизити ваші витрати на інфраструктуру.\n\n## Безкоштовні сервіси\n\nДекілька провайдерів пропонують безкоштовний RPC-доступ до публічних кластерів Solana. Ці сервіси підходять для реальних тестів, ранніх демонстрацій і невеликих приватних бета-програм. Майте на увазі, що ви отримуєте саме те, за що платите. Безкоштовні сервіси зазвичай не масштабуються автоматично, мають обмеження за кількістю запитів, не пропонують SLA і не соромляться блокувати зловживачів. Коли додаток готовий до відкриття для публіки, настає час інвестувати в приватний RPC-доступ.\n\n**Деякі безкоштовні RPC-провайдери:**\n\n**Testnet**\n\n- [https://api.testnet.solana.com](https://api.testnet.solana.com/)\n\n**Devnet**\n\n- [https://api.devnet.solana.com](https://api.devnet.solana.com/)\n- [https://rpc.ankr.com/solana_devnet](https://rpc.ankr.com/solana_devnet)\n- [Helius](https://www.helius.dev/solana-rpc-nodes)\n- [OrbitFlare](https://orbitflare.com/)\n- [Quicknode](https://www.quicknode.com/chains/sol) ([з підтримкою x402](https://www.quicknode.com/docs/build-with-ai/x402-payments))\n- [Chainstack](https://chainstack.com/build-better-with-solana/)\n\n**Mainnet-beta**\n\n- [https://api.mainnet-beta.solana.com](https://api.mainnet-beta.solana.com/)\n- [Solana Vibe Station](https://solanavibestation.com)\n- [Syndica](https://syndica.io/)\n- [Blockdaemon](https://www.blockdaemon.com/protocols/solana)\n- [https://rpc.ankr.com/solana](https://rpc.ankr.com/solana)\n- [GetBlock](https://getblock.io/nodes/sol/)\n- [FluxRPC](https://fluxrpc.com/)\n- [Helius](https://www.helius.dev/solana-rpc-nodes)\n- [OrbitFlare](https://orbitflare.com/)\n- [Quicknode](https://www.quicknode.com/chains/sol) ([з підтримкою x402](https://www.quicknode.com/docs/build-with-ai/x402-payments))\n- [InstantNodes](https://instantnodes.io/)\n- [Chainstack](https://chainstack.com/build-better-with-solana/)\n\n## Приватні сервіси\n\nЧерез варіативність вимог до RPC між додатками, узагальнена публічна RPC-інфраструктура рідко підходить. Щоб гарантувати користувачам гарний досвід, публічні додатки повинні забезпечити власний приватний RPC-доступ. Це дозволить вам автоматично масштабуватися відповідно до попиту користувачів, послабити обмеження швидкості відповідно до вашого додатка і мати спокій, що користувачі інших додатків не витіснять ваших. Декілька організацій пропонують високодоступні RPC-сервіси на вимогу; дивіться нижче. Якщо жоден із провайдерів не підходить і ви готові запустити власний RPC-сервіс, будь ласка, зв'яжіться з Solana Foundation для отримання рекомендацій.\n\n- [Quicknode](https://www.quicknode.com/chains/sol) (спільний, [з підтримкою x402](https://www.quicknode.com/docs/build-with-ai/x402-payments))\n- [Triton/RPC Pool](https://triton.one/) (спільний і виділений)\n- [Chainflow](https://chainflow.io/contact/) (виділений)\n- [Chainstack](https://chainstack.com/build-better-with-solana/) (спільний і виділений)\n- [GenesysGo](https://genesysgo.com/) (виділений)\n- [Figment](https://datahub.figment.io/sign_up?service=solana) (спільний)\n- [FluxRPC](https://fluxrpc.com/)\n- [Foundation Server Program](https://solana.org/delegation-program) - фізичні сервери зі знижкою для самостійного запуску\n- [Solana Vibe Station](https://solanavibestation.com) (спільний і виділений)\n- [Syndica](https://syndica.io/)\n- [Alchemy](https://www.alchemy.com/solana) (спільний)\n- [Blockdaemon](https://blockdaemon.com/marketplace/solana/)\n- [Ankr](https://www.ankr.com/)\n- [GetBlock](https://getblock.io/nodes/sol/)\n- [Helius](https://helius.dev/solana-rpc-nodes)\n- [OrbitFlare](https://orbitflare.com/) (спільний і виділений)\n- [NOWNodes](https://nownodes.io/nodes/solana-sol) (спільний і виділений)\n- [InstantNodes](https://instantnodes.io/) (гібридні)\n- [Digital Energy](https://rpc.digital-energy.io) (спільний, [з підтримкою x402](https://agents.digital-energy.io))"
   },
   "2024outlook": {
     "meta": {
@@ -10344,13 +10378,13 @@
   },
   "developers-evm-to-svm": {
     "meta": {
-      "seoTitle": "Міграція на Solana — Hub міграції між блокчейнами",
+      "seoTitle": "Міграція на Solana: Hub міграції між блокчейнами",
       "seoDescription": "Посібники з міграції вашого проєкту з Ethereum, CosmWasm або інших блокчейнів на Solana."
     },
     "hero": {
       "eyebrow": "Посібник з міграції мереж",
       "headline": "Перейдіть на Solana",
-      "body": "<p>Вичерпні посібники з міграції вашого продукту з Ethereum, Cosmos або інших блокчейнів на Solana. Кожен посібник адаптовано до вашої вихідної мережі — охоплює ключові відмінності, інструменти та покрокові схеми міграції.</p>",
+      "body": "<p>Вичерпні посібники з міграції вашого продукту з Ethereum, Cosmos або інших блокчейнів на Solana. Кожен посібник адаптовано до вашої вихідної мережі, і він охоплює ключові відмінності, інструменти та покрокові схеми міграції.</p>",
       "buttons": [
         {
           "label": "Переглянути посібники EVM"
@@ -10473,7 +10507,7 @@
         {
           "eyebrow": "",
           "heading": "Programs and Smart Contracts",
-          "body": "Досліджуйте програми — відомі як смарт-контракти в інших екосистемах — та принципи їхньої роботи на Solana",
+          "body": "Досліджуйте програми (відомі як смарт-контракти в інших екосистемах) та принципи їхньої роботи на Solana",
           "callToAction": {
             "label": "Read"
           }
@@ -10529,7 +10563,7 @@
         "accordions": [
           {
             "title": "У чому найбільша архітектурна відмінність між EVM і SVM?",
-            "body": "<p>На Ethereum смарт-контракти зберігають власний стан. На Solana програми є stateless — увесь стан знаходиться в окремих акаунтах, якими володіє програма. Це розділення забезпечує паралельне виконання транзакцій у Solana і є ключовою концепцією, яку слід засвоїти перед міграцією.</p>"
+            "body": "<p>В Ethereum смарт-контракти зберігають власний стан. У Solana програми не мають стану: весь стан зберігається в окремих акаунтах, якими володіє програма. Таке розділення забезпечує паралельне виконання транзакцій у Solana і є ключовою концепцією, яку слід засвоїти перед міграцією.</p>"
           },
           {
             "title": "Чи можу я розгорнути свої контракти Solidity на Solana?",
@@ -10585,12 +10619,12 @@
       "complete": {
         "eyebrow": "Повний посібник",
         "headline": "Покрокове керівництво з міграції",
-        "body": "Покроковий посібник, що охоплює кожен етап міграції Cosmos app chain на Solana — від управління та завершення роботи мережі до клеймінгу токенів і розгортання програм."
+        "body": "Покроковий посібник, що охоплює кожен етап міграції Cosmos app chain на Solana: від управління та завершення роботи мережі до клеймінгу токенів і розгортання програм."
       }
     },
     "evmPage": {
       "meta": {
-        "seoTitle": "EVM до SVM — Посібники з міграції на Solana для розробників Ethereum",
+        "seoTitle": "EVM до SVM: посібники з міграції на Solana для розробників Ethereum",
         "seoDescription": "Покрокові посібники для розробників Ethereum, що мігрують на Solana: акаунти, програми, стандарти токенів (ERC20, ERC721, ERC4337), консенсус і відмінності клієнтів."
       }
     },
@@ -11616,7 +11650,7 @@
       "blocks": {
         "intro": "<p>ERC20 sets a standard for Fungible Tokens, which means that each token is the same as another token (both in type and value). For example, an ERC20 Token works similarly to the ETH token, where 1 Token is always equal to any other Token.</p>",
         "tokenProgram": "<h2><strong>The Token Program</strong></h2><p>The <a href=\"https://spl.solana.com/token\" rel=\"noopener noreferrer\" target=\"_blank\">Token Program</a> on Solana is the single smart contract that is used for most token operations. This is different from Ethereum, where you deploy a new smart contract for every token. Why is there only one main smart contract for tokens on Solana?</p><p>The <a href=\"https://solana.com/docs/core/accounts\" rel=\"noopener noreferrer\" target=\"_blank\">Solana Account Model </a>separates the state from execution logic on Solana, making interfaces very difficult to create like ERC20 does on Ethereum. Instead of multiple smart contracts, the single Token Program handles tokens in separate “accounts” known as “mint accounts”, while user tokens are stored in individual “token accounts”. The account model gives a significant benefit in program reusability and predetermined definition, avoiding unknown side effects of anyone being able to write their own ERC20 token functions.</p>",
-        "tokensNoContractAddress": "<h3><strong>Токени не мають адреси контракту, лише адресу mint</strong></h3><p>В Ethereum кожен токен унікально ідентифікується своєю адресою контракту. У Solana кожен токен унікально ідентифікується адресою mint. Базова ідея схожа — це ончейн-вказівник на конкретний токен. Але оскільки Token Program у Solana є універсальним, вам не потрібно розгортати окрему \"адресу контракту\". Натомість ви надаєте середовищу виконання Solana новий mint account.</p>",
+        "tokensNoContractAddress": "<h3><strong>Токени не мають адрес контрактів, лише mint-адреси</strong></h3><p>В Ethereum кожен токен унікально ідентифікується адресою контракту. У Solana кожен токен унікально ідентифікується mint-адресою. Ідея схожа: це ончейн-вказівник на конкретний токен. Але оскільки Solana Token Program універсальний, ви не розгортаєте окрему «адресу контракту». Натомість ви передаєте середовищу виконання Solana новий mint account.</p>",
         "noApprovalFlow": "<h3><strong>No Approval Flow Needed</strong></h3><p>On Ethereum, transferring ERC20 tokens between two addresses often requires <code>approve</code> + <code>transferFrom</code> if you're doing it on behalf of a user. On Solana, each user already has an ATA (<a href=\"https://spl.solana.com/associated-token-account\" rel=\"noopener noreferrer\" target=\"_blank\">Associated token accounts</a>) recognized by the Token Program. A single Solana transaction can atomically call multiple instructions, so no separate approval step is required. You can directly transfer from one user’s token account to another in one go.</p>",
         "tokenProgramLookLike": "<h3><strong>What Does A Solana Token Program Look Like?</strong></h3><p>A very rough translation of the Solana Token Program would look like this:</p>",
         "tokenProgramExplanation": "<p>As you can see in the contract, instead of an approval flow, there is only a transfer function to move tokens. On Solana, a single transaction can call multiple smart contract functions atomically, removing the need for the approval flow. Another difference is that everything is stored in a token account on Solana, keeping the details of the owner’s tokens separate from the other state.</p>",
@@ -12903,26 +12937,63 @@
   },
   "wsop": {
     "metadata": {
-      "title": "Solana × World Series of Poker",
-      "description": "Solana впроваджує миттєві цифрові бай-іни та виплати на World Series of Poker — і приводить найвідоміші постаті криптосвіту до головного столу.",
-      "socialImageAlt": "Solana × World Series of Poker"
+      "title": "WSOP Paradise за підтримки Solana",
+      "description": "Купуйте бай-ін на WSOP Paradise ончейн через Solana Pay у додатку World Series of Poker. Baha Mar, Нассау, з середи, 2 грудня.",
+      "socialImageAlt": "WSOP Paradise за підтримки Solana"
     },
     "accessibility": {
       "skipToMain": "Перейти до основного вмісту"
     },
     "marquee": {
-      "shuffleUp": "Перетасуй і роздай"
+      "skipWire": "Без банківських переказів",
+      "buyInSolana": "Бай-ін на Solana",
+      "settles": "Розрахунок за секунди",
+      "nothingToDeclare": "Нічого декларувати",
+      "anyDay": "У будь-який час, будь-якого дня",
+      "shuffleUp": "Перетасуй і роздай",
+      "noCash": "Без готівки при собі",
+      "paradise": "Baha Mar, Нассау"
     },
-    "hero": {},
+    "hero": {
+      "topline": "WSOP Paradise · Baha Mar, Нассау",
+      "presentedBy": "За підтримки Solana",
+      "lockupAlt": "WSOP Paradise за підтримки Solana",
+      "eyebrow": "З середи, 2 грудня",
+      "title": "Купуйте бай-ін на WSOP Paradise ончейн.",
+      "description": "Платіть через Solana Pay у додатку World Series of Poker. Baha Mar, Нассау, з середи, 2 грудня.",
+      "cta": "Дізнайтеся, як зробити бай-ін"
+    },
     "stories": {
-      "ariaLabel": "Історії кампанії WSOP",
-      "fallbackLabel": "Історія",
-      "empty": {
-        "chip": "Перша роздача · 4 серп.",
-        "title": "Історії з ігрового столу вже незабаром.",
-        "description": "Представлення гравців, розмови за столом і яскраві моменти з'являтимуться тут у міру розгортання кампанії.",
-        "action": "Стежити за подіями"
+      "label": "Solana Stories",
+      "title": "Гравці, що стоять за причинами",
+      "description": "Троє чемпіонів WSOP про те, що змінюється, коли бай-ін переходить в ончейн. Новий випуск щотижня.",
+      "episode": "Еп. {number}",
+      "watch": "Дивитися випуск",
+      "goesLive": "Вийде {date}",
+      "comingSoon": "Незабаром",
+      "profiles": {
+        "jamieGold": {
+          "title": "Чемпіон Main Event 2006 року",
+          "biography": "Переможець Main Event WSOP 2006 року, найбільшого в історії на той час, із рекордним призом $12 мільйонів. Голд — одна з найяскравіших особистостей покеру та знакова постать початкової ери WSOP на ESPN.",
+          "theme": "Доступ",
+          "themeLine": "Хто тепер може потрапити на турнір"
+        },
+        "michaelMizrachi": {
+          "title": "Гріндер",
+          "biography": "Чемпіон Main Event WSOP 2025 року здобув титул, вигравши $10 мільйонів. Серед його дев'яти браслетів — рекордні чотири перемоги в Poker Players Championship. Введений до Залу слави покеру у 2025 році, його заробітки за кар'єру перевищують $30 мільйонів.",
+          "theme": "Швидкість і розрахунок",
+          "themeLine": "Як швидко підтверджується місце"
+        },
+        "philHellmuth": {
+          "title": "17-разовий володар браслета WSOP",
+          "biography": "Переможець Main Event WSOP 1989 року та беззаперечний лідер покеру за кількістю браслетів — рекордні 17. Введений до Залу слави покеру у 2007 році, Гелмут збудував одну з найуспішніших кар'єр в історії WSOP.",
+          "theme": "Як гра платить",
+          "themeLine": "Новий спосіб зробити бай-ін"
+        }
       }
+    },
+    "news": {
+      "title": "Новини WSOP"
     },
     "start": {
       "label": "Ваша перша роздача",
@@ -12930,7 +13001,106 @@
       "description": "Налаштуйте гаманець, вивчіть основи та будьте готові, коли дія перейде в мережу.",
       "findWallet": "Знайти гаманець",
       "guide": "Посібник покерного гравця з крипти",
+      "guideDescription": "Вступ до криптотрейдингу, побудований на навичках, які у вас уже є.",
+      "guideCta": "Прочитати посібник",
       "comingSoon": "Незабаром"
+    },
+    "howTo": {
+      "label": "Як зробити бай-ін",
+      "title": "Ваш бай-ін крок за кроком",
+      "description": "Бай-іни на Paradise проходять через додаток World Series of Poker із Solana Pay. Перегляньте відеоінструкцію або виконайте сім кроків.",
+      "videoTitle": "Відеоінструкція з бай-іну на WSOP Paradise",
+      "videoNote": "Повна відеоінструкція вийде в понеділок, 26 жовтня.",
+      "steps": {
+        "1": "Завантажте <link>додаток WSOP Live</link>.",
+        "2": "Створіть акаунт. Найшвидше увійти через Google.",
+        "3": "Прокрутіть до останньої події на сторінці — <strong>2026 WSOP Paradise</strong>.",
+        "4": "Виберіть подію, на яку хочете зробити бай-ін.",
+        "5": "Натисніть <strong>Register</strong> (угорі праворуч), поставте позначку <strong>acknowledge the terms</strong>, а потім <strong>Purchase ticket</strong>.",
+        "6": "Виберіть <strong>Crypto Solana</strong>.",
+        "7": "Підключіть сумісний гаманець, наприклад Phantom, або скопіюйте адресу гаманця-отримувача й надішліть кошти вручну."
+      },
+      "download": {
+        "label": "Отримайте додаток WSOP Live",
+        "viewOn": "Дивитися в",
+        "appStore": "App Store",
+        "googlePlay": "Google Play",
+        "appStoreAria": "Переглянути WSOP Live в App Store (відкривається в новій вкладці)",
+        "googlePlayAria": "Переглянути WSOP Live в Google Play (відкривається в новій вкладці)"
+      }
+    },
+    "whyOnchain": {
+      "label": "Чому варто робити бай-ін ончейн",
+      "title": "Забудьте про банківські перекази. Бай-ін на Solana.",
+      "description": "Оплата ончейн вигідніша за банківський переказ чи перевезення готівки, особливо якщо ви прилітаєте з-за меж США.",
+      "cards": {
+        "speed": {
+          "title": "Розрахунок за секунди",
+          "body": "Ваше місце підтверджується, поки ви ще в додатку."
+        },
+        "fees": {
+          "title": "Частки цента",
+          "body": "Жодної комісії за переказ, жодної надбавки за картку, жодного відсотка, що вираховується наперед."
+        },
+        "crossBorder": {
+          "title": "Жодних комісій за міжнародні перекази",
+          "body": "Платити з Лагоса коштує стільки ж, скільки з Лас-Вегаса."
+        },
+        "availability": {
+          "title": "У будь-який час, у будь-який день",
+          "body": "Жодних банківських годин, жодних вихідних, жодних обмежень за часом."
+        },
+        "customs": {
+          "title": "Нічого декларувати",
+          "body": "Не потрібно везти бай-ін через аеропорт."
+        },
+        "security": {
+          "title": "Жодної готівки при собі",
+          "body": "Нічого втрачати і нічого, через що вас могли б обрати мішенню."
+        }
+      }
+    },
+    "showdown": {
+      "label": "The Solana Showdown",
+      "lockupAlt": "WSOP Solana Showdown на базі Phantom",
+      "chip": "Одна гра · Трансляція",
+      "title": "Багамський інвайтешнл",
+      "description": "Одна запрошувальна гра в Baha Mar із прямою трансляцією. Дев'ять місць, а гравців буде названо до першої роздачі.",
+      "ticket": {
+        "topline": "WSOP Paradise",
+        "type": "Інвайтешнл",
+        "name": "Solana Showdown",
+        "subtitle": "Багамський інвайтешнл",
+        "dateLabel": "Дата гри:",
+        "dateValue": "Сб, 12 грудня 2026",
+        "venue": "Baha Mar, Нассау",
+        "streamed": "Трансляція",
+        "inviteOnly": "Лише за запрошенням"
+      },
+      "details": {
+        "when": {
+          "label": "Коли",
+          "value": "Субота, 12 грудня 2026"
+        },
+        "where": {
+          "label": "Де",
+          "value": "Baha Mar, Нассау, Багамські Острови"
+        },
+        "format": {
+          "label": "Формат",
+          "value": "Одна запрошувальна гра з трансляцією"
+        }
+      },
+      "lineup": {
+        "eyebrow": "За столом",
+        "title": "Дев'ять місць.<br></br>Імена буде розкрито.",
+        "seat": "Місце {number}",
+        "unrevealed": "Буде розкрито"
+      },
+      "cta": {
+        "description": "Стежте за @Solana в X, щоб дізнатися про гравців за столом і дивитися трансляцію.",
+        "action": "Стежити за @Solana"
+      }
     }
   },
   "sdp": {
@@ -13163,7 +13333,7 @@
     },
     "hero": {
       "eyebrow": "CosmWasm -> Solana / Anchor",
-      "headline": "Переписати контракти CosmWasm як програми Solana",
+      "headline": "Перенесення контрактів CosmWasm",
       "body": "Використовуйте цей посібник, коли переносите логіку смартконтракту з CosmWasm до програми Solana. Він організований навколо реальної роботи з переписування: зміна ментальних моделей, <a href=\"/docs/core/accounts\">акаунти Solana</a> як об'єкти стану, які ваша програма читає та записує, <a href=\"/docs/core/cpi\">патерни CPI</a> для викликів між програмами, тестування, <a href=\"/docs/core/programs/program-deployment\">оновлення програм</a> та специфічні для Solana правила безпеки."
     },
     "contentEditor": {
@@ -13198,7 +13368,7 @@
     },
     "hero": {
       "eyebrow": "Cosmos App Chain -> Solana",
-      "headline": "Перемістити Cosmos App Chain до Solana",
+      "headline": "Мігрувати Cosmos app chain",
       "body": "Використовуйте цей посібник, коли ви виводите з експлуатації активний ланцюжок Cosmos SDK або CosmWasm і переводите користувачів, активи, управління та продуктову інфраструктуру на Solana. Він відповідає реальній послідовності міграції: прийняття рішень, операції зупинки, <a href=\"/docs/tokens\">архітектура токенів</a>, запуск на Solana, <a href=\"/docs/core/programs\">міграція програм</a>, комунікація з користувачами та виведення з експлуатації."
     },
     "contentEditor": {

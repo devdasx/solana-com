@@ -598,6 +598,35 @@
           "name": "Nagroda Kampania Roku",
           "description": "Dla kampanii, która przykuła uwagę społeczności Solana."
         }
+      },
+      "voting": {
+        "metadataDescription": "Głosuj na finalistów Nagród Społeczności Breakpoint 2026, kategoria po kategorii.",
+        "heroCta": "Głosuj na finalistów",
+        "viewAwards": "Zobacz nagrody",
+        "heroDescription": "Wybierz jednego finalistę w każdej kategorii Nagród Społeczności. Oddane głosy są ostateczne.",
+        "eyebrow": "Głosowanie w Nagrodach Społeczności",
+        "headline": "Zagłosuj na finalistów.",
+        "description": "Wybierz jednego finalistę w każdej kategorii. Po wysłaniu głosu nie można go zmienić.",
+        "status": {
+          "finalistsPending": "Finaliści są weryfikowani. Głosowanie rozpocznie się po ich ogłoszeniu.",
+          "notStarted": "Głosowanie jeszcze się nie rozpoczęło. Zajrzyj tu po zakończeniu nominacji.",
+          "open": "Głosowanie jest otwarte.",
+          "closed": "Głosowanie zostało zamknięte. Dziękujemy za udział."
+        },
+        "progress": "Zagłosowano w kategoriach: {count} z {total}",
+        "voted": "Zagłosowano",
+        "submitted": "Głos wysłany",
+        "finalVote": "Twój głos w tej kategorii jest ostateczny.",
+        "share": "Udostępnij głos",
+        "chooseFinalist": "Wybierz finalistę",
+        "submit": "Wyślij głos",
+        "submitting": "Wysyłanie…",
+        "shareText": "Głosuję na {name} w kategorii {category} na @SolanaConf. 🏆",
+        "errors": {
+          "load": "Nie udało się wczytać Twoich głosów. Odśwież stronę.",
+          "save": "Nie udało się zapisać Twojego głosu. Spróbuj ponownie.",
+          "alreadyVoted": "Przywrócono Twój poprzedni głos. Głosów nie można zmieniać."
+        }
       }
     },
     "accessibility": {
@@ -684,6 +713,238 @@
         "hours": "Godziny",
         "minutes": "Minuty",
         "seconds": "Sekundy"
+      }
+    },
+    "hereFor": {
+      "metadata": {
+        "title": "Znajdź swoje mutuale z BP26",
+        "description": "Dodaj trzy osoby, które chcesz poznać na Breakpoint 2026, zobacz, gdzie łączy się społeczność, i znajdź ludzi oddalonych od Ciebie o jeden krok.",
+        "personTitle": "3 osoby, dla których {handle} przemierzy Londyn",
+        "personDescription": "Zobacz, kto jest na liście {handle} na Breakpoint 2026, kto dodał {handle} i jak jesteście połączeni."
+      },
+      "hero": {
+        "eyebrow": "Breakpoint 2026",
+        "title": "Znajdź swoje mutuale z BP26",
+        "description": "Dodaj trzy osoby, które chcesz poznać w Londynie, a potem zobacz, gdzie łączy się społeczność.",
+        "cta": "Dodaj swoją trójkę",
+        "ticketsCta": "Kup bilet"
+      },
+      "marquee": {
+        "community": "SPOŁECZNOŚĆ",
+        "connections": "POŁĄCZENIA",
+        "mutuals": "MUTUALE",
+        "london": "LONDYN",
+        "hereFor": "KOGO CHCESZ ZOBACZYĆ?"
+      },
+      "nav": {
+        "add": "Dodaj swoją trójkę",
+        "back": "Wróć do mapy",
+        "map": "Otwórz mapę"
+      },
+      "explorer": {
+        "eyebrow": "Przeglądaj mapę",
+        "stats": {
+          "people": "Osoby: {people}",
+          "adds": "Dodania: {adds}",
+          "mutuals": "Mutuale: {mutuals}"
+        },
+        "searchLabel": "Znajdź kogoś",
+        "searchPlaceholder": "nazwa użytkownika",
+        "noResults": "Nikogo o takiej nazwie użytkownika nie ma jeszcze na mapie.",
+        "viewsLabel": "Widok",
+        "views": {
+          "all": "Wszyscy",
+          "mutuals": "Tylko mutuale",
+          "network": "Twoja sieć",
+          "most": "Najczęściej dodawani",
+          "communities": "Społeczności"
+        },
+        "legend": {
+          "out": "Dodani przez tę osobę",
+          "in": "Dodali tę osobę",
+          "mutual": "Mutual",
+          "path": "Twoja droga do tej osoby"
+        },
+        "findMutuals": "Znajdź mutuale",
+        "zoomControls": "Powiększenie",
+        "zoomIn": "Powiększ",
+        "zoomOut": "Pomniejsz",
+        "fit": "Pokaż wszystkich",
+        "centreOnYou": "Wyśrodkuj na sobie",
+        "refresh": "Odśwież mapę",
+        "hint": "Przeciągnij, aby obracać · przewijaj lub zsuwaj palce, aby zmienić powiększenie · klawisze + / –",
+        "trail": "Ścieżka",
+        "you": "Ty",
+        "around": "Wokół {handle}",
+        "loading": "Wczytywanie mapy",
+        "error": "Nie udało się wczytać mapy. Odśwież stronę, aby spróbować ponownie.",
+        "empty": "Nikt jeszcze nie dodał swojej trójki. Bądź pierwszą osobą na mapie.",
+        "mapLabel": "Mapa połączeń"
+      },
+      "panel": {
+        "label": "Wybrana osoba",
+        "yourNode": "Twój węzeł",
+        "inYour3": "W Twojej trójce",
+        "steps": "{count, plural, one {# krok} few {# kroki} many {# kroków} other {# kroku}} od Ciebie",
+        "notConnected": "Brak połączenia z Tobą",
+        "selectSomeone": "Wybierz dowolną osobę na mapie",
+        "selectHint": "Kliknij węzeł lub wyszukaj nazwę użytkownika, aby zobaczyć, kogo ta osoba dodała i jak się łączycie.",
+        "added": "Dodane osoby",
+        "addedBy": "Dodane przez",
+        "mutuals": "Mutuale",
+        "their3": "Trójka tej osoby",
+        "your3": "Twoja trójka",
+        "nobodyAdded": "Jeszcze nikt. Oznacz tę osobę na X.",
+        "notJoined": "Brak jeszcze trójki tej osoby.",
+        "more": "+{count} więcej",
+        "howYouConnect": "Jak się łączycie",
+        "noPath": "Brak połączenia. Dodaj tę osobę, aby się połączyć.",
+        "joinToConnect": "Dodaj swoją trójkę, aby zobaczyć, jak się łączycie.",
+        "mutual": "Mutual",
+        "addToYour3": "Dodaj do swojej trójki",
+        "postYour3": "Opublikuj swoją trójkę",
+        "share": "Udostępnij"
+      },
+      "add": {
+        "metadataTitle": "Dodaj swoją trójkę",
+        "metadataDescription": "Wybierz trzy osoby, które chcesz zobaczyć na Breakpoint 2026 w Londynie, potwierdź przez X i opublikuj wpis, aby zostały oznaczone.",
+        "eyebrow": "Dodaj swoją trójkę",
+        "title": "Kogo chcesz zobaczyć w Londynie?",
+        "description": "Developerów, twórców albo kogoś, kogo znasz tylko z komentarzy.",
+        "progress": "Dodano {count} z 3",
+        "steps": {
+          "picks": "Wybierz swoją trójkę",
+          "handle": "Potwierdź przez X",
+          "post": "Opublikuj na X"
+        },
+        "signInHint": "Zapisanie wymaga potwierdzenia przez X, że to Ty, aby nikt inny nie mógł wybierać w imieniu Twojej nazwy użytkownika. X wyświetla najwęższy zakres dostępu, jaki oferuje. Odczytujemy Twój @handle jeden raz, a potem oddajemy dostęp. Nie możemy publikować, nikogo obserwować ani widzieć Twoich wiadomości.",
+        "signOut": "Wyloguj się",
+        "picksLabel": "Twoja trójka",
+        "addLabel": "Znajdź kogoś",
+        "addPlaceholder": "Zacznij pisać lub wklej link do profilu na X",
+        "remove": "Usuń {handle}",
+        "empty": "Puste",
+        "suggestionsNear": "Blisko Ciebie na mapie",
+        "suggestionsTop": "Najczęściej dodawani na mapie",
+        "addedYou": "Dodał(a) Cię",
+        "addedCount": "{count, plural, one {# dodanie} few {# dodania} many {# dodań} other {# dodania}}",
+        "postPreview": "Twój wpis",
+        "save": "Zapisz swoją trójkę",
+        "saving": "Zapisywanie",
+        "update": "Zaktualizuj swoją trójkę",
+        "closed": "Dodawanie jest zamknięte. Mapa pozostaje otwarta.",
+        "saved": "Jesteś na mapie",
+        "savedDescription": "Opublikuj swoją trójkę, aby te osoby zostały oznaczone. Każda z nich dostanie link, by dodać własną.",
+        "newMutualEyebrow": "Nowy mutual",
+        "newMutualTitle": "Ty i {handle} dodaliście się nawzajem",
+        "newMutualDescription": "Opublikuj wpis, żeby łatwiej było się odnaleźć na Olympii.",
+        "postMutual": "Opublikuj mutual",
+        "postYour3": "Opublikuj swoją trójkę",
+        "openMap": "Zobacz siebie na mapie",
+        "findMutuals": "Znajdź swoje mutuale",
+        "signInToSave": "Zaloguj się przez X, aby zapisać",
+        "alreadyAdded": "Twoja trójka jest już dodana? Zaloguj się przez X",
+        "savingAs": "Zapisywanie jako",
+        "noMatch": "Pisz dalej. Nazwa użytkownika może zawierać litery, cyfry i podkreślenia.",
+        "notOnMap": "Jeszcze nie ma na mapie",
+        "onMapCount": "{count, plural, =0 {Na mapie} one {# dodanie} few {# dodania} many {# dodań} other {# dodania}}"
+      },
+      "errors": {
+        "invalid_handle": "Wpisz prawidłową nazwę użytkownika X: litery, cyfry i podkreślenia, do 15 znaków.",
+        "auth_required": "Zaloguj się przez X, aby zapisać swoją trójkę.",
+        "x_denied": "Logowanie przez X zostało anulowane. Twoje wybory nadal tu są.",
+        "x_error": "Logowanie przez X nie powiodło się. Spróbuj ponownie za chwilę.",
+        "logout_error": "Wylogowanie nie powiodło się. Spróbuj ponownie za chwilę.",
+        "invalid_adds": "Dodaj trzy różne osoby.",
+        "self_add": "Nie możesz dodać samego siebie.",
+        "handle_claimed": "Ktoś zapisał się pod tą nazwą użytkownika w tym samym momencie. Spróbuj ponownie.",
+        "rate_limited": "Zbyt wiele prób. Odczekaj minutę i spróbuj ponownie.",
+        "closed": "Dodawanie jest zamknięte.",
+        "unavailable": "Zapis nie powiódł się. Spróbuj ponownie za chwilę.",
+        "duplicate": "{handle} jest już w Twojej trójce.",
+        "full": "Twoja trójka jest pełna. Najpierw kogoś usuń."
+      },
+      "mutuals": {
+        "metadataTitle": "Znajdź swoje mutuale",
+        "metadataDescription": "Zobacz swoje mutuale z Breakpoint 2026 oraz osoby oddalone od Ciebie o jeden krok, uszeregowane według tego, kogo dodaliście Ty i Twoja trójka.",
+        "eyebrow": "Znajdź swoje mutuale",
+        "title": "Osoby oddalone od Ciebie o jeden krok",
+        "description": "Ranking na podstawie tego, kogo dodali Ty i osoby wokół Ciebie. Dodaj kogoś lub przywitaj się na X. Jeśli ta osoba doda Cię z powrotem, jesteście mutualami.",
+        "yourMutuals": "Twoje mutuale · {count}",
+        "noMutuals": "Jeszcze brak. Opublikuj swoją trójkę, aby wybrane osoby to zobaczyły.",
+        "filtersLabel": "Dlaczego tu są",
+        "filters": {
+          "all": "Wszystkie propozycje",
+          "addedYou": "Dodali Cię",
+          "sharedAdd": "Wspólne dodania",
+          "step": "Jeden krok dalej"
+        },
+        "count": "{from}–{to} z {total} propozycji",
+        "pagination": "Strony propozycji",
+        "previous": "Poprzednia",
+        "next": "Następna",
+        "page": "Strona {page} z {pages}",
+        "your3": "Twoja trójka: {handles}",
+        "scoring": "Punkty się sumują: dodał(a) Cię (5), oboje dodaliście tę samą osobę (2 za każdą), ktoś z Twojej trójki dodał tę osobę (2 za każdą), ktoś, kto dodał Ciebie, dodał też tę osobę (1 za każdą).",
+        "reasons": {
+          "addedYou": "Dodał(a) Cię",
+          "sharedAdd": "Oboje dodaliście {handle}",
+          "yourAddAdded": "{handle} dodał(a) tę osobę",
+          "coAdded": "{handle} dodał(a) Was oboje"
+        },
+        "sayHi": "Przywitaj się",
+        "swapIn": "Dodaj",
+        "inYour3": "W Twojej trójce",
+        "viewOnMap": "Zobacz {handle} na mapie",
+        "postMutuals": "Opublikuj swoje mutuale",
+        "needsHandle": "Najpierw dodaj swoją trójkę. Wtedy ta strona pokaże osoby oddalone od Ciebie o jeden krok.",
+        "empty": "Brak propozycji. Pojawią się, gdy więcej osób doda swoją trójkę.",
+        "loading": "Szukanie Twoich mutuali"
+      },
+      "how": {
+        "eyebrow": "Jak to działa",
+        "step1Title": "Dodaj swoją trójkę",
+        "step1Body": "Zaloguj się przez X, a potem wybierz trzy osoby, które chcesz poznać. Liczy się każdy członek społeczności.",
+        "step2Title": "Przeglądaj mapę",
+        "step2Body": "Wybierz dowolną osobę, aby zobaczyć, kogo dodała, kto dodał ją i ile kroków dzieli ją od Ciebie.",
+        "step3Title": "Znajdź swoje mutuale",
+        "step3Body": "Otrzymaj listę osób blisko Ciebie na mapie wraz z powodem dla każdej. Dodaj je w odpowiedzi lub przywitaj się na X."
+      },
+      "shareSection": {
+        "eyebrow": "Udostępnij",
+        "title": "Każdy wpis oznacza wymienione w nim osoby",
+        "description": "Oznaczone osoby dostają link, by dodać własną trójkę. W ten sposób mapa rośnie.",
+        "your3": "Twoja trójka · oznacza wszystkie trzy osoby",
+        "mutual": "Mutual · oznacza tę osobę",
+        "mutuals": "Twoje mutuale · oznacza mutuale i propozycje"
+      },
+      "share": {
+        "ask": "Kto jest w Twojej trójce?",
+        "your3": "Trzy osoby, dla których przemierzę Londyn: {handles}. Do zobaczenia na Breakpoint.",
+        "mutual": "{handle} i ja wybraliśmy się nawzajem na Breakpoint. To mutual. Do zobaczenia w Londynie.",
+        "mutuals": "Moja ekipa na Breakpoint na razie: {mutuals}. Wciąż mam nadzieję poznać: {next}.",
+        "mutualsNone": "Buduję swoją ekipę na Breakpoint. Mam nadzieję poznać: {next}.",
+        "sayHi": "Hej {handle}, mapa Breakpoint mówi, że dzieli nas jeden krok. Kawa w Londynie?",
+        "person": "Oto {handle} na mapie Breakpoint."
+      },
+      "card": {
+        "isHereFor": "{handle} przemierzy Londyn dla",
+        "mutualEyebrow": "Mutual · dodali się nawzajem",
+        "mutualsEyebrow": "Ekipa {handle} na Breakpoint",
+        "mutualsLabel": "Mutuale",
+        "nextLabel": "Do poznania",
+        "footer": "Breakpoint 2026 · Londyn · 15–17 listopada",
+        "question": "Kto jest w Twojej trójce?",
+        "mutual": "Mutual"
+      },
+      "egg": {
+        "eyebrow": "Znaleziono węzeł // brak połączeń",
+        "title": "Nikt go nie dodał. Mimo to udało Ci się go odnaleźć.",
+        "description": "Odbierz 25% zniżki na bilet Breakpoint 2026, dopóki są dostępne kody.",
+        "copy": "Kopiuj kod",
+        "copied": "Skopiowano",
+        "claim": "Odbierz na Luma",
+        "close": "Zamknij"
       }
     }
   }
